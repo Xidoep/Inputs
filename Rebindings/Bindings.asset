@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 656a7204fa66aca4da74607549457db8, type: 3}
+  m_Name: Bindings
+  m_EditorClassIdentifier: 
+  guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
+  inputActions: {fileID: -944628639613478452, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
+  guardats: {fileID: 11400000, guid: b4c919ec2f918e740be073fbab0b706b, type: 2}

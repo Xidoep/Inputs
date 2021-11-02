@@ -1,0 +1,9 @@
+{
+  "name": "com.xidostudio.inputs",
+  "version": "1.0.0-preview.1",
+  "displayName": "XS_Inputs",
+  "type": "tool",
+  "dependencies": {
+    "com.xidostudio.utils": "1.0.0"
+  }
+}

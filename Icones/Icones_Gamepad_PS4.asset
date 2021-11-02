@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 623131aeb68fdf649bc29995bd20e5ef, type: 3}
+  m_Name: Icones_Gamepad_PS4
+  m_EditorClassIdentifier: 
+  Esquema: PlayStation
+  paths:
+  - DualShockGamepad
+  plataformes: 19000000
+  botons:
+  - sprite: {fileID: 21300000, guid: 94d50de34ddfdba46bfdaaaf62726864, type: 3}
+    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
+    path: dpad/up
+    boto: 0
+  - sprite: {fileID: 21300000, guid: ae74f92bfd239d849a188e7ce5662109, type: 3}
+    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
+    path: dpad/down
+    boto: 1
+  - sprite: {fileID: 21300000, guid: f368b3d6ac452e643a33611e95772325, type: 3}
+    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
+    path: dpad/left
+    boto: 2
+  - sprite: {fileID: 21300000, guid: 358978d2a83b71240a7df7ccf793cc25, type: 3}
+    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
+    path: dpad/right
+    boto: 3
+  - sprite: {fileID: 21300000, guid: aabdb535cf922a941b7dc9eccc6df883, type: 3}
+    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
+    path: buttonNorth
+    boto: 4
+  - sprite: {fileID: 21300000, guid: 7a7c3c6efc2d8ca4d9a2b12d67c4e498, type: 3}
+    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
+    path: buttonEast
+    boto: 5
+  - sprite: {fileID: 21300000, guid: bf48db5b789b3154ea8239dcdec3e244, type: 3}
+    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
+    path: buttonSouth
+    boto: 6
+  - sprite: {fileID: 21300000, guid: 797ee0b4e06d4ab47b1c7bf1c0b49b0a, type: 3}
+    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
+    path: buttonWest
+    boto: 7
+  - sprite: {fileID: 21300000, guid: abde0f4133df66943b432e236b0e960e, type: 3}
+    fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
+    path: leftStick
+    boto: 8
+  - sprite: {fileID: 21300000, guid: da5eaf6b0ab5a5048b480c503d7379bf, type: 3}
+    fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
+    path: rightStick
+    boto: 9
+  - sprite: {fileID: 21300000, guid: 8cfb72e9ab241d14da7d6ef42ddbce31, type: 3}
+    fondo: {fileID: 21300000, guid: d4ee7d18acd1fac4dbd3e9054654f21b, type: 3}
+    path: leftShoulder
+    boto: 10
+  - sprite: {fileID: 21300000, guid: ce953424d403ded4e92ff0e36150a6a1, type: 3}
+    fondo: {fileID: 21300000, guid: f0b4f9e2e0ca76d4d86b5ada315b3ac5, type: 3}
+    path: rightShoulder
+    boto: 11
+  - sprite: {fileID: 21300000, guid: 082e87ab998bda8498d64a527ef3a7f7, type: 3}
+    fondo: {fileID: 21300000, guid: 931b55b3eddcdbc4889bf33860cb0485, type: 3}
+    path: start
+    boto: 12
+  - sprite: {fileID: 21300000, guid: 9e32887f1f5a5b64985b9f3fdbcb9ada, type: 3}
+    fondo: {fileID: 21300000, guid: 931b55b3eddcdbc4889bf33860cb0485, type: 3}
+    path: select
+    boto: 13
+  - sprite: {fileID: 21300000, guid: c4c10002e02b65e4d85e55d2b7f7a1cf, type: 3}
+    fondo: {fileID: 21300000, guid: 68abd5e59e8e9ce4182aaa367d762a4f, type: 3}
+    path: leftTrigger
+    boto: 32
+  - sprite: {fileID: 21300000, guid: 5f95fce1a996ff74da1639dcbebdf45c, type: 3}
+    fondo: {fileID: 21300000, guid: dbb6efc7354d0ca47b57ae96a73b077a, type: 3}
+    path: rightTrigger
+    boto: 33
+  tecles: []
+  ratoli: []
+  tactil: []

@@ -1,0 +1,813 @@
+{
+    "name": "InputGeneric",
+    "maps": [
+        {
+            "name": "GamePlay",
+            "id": "0e3151c3-6ae8-4ddc-88e4-914e30ee0cce",
+            "actions": [
+                {
+                    "name": "AccioPrincipal",
+                    "type": "Button",
+                    "id": "6430be3e-df8e-4e95-a7af-e108ee9b8fde",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "AccioSecundaria",
+                    "type": "Button",
+                    "id": "f9126289-cf46-4fd0-b94b-1be9c2d89fa2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Moviment",
+                    "type": "Value",
+                    "id": "7ab82112-ea6d-4109-9039-6866f50aa774",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Visio",
+                    "type": "Value",
+                    "id": "38ae74b9-af5d-45d6-b378-f60303a4e41a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Pausa",
+                    "type": "Button",
+                    "id": "09ed5eae-6d9e-40fb-b8e0-2f87a6e15878",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Interactuar",
+                    "type": "Button",
+                    "id": "be8870f2-e1c8-4eb7-9f53-e93a0a46cbb5",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Reconeixement_TeclatRatoli",
+                    "type": "Button",
+                    "id": "2e69adc5-4508-47ac-8dee-61d79655b573",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Reconeixement_Ps",
+                    "type": "Button",
+                    "id": "841f2f72-0810-4657-ba2d-6d4a3412aae4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Reconeixement_Switch",
+                    "type": "Button",
+                    "id": "4db1b4db-a405-4b30-95bf-a2890f28a1ed",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Reconeixement_Xbox",
+                    "type": "Button",
+                    "id": "1800fbef-d1a1-41d9-b368-0fa4434d2a15",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Reconeixement_Tactil",
+                    "type": "Button",
+                    "id": "b93096d6-7844-4052-abe7-aa804a130c62",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Seleccionar",
+                    "type": "Button",
+                    "id": "e24e334a-f12e-4d97-af73-cdee9f14c225",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Desseleccionar",
+                    "type": "Button",
+                    "id": "54196ad1-39a9-4bf5-a7fa-af91913b0b05",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Reconeixement",
+                    "type": "Button",
+                    "id": "e8b59bdb-776e-428d-b86b-a100240a6a75",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "WASD",
+                    "id": "85f905bf-002b-435f-ac1a-d67b64b3f4c2",
+                    "path": "2DVector",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "fea244d9-e065-4518-97fc-9fb021797f8f",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "200b11c9-da74-4de3-9766-57a9a8b3942a",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "ef47bf29-0376-4a42-aba4-75a2fdc6d092",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "8df7c344-c180-4ab6-9a53-9d1508ade152",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "1461a1a5-8af2-46b6-b710-a324a0315dbd",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "PlayStation;Xbox;Switch;Gamepad",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c28a5654-55db-46d6-9cd1-67a3d5e6b355",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Visio",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "db45678a-04cd-4903-9299-65107a6a6bad",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation;Xbox;Switch;Gamepad",
+                    "action": "Visio",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9cc0490-8793-4f99-b470-a35b3a4b648e",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "AccioPrincipal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9008897e-8c55-45d8-8188-04dbc6abb995",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "PlayStation;Xbox;Switch;Gamepad",
+                    "action": "AccioPrincipal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d125d29-f481-439b-8821-797a3b74d4fb",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "AccioSecundaria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb333032-d6a7-43e6-94df-760898c29836",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;PlayStation;Xbox;Switch",
+                    "action": "AccioSecundaria",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a820b3a9-ab29-4029-bf0e-60ccd8d010fd",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli;Gamepad;Tactil;PlayStation;Xbox;Switch",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8099bc6a-502b-4fb9-9f02-b9a9bd8fe02c",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "56535470-ab09-457c-b34f-754db01ec8fc",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ac9795e2-ce53-4e7e-b07a-0db05fa5d805",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Interactuar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c52cd853-85bf-4083-a0ad-dfe52a47fff9",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation;Xbox;Switch;Gamepad",
+                    "action": "Interactuar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29c39fa0-3c77-41a8-afa7-2ba397884441",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil;PlayStation;Xbox;Switch",
+                    "action": "Reconeixement_TeclatRatoli",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d04dbaa5-6994-461b-a838-911e3d16775f",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil;TeclatRatoli;Xbox;Switch;Gamepad",
+                    "action": "Reconeixement_Ps",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58fab17a-f1f2-447f-a1a5-5138f5983e14",
+                    "path": "<SwitchProControllerHID>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil;TeclatRatoli;Gamepad;PlayStation;Xbox",
+                    "action": "Reconeixement_Switch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e2617388-fb46-4258-b694-322736405c96",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil;TeclatRatoli;Switch;PlayStation;Gamepad",
+                    "action": "Reconeixement_Xbox",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ed5bdea0-5fef-4d5b-b138-c19d3de5be4f",
+                    "path": "<Touchscreen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;TeclatRatoli;PlayStation;Xbox;Switch",
+                    "action": "Reconeixement_Tactil",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0ff1c5c4-9a87-4022-b023-84c17f2a73bc",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Seleccionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3ea61e8c-dddb-4d86-b81a-6c35147fc1f7",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;PlayStation;Xbox;Switch;Tactil",
+                    "action": "Seleccionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbc9e0c7-cb24-4938-8670-fed1b486456f",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Desseleccionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d22fec9-6026-4d09-b614-1ef02b3f1c1c",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;PlayStation;Xbox;Switch;Tactil",
+                    "action": "Desseleccionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aad26cfb-2e1c-4495-82ba-cda144d74929",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Tactil;PlayStation;Xbox;Switch",
+                    "action": "Reconeixement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "257f7baa-8279-43d9-b362-07fc157c6d51",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil;TeclatRatoli;Xbox;Switch",
+                    "action": "Reconeixement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8870d975-ef30-4581-834c-2674766aeace",
+                    "path": "<SwitchProControllerHID>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil;TeclatRatoli;PlayStation;Xbox",
+                    "action": "Reconeixement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e46aa46-c3f1-4ac3-aaf4-0596f38f8bd1",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil;TeclatRatoli;PlayStation;Switch",
+                    "action": "Reconeixement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea103352-7e56-4e54-bbce-05cf12bd38b2",
+                    "path": "<Touchscreen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;TeclatRatoli;PlayStation;Xbox;Switch",
+                    "action": "Reconeixement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "UI",
+            "id": "96af6d59-8ebf-4fc8-984b-99982509d868",
+            "actions": [
+                {
+                    "name": "Moviment",
+                    "type": "Value",
+                    "id": "fbeb17fe-6866-4bf0-903f-e498f8fd4c31",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Seleccionar",
+                    "type": "Button",
+                    "id": "35dba629-21ef-4ec8-adc5-4d0e1da79ac9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Enderrera",
+                    "type": "Button",
+                    "id": "500e2d70-e733-4da6-9b4f-92f589f1c2e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Fletxes",
+                    "id": "03657f8c-d721-47fc-b01a-699f8ea6b2ba",
+                    "path": "2DVector",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "cc3a9f01-7d06-4138-a429-a45e7745e8a6",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "a8e7f4e1-8e53-436d-b9cb-87ee515689bf",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "75a381c3-f456-4e3f-9fdd-ea5bfbcece01",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "82857d94-799a-4ce2-bbae-5a1481754d8a",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "WASD",
+                    "id": "a25af24c-49d5-401b-a94f-32def9cc865c",
+                    "path": "2DVector",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "d3eb8c94-1821-4820-af72-5057214ffb44",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "36f11a45-bfcb-4d60-9e7d-ed83679b08af",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "95d9a403-2346-448e-a21d-84c569457957",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "22a91ac1-a30a-4e37-92eb-73c9608eee1b",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "e501ed87-0e8a-479e-ba4e-446039c37fb8",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation;Xbox;Switch",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5deef670-d4c2-4820-92bc-a963e9bfc620",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation;Xbox;Switch",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5bfda822-a593-489c-91ba-97fabfc81cbd",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation;Xbox;Switch",
+                    "action": "Moviment",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67196f63-b090-4a7f-adde-75074559330b",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Seleccionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99d69ef1-8ad2-47d1-972f-9fa2a1a2b7c6",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;PlayStation;Xbox;Switch",
+                    "action": "Seleccionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2102716-0479-41ae-92a0-475be1c24a16",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;PlayStation;Xbox;Switch",
+                    "action": "Seleccionar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3fd1fa27-0626-4240-9dc5-76944ed4b3e8",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Enderrera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37dac10d-8f14-4c02-b4fe-164ae7fd95c7",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Enderrera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3e79410b-655d-42f9-82aa-6d4d45c78cff",
+                    "path": "<Touchscreen>/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Tactil",
+                    "action": "Enderrera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbecc563-a0d9-4c38-aed2-2522b29ea201",
+                    "path": "<DualShockGamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation",
+                    "action": "Enderrera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ff357fb5-2bf1-4be0-9d41-4dcb2497fee6",
+                    "path": "<SwitchProControllerHID>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "Enderrera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9d15288a-0f2c-4c42-9888-b1a08316c278",
+                    "path": "<XInputController>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Switch",
+                    "action": "Enderrera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "TeclatRatoli",
+            "bindingGroup": "TeclatRatoli",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Gamepad",
+            "bindingGroup": "Gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Tactil",
+            "bindingGroup": "Tactil",
+            "devices": [
+                {
+                    "devicePath": "<Touchscreen>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "PlayStation",
+            "bindingGroup": "PlayStation",
+            "devices": [
+                {
+                    "devicePath": "<DualShockGamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Xbox",
+            "bindingGroup": "Xbox",
+            "devices": [
+                {
+                    "devicePath": "<XInputController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Switch",
+            "bindingGroup": "Switch",
+            "devices": [
+                {
+                    "devicePath": "<SwitchProControllerHID>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
