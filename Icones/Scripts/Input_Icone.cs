@@ -33,7 +33,7 @@ public abstract class Input_Icone : MonoBehaviour
         Debug.Log(playerInput.gameObject.name);
         Debug.Log(playerInput.devices[0]);
 
-        Inputs.Icone icone = reconeixement.GetIcone(accio, playerInput.devices[0]);
+        Inputs_Utils.Icone icone = reconeixement.GetIcone(accio, playerInput.devices[0]);
 
         //binding.GetComponent<SpriteRenderer>()?.sprite = icone.icone;
         //fondo.GetComponent<SpriteRenderer>()?.sprite = icone.fondo;
