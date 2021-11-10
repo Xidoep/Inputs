@@ -16,7 +16,6 @@ public class Input_ReconeixementTipus : ScriptableObject
     public Ratoli[] ratoli;
     public Tactil[] tactil;
 
-
     public class Binding
     {
         public Sprite sprite;

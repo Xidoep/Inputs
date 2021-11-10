@@ -23,6 +23,7 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
 
     public void Interactuar(InputAction.CallbackContext context)
     {
+        Debug.Log($"Interactuar desde {this.gameObject.name}");
         if (context.phase == InputActionPhase.Performed) OnInteractuar.Invoke();
     }
 

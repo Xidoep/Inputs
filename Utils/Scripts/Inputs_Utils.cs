@@ -52,7 +52,7 @@ public static class Inputs_Utils
         return iguals;
     }
 
-    public static bool Comparar(this InputBinding inputBinding, string path) => inputBinding.Path() == path;
+    public static bool Comparar(this InputBinding inputBinding, string path) => inputBinding.PathOrOverridePath() == path;
     /*{
         if (string.IsNullOrEmpty(inputBinding.overridePath))
             return inputBinding.path == path;
@@ -64,7 +64,7 @@ public static class Inputs_Utils
     /// </summary>
     /// <param name="inputBinding"></param>
     /// <returns></returns>
-    public static string Path(this InputBinding inputBinding)
+    public static string PathOrOverridePath(this InputBinding inputBinding)
     {
         if (string.IsNullOrEmpty(inputBinding.overridePath))
             return inputBinding.path;
@@ -101,10 +101,12 @@ public static class Inputs_Utils
             for (int a = 0; a < input.tecles.Length; a++)
             {
                 //Debugar.Log($"(Comparar path){a}      (reconeixement) {reconeixement.inputs[r].tecles[a].Path} == (accio) {accio.bindings[b].path}???");
-                if (accio.bindings[b].Path() == KEY_2DVECTOR)
+
+                //PROVAR 
+                if (accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR)
                 {
                     Debugar.Log($"¿¿¿{input.tecles[a].Path}???");
-                    if (string.Equals(input.tecles[a].Path, accio.bindings[b + 1].Path()))
+                    if (string.Equals(input.tecles[a].Path, accio.bindings[b + 1].PathOrOverridePath()))
                     {
                         return new Icone() { icone = input.tecles[a].sprite, fondo = input.tecles[a].fondo };
                     }
@@ -113,17 +115,18 @@ public static class Inputs_Utils
                 else
                 {
                     Debugar.Log($"¿¿¿{input.tecles[a].Path}???");
-                    if (string.Equals(input.tecles[a].Path, accio.bindings[b].Path()))
+                    if (string.Equals(input.tecles[a].Path, accio.bindings[b].PathOrOverridePath()))
                     {
                         return new Icone() { icone = input.tecles[a].sprite, fondo = input.tecles[a].fondo };
                     }
 
                 }
+                
             }
             for (int a = 0; a < input.ratoli.Length; a++)
             {
                 Debugar.Log($"¿¿¿{input.ratoli[a].Path}???");
-                if (string.Equals(input.ratoli[a].Path, accio.bindings[b].Path()))
+                if (string.Equals(input.ratoli[a].Path, accio.bindings[b].PathOrOverridePath()))
                 {
                     return new Icone() { icone = input.ratoli[a].sprite, fondo = input.ratoli[a].fondo };
                 }
@@ -131,7 +134,7 @@ public static class Inputs_Utils
             for (int a = 0; a < input.botons.Length; a++)
             {
                 Debugar.Log($"¿¿¿{input.botons[a].Path}???");
-                if (string.Equals(input.botons[a].Path, accio.bindings[b].Path()))
+                if (string.Equals(input.botons[a].Path, accio.bindings[b].PathOrOverridePath()))
                 {
                     return new Icone() { icone = input.botons[a].sprite, fondo = input.botons[a].fondo };
                 }
@@ -139,7 +142,7 @@ public static class Inputs_Utils
             for (int a = 0; a < input.tactil.Length; a++)
             {
                 Debugar.Log($"¿¿¿{input.tactil[a].Path}???");
-                if (string.Equals(input.tactil[a].Path, accio.bindings[b].Path()))
+                if (string.Equals(input.tactil[a].Path, accio.bindings[b].PathOrOverridePath()))
                 {
                     return new Icone() { icone = input.tactil[a].sprite, fondo = input.tactil[a].fondo };
                 }
