@@ -41,23 +41,37 @@ public abstract class Input_Icone : MonoBehaviour
         if (fondo != null) fondo.GetComponent<SpriteRenderer>()?.Sprite(icone.fondo);
         binding.GetComponent<Image>()?.Sprite(icone.icone);
         if (fondo != null) fondo.GetComponent<Image>()?.Sprite(icone.fondo);
-        texte.StringChanged += ActualitzarEtiqueta;
-        fonts.AssetChanged += ActualitzarEtiqueta;
+
+        /*if (texte != null) 
+        {
+            texte.WaitForCompletion = true;
+            texte.StringChanged += ActualitzarEtiqueta;
+        }
+        if (fonts != null) 
+        {
+            fonts.WaitForCompletion = true;
+            fonts.AssetChanged += ActualitzarFont;
+        } */
+        
         //texte.GetTraduccio((UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<string> resultat) => { etiqueta.GetComponent<TMP_Text>()?.SetText(resultat.Result); });
     }
 
     private void OnDisable()
     {
-        texte.StringChanged -= ActualitzarEtiqueta;
-        fonts.AssetChanged -= ActualitzarEtiqueta;
+        //if (texte != null) texte.StringChanged -= ActualitzarEtiqueta;
+        //if (fonts != null) fonts.AssetChanged -= ActualitzarFont;
     }
 
     void ActualitzarEtiqueta(string s)
     {
         etiqueta.GetComponent<TMP_Text>()?.SetText(s);
     }
-    void ActualitzarEtiqueta(TMP_FontAsset s)
+    void ActualitzarFont(TMP_FontAsset s)
     {
+        if(s == null)
+        {
+            Debug.LogError("Error al carregar asset");
+        }
         etiqueta.GetComponent<TMP_Text>().font = s;
     }
 
