@@ -72,6 +72,20 @@ public static class Inputs_Utils
     }
     static Input_ReconeixementTipus input;
 
+    public static bool EsComposada(this InputAction accio, InputDevice inputDevice)
+    {
+        bool composada = false;
+        for (int b = 0; b < accio.bindings.Count; b++)
+        {
+            for (int a = 0; a < input.tecles.Length; a++)
+            {
+                composada = accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR;
+                return composada;
+            }
+        }
+        return composada;
+    }
+
     public static Icone GetIcone(this Input_Reconeixement reconeixement, InputAction accio, InputDevice inputDevice)
     {
         Icone icone = new Icone() { icone = null, fondo = null };

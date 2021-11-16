@@ -16,7 +16,7 @@ public abstract class Input_Icone : MonoBehaviour
     public LocalizedAsset<TMP_FontAsset> fonts;
     public Input_Reconeixement reconeixement;
 
-    bool trobat = false;
+    internal bool trobat = false;
 
 
 
@@ -41,7 +41,7 @@ public abstract class Input_Icone : MonoBehaviour
         if (fondo != null) fondo.GetComponent<SpriteRenderer>()?.Sprite(icone.fondo);
         binding.GetComponent<Image>()?.Sprite(icone.icone);
         if (fondo != null) fondo.GetComponent<Image>()?.Sprite(icone.fondo);
-
+        
         /*if (texte != null) 
         {
             texte.WaitForCompletion = true;

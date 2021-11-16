@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using XS_Utils;
 
 public class Input_IconePerBinding : Input_Icone
 {
@@ -18,11 +19,13 @@ public class Input_IconePerBinding : Input_Icone
         MostrarIcone(inputBinding.action);
     }
 
-    /*private void OnValidate()
+    [ContextMenu("Provar")]
+    void Provar()
     {
-        if (Application.isPlaying)
-            return;
 
+        Debug.Log(inputBinding.action.EsComposada(FindObjectOfType<PlayerInput>().devices[0]));
+
+        trobat = false;
         MostrarIcone(inputBinding.action);
-    }*/
+    }
 }

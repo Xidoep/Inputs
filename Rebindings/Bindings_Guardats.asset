@@ -12,5 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab6a5ed33f5bcf348bd4937e477668f7, type: 3}
   m_Name: Bindings_Guardats
   m_EditorClassIdentifier: 
-  keys: []
-  values: []
+  keys:
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment0
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment1
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment2
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment3
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment4
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment5
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayCorrer/Deixar0
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayCorrer/Deixar1
+  values:
+  - <Gamepad>/leftStick
+  - 2DVector
+  - <Keyboard>/w
+  - <Keyboard>/s
+  - <Keyboard>/a
+  - <Keyboard>/d
+  - <Gamepad>/buttonSouth
+  - <Keyboard>/z

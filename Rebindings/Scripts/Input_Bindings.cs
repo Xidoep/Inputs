@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using XS_Utils;
 
 [CreateAssetMenu(menuName = "Xido Studio/Inputs/Bindings", fileName = "Bindings")]
 public class Input_Bindings : ScriptableObject
@@ -42,16 +43,24 @@ public class Input_Bindings : ScriptableObject
         }
     }
 
-
+    [ContextMenu("Guardar")]
     public void Guardar(InputAction action)
     {
+        Debug.Log($"{action.bindings.Count} bindings");
         for (int i = 0; i < action.bindings.Count; i++)
         {
+            Debug.Log($"Binding - {action.actionMap + action.name + i}");
             //guardat.Set(action.actionMap + action.name + i, action.bindings[i].overridePath);
-            if (guardats.Keys.Contains(action.actionMap + action.name + i))
-                continue;
-
-            guardats.Add(action.actionMap + action.name + i, action.bindings[i].overridePath);
+            if (!guardats.Keys.Contains(action.actionMap + action.name + i))
+            {
+                guardats.Add(action.actionMap + action.name + i, action.bindings[i].PathOrOverridePath());
+            }
+            else
+            {
+                guardats.Replace(action.actionMap + action.name + i, action.bindings[i].PathOrOverridePath());
+            }
+            Debug.Log($"Guardar: {action.actionMap + action.name + i} amb valor {action.bindings[i].PathOrOverridePath()}");
+           
 
             //PlayerPrefs.SetString(action.actionMap + action.name + i, action.bindings[i].overridePath);
         }
