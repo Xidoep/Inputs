@@ -70,27 +70,11 @@ public static class Inputs_Utils
             return inputBinding.path;
         else return inputBinding.overridePath;
     }
-    static Input_ReconeixementTipus input;
+    //static Input_ReconeixementTipus input;
 
-    public static bool EsComposada(this InputAction accio, InputDevice inputDevice)
+    public static Input_ReconeixementTipus TipusInput(this Input_Reconeixement reconeixement, InputDevice inputDevice)
     {
-        bool composada = false;
-        for (int b = 0; b < accio.bindings.Count; b++)
-        {
-            for (int a = 0; a < input.tecles.Length; a++)
-            {
-                composada = accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR;
-                return composada;
-            }
-        }
-        return composada;
-    }
-
-    public static Icone GetIcone(this Input_Reconeixement reconeixement, InputAction accio, InputDevice inputDevice)
-    {
-        Icone icone = new Icone() { icone = null, fondo = null };
-
-        input = null;
+        Input_ReconeixementTipus input = null;
         //Trobar tipus d'imput
         for (int r = 0; r < reconeixement.inputs.Count; r++)
         {
@@ -105,6 +89,71 @@ public static class Inputs_Utils
                 }
             }
         }
+        return input;
+    }
+    public static bool EsComposada(this InputAction accio, InputDevice inputDevice)
+    {
+        bool composada = false;
+        for (int b = 0; b < accio.bindings.Count; b++)
+        {
+            composada = accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR;
+            return composada;
+        }
+        return composada;
+    }
+
+    public static void GetIconeComposte(this Input_ReconeixementTipus reconeixementTipus, InputAction accio)
+    {
+        for (int b = 0; b < accio.bindings.Count; b++)
+        {
+            for (int a = 0; a < reconeixementTipus.tecles.Length; a++)
+            {
+                //Debugar.Log($"(Comparar path){a}      (reconeixement) {reconeixement.inputs[r].tecles[a].Path} == (accio) {accio.bindings[b].path}???");
+
+                //PROVAR 
+                if (accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR)
+                {
+                    Debugar.Log($"¿¿¿{reconeixementTipus.tecles[a].Path}???");
+                    if (string.Equals(reconeixementTipus.tecles[a].Path, accio.bindings[b + 1].PathOrOverridePath()))
+                    {
+                        Debug.Log("");
+                        //return new Icone() { icone = reconeixementTipus.tecles[a].sprite, fondo = reconeixementTipus.tecles[a].fondo };
+                    }
+                    b += 4;
+                }
+                else
+                {
+                    Debugar.Log($"¿¿¿{reconeixementTipus.tecles[a].Path}???");
+                    if (string.Equals(reconeixementTipus.tecles[a].Path, accio.bindings[b].PathOrOverridePath()))
+                    {
+                        //return new Icone() { icone = reconeixementTipus.tecles[a].sprite, fondo = reconeixementTipus.tecles[a].fondo };
+                    }
+                }
+
+            }
+        }
+    }
+
+    public static Icone GetIcone(this Input_Reconeixement reconeixement, InputAction accio, InputDevice inputDevice)
+    {
+        Icone icone = new Icone() { icone = null, fondo = null };
+
+        //Input_ReconeixementTipus input = null;
+        Input_ReconeixementTipus input = reconeixement.TipusInput(inputDevice);
+        //Trobar tipus d'imput
+        /*for (int r = 0; r < reconeixement.inputs.Count; r++)
+        {
+            for (int p = 0; p < reconeixement.inputs[r].paths.Length; p++)
+            {
+                Debugar.Log(reconeixement.inputs[r].paths[p]);
+                if (inputDevice.name.StartsWith(reconeixement.inputs[r].paths[p]))
+                {
+                    Debugar.Log($"Trobat! {reconeixement.inputs[r].name}");
+                    input = reconeixement.inputs[r];
+                    break;
+                }
+            }
+        }*/
 
         //Trobar el binding
         if (input == null)
@@ -133,7 +182,6 @@ public static class Inputs_Utils
                     {
                         return new Icone() { icone = input.tecles[a].sprite, fondo = input.tecles[a].fondo };
                     }
-
                 }
                 
             }

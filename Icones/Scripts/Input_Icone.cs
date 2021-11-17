@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ using XS_Utils;
 public abstract class Input_Icone : MonoBehaviour
 {
     public GameObject binding;
+    public List<GameObject> bindingsComposats;
     public GameObject fondo;
     [Space(10)]
     public GameObject etiqueta;
@@ -33,27 +35,41 @@ public abstract class Input_Icone : MonoBehaviour
         Debug.Log(playerInput.gameObject.name);
         Debug.Log(playerInput.devices[0]);
 
-        Inputs_Utils.Icone icone = reconeixement.GetIcone(accio, playerInput.devices[0]);
+        Input_ReconeixementTipus input = reconeixement.TipusInput(playerInput.devices[0]);
 
-        //binding.GetComponent<SpriteRenderer>()?.sprite = icone.icone;
-        //fondo.GetComponent<SpriteRenderer>()?.sprite = icone.fondo;
+        if (input == null)
+            return;
+
+        if (input.paths[0] != "Keyboard")
+        {
+            if (accio.EsComposada(playerInput.devices[0]))
+            {
+                IconeComposte(input, accio);
+            }
+            else
+            {
+                IconeSimple(accio, playerInput.devices[0]);
+            }
+        }
+        else
+        {
+            IconeSimple(accio, playerInput.devices[0]);
+        }
+
+    }
+
+    void IconeSimple(InputAction accio, InputDevice inputDevice)
+    {
+        Inputs_Utils.Icone icone = reconeixement.GetIcone(accio, inputDevice);
+
         binding.GetComponent<SpriteRenderer>()?.Sprite(icone.icone);
         if (fondo != null) fondo.GetComponent<SpriteRenderer>()?.Sprite(icone.fondo);
         binding.GetComponent<Image>()?.Sprite(icone.icone);
         if (fondo != null) fondo.GetComponent<Image>()?.Sprite(icone.fondo);
-        
-        /*if (texte != null) 
-        {
-            texte.WaitForCompletion = true;
-            texte.StringChanged += ActualitzarEtiqueta;
-        }
-        if (fonts != null) 
-        {
-            fonts.WaitForCompletion = true;
-            fonts.AssetChanged += ActualitzarFont;
-        } */
-        
-        //texte.GetTraduccio((UnityEngine.ResourceManagement.AsyncOperations.AsyncOperationHandle<string> resultat) => { etiqueta.GetComponent<TMP_Text>()?.SetText(resultat.Result); });
+    }
+    void IconeComposte(Input_ReconeixementTipus input, InputAction accio)
+    {
+        input.GetIconeComposte(accio);
     }
 
     private void OnDisable()
