@@ -40,27 +40,31 @@ public abstract class Input_Icone : MonoBehaviour
         if (input == null)
             return;
 
-        if (input.paths[0] != "Keyboard")
+        if (input.paths[0] == "Keyboard")
         {
+            
             if (accio.EsComposada(playerInput.devices[0]))
             {
+                Debug.Log("Composada");
                 IconeComposte(input, accio);
             }
             else
             {
-                IconeSimple(accio, playerInput.devices[0]);
+                Debug.Log("Simple");
+                IconeSimple(input, accio, playerInput.devices[0]);
             }
         }
         else
         {
-            IconeSimple(accio, playerInput.devices[0]);
+            Debug.Log("No Teclat");
+            IconeSimple(input, accio, playerInput.devices[0]);
         }
 
     }
 
-    void IconeSimple(InputAction accio, InputDevice inputDevice)
+    void IconeSimple(Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice)
     {
-        Inputs_Utils.Icone icone = reconeixement.GetIcone(accio, inputDevice);
+        Inputs_Utils.Icone icone = input.GetIcone(accio, inputDevice);
 
         binding.GetComponent<SpriteRenderer>()?.Sprite(icone.icone);
         if (fondo != null) fondo.GetComponent<SpriteRenderer>()?.Sprite(icone.fondo);
@@ -69,7 +73,11 @@ public abstract class Input_Icone : MonoBehaviour
     }
     void IconeComposte(Input_ReconeixementTipus input, InputAction accio)
     {
-        input.GetIconeComposte(accio);
+        Inputs_Utils.Icone[] icones = input.GetIconeComposte(accio);
+        for (int i = 0; i < icones.Length; i++)
+        {
+            Debug.Log(icones[i].icone.name);
+        }
     }
 
     private void OnDisable()

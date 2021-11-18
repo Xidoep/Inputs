@@ -116,6 +116,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Prova",
+                    "type": "Button",
+                    "id": "9f1acf09-9710-410d-bc3f-2d88f7cce439",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -459,6 +467,17 @@
                     "action": "Reconeixement",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a06d4a94-8023-4b21-9cfe-1dbe8fc569c7",
+                    "path": "<Keyboard>/numpadPeriod",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Prova",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -492,61 +511,6 @@
                 }
             ],
             "bindings": [
-                {
-                    "name": "Fletxes",
-                    "id": "03657f8c-d721-47fc-b01a-699f8ea6b2ba",
-                    "path": "2DVector",
-                    "interactions": "Press(behavior=2)",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "cc3a9f01-7d06-4138-a429-a45e7745e8a6",
-                    "path": "<Keyboard>/upArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "a8e7f4e1-8e53-436d-b9cb-87ee515689bf",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "75a381c3-f456-4e3f-9fdd-ea5bfbcece01",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "82857d94-799a-4ce2-bbae-5a1481754d8a",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
                 {
                     "name": "WASD",
                     "id": "a25af24c-49d5-401b-a94f-32def9cc865c",

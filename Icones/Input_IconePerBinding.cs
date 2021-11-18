@@ -23,8 +23,6 @@ public class Input_IconePerBinding : Input_Icone
     void Provar()
     {
 
-        Debug.Log(inputBinding.action.EsComposada(FindObjectOfType<PlayerInput>().devices[0]));
-
         trobat = false;
         MostrarIcone(inputBinding.action);
     }

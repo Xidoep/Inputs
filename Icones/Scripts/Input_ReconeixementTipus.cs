@@ -18,9 +18,9 @@ public class Input_ReconeixementTipus : ScriptableObject
 
     public class Binding
     {
+        public string path;
         public Sprite sprite;
         public Sprite fondo;
-        public string path;
         public virtual string Path { get; }
     }
 
