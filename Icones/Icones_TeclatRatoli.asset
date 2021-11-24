@@ -479,3 +479,4 @@ MonoBehaviour:
     mouseButton: 2
     mouseInteraccio: 2
   tactil: []
+  fondoComposat: {fileID: 21300000, guid: 8e61d7071e8f93641801091206504b27, type: 3}

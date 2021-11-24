@@ -16,6 +16,7 @@ public class Input_ReconeixementTipus : ScriptableObject
     public Ratoli[] ratoli;
     public Tactil[] tactil;
 
+    public Sprite fondoComposat;
     public class Binding
     {
         public string path;

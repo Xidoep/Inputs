@@ -9,18 +9,80 @@ using XS_Utils;
 
 public abstract class Input_Icone : MonoBehaviour
 {
-    public GameObject binding;
-    public List<GameObject> bindingsComposats;
-    public GameObject fondo;
-    [Space(10)]
-    public GameObject etiqueta;
-    public LocalizedString texte;
-    public LocalizedAsset<TMP_FontAsset> fonts;
-    public Input_Reconeixement reconeixement;
+    [SerializeField] Input_Reconeixement reconeixement;
+    [SerializeField] GameObject binding;
+    [SerializeField] GameObject fondo;
+    List<GameObject> bindingsComposats;
+    //[Space(10)]
+    //public GameObject etiqueta;
+    //public LocalizedString texte;
+    //public LocalizedAsset<TMP_FontAsset> fonts;
 
     internal bool trobat = false;
 
+    Image bindingImage;
+    SpriteRenderer bindingSpriteRenderer;
+    Image fondoImage;
+    SpriteRenderer fondoSpriteRenderer;
 
+    
+
+    Sprite SetSpriteBinding
+    {
+        set
+        {
+            if (bindingImage != null) bindingImage.sprite = value;
+            else if (bindingSpriteRenderer != null) bindingSpriteRenderer.sprite = value;
+        }
+    }
+    bool SetEnableBinding
+    {
+        set
+        {
+            if (bindingImage != null) bindingImage.enabled = value;
+            else if (bindingSpriteRenderer != null) bindingSpriteRenderer.enabled = value;
+        }
+    }
+    Sprite SetSpriteFondo
+    {
+        set
+        {
+            if (!fondo)
+                return;
+
+            if (fondoImage != null) fondoImage.sprite = value;
+            else if (fondoSpriteRenderer != null) fondoSpriteRenderer.sprite = value;
+        }
+    }
+    Vector3 SetSizeFondo
+    {
+        set
+        {
+            if (fondoImage != null) fondoImage.transform.localScale = value;
+            else if (fondoSpriteRenderer != null) fondoSpriteRenderer.transform.localScale = value;
+        }
+    }
+    Color GetColorBinding
+    {
+        get
+        {
+            if (bindingImage != null) return bindingImage.color;
+            else if (bindingSpriteRenderer != null) return bindingSpriteRenderer.color;
+            else return Color.black;
+        }
+    }
+
+    void FindRenderers()
+    {
+        bindingImage = binding.GetComponent<Image>();
+        bindingSpriteRenderer = binding.GetComponent<SpriteRenderer>();
+
+        if (!fondo)
+            return;
+
+        fondoImage = fondo.GetComponent<Image>();
+        fondoSpriteRenderer = fondo.GetComponent<SpriteRenderer>();
+    }
 
     public void MostrarIcone(InputAction accio)
     {
@@ -36,6 +98,9 @@ public abstract class Input_Icone : MonoBehaviour
         Debug.Log(playerInput.devices[0]);
 
         Input_ReconeixementTipus input = reconeixement.TipusInput(playerInput.devices[0]);
+
+        FindRenderers();
+
 
         if (input == null)
             return;
@@ -64,39 +129,68 @@ public abstract class Input_Icone : MonoBehaviour
 
     void IconeSimple(Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice)
     {
+        if(bindingsComposats != null)
+        {
+            for (int i = 0; i < bindingsComposats.Count; i++)
+            {
+                Destroy(bindingsComposats[i]);
+            }
+        }
+       
+
         Inputs_Utils.Icone icone = input.GetIcone(accio, inputDevice);
 
-        binding.GetComponent<SpriteRenderer>()?.Sprite(icone.icone);
-        if (fondo != null) fondo.GetComponent<SpriteRenderer>()?.Sprite(icone.fondo);
-        binding.GetComponent<Image>()?.Sprite(icone.icone);
-        if (fondo != null) fondo.GetComponent<Image>()?.Sprite(icone.fondo);
+        SetEnableBinding = true;
+        SetSpriteBinding = icone.icone;
+        SetSpriteFondo = icone.fondo;
+        SetSizeFondo = Vector3.one;
     }
     void IconeComposte(Input_ReconeixementTipus input, InputAction accio)
     {
+        if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
+
+        //Neteja
+        SetSpriteBinding = null;
+        SetEnableBinding = false;
+        //Busca icones
         Inputs_Utils.Icone[] icones = input.GetIconeComposte(accio);
+
+        //Crea una imatge per cada icone
         for (int i = 0; i < icones.Length; i++)
         {
-            Debug.Log(icones[i].icone.name);
+            GameObject iconeComposada = new GameObject();
+            bindingsComposats.Add(iconeComposada);
+
+            //posicionar
+            iconeComposada.transform.SetParent(transform);
+            iconeComposada.transform.localPosition = PosicioPerIndex(i);
+            iconeComposada.transform.localScale = Vector3.one * 0.2f;
+
+            Image image = iconeComposada.AddComponent<Image>();
+            image.sprite = icones[i].icone;
+            image.color = GetColorBinding;
+
         }
+        SetSpriteFondo = input.fondoComposat;
+        SetSizeFondo = Vector3.one * 1.4f;
+
     }
 
-    private void OnDisable()
+    Vector3 PosicioPerIndex(int i)
     {
-        //if (texte != null) texte.StringChanged -= ActualitzarEtiqueta;
-        //if (fonts != null) fonts.AssetChanged -= ActualitzarFont;
-    }
-
-    void ActualitzarEtiqueta(string s)
-    {
-        etiqueta.GetComponent<TMP_Text>()?.SetText(s);
-    }
-    void ActualitzarFont(TMP_FontAsset s)
-    {
-        if(s == null)
+        switch (i)
         {
-            Debug.LogError("Error al carregar asset");
+            case 0:
+                return transform.up * 9.7f;
+            case 1:
+                return transform.up * -8.3f;
+            case 2:
+                return transform.up * -8.3f + transform.right * -18;
+            case 3:
+                return transform.up * -8.3f + transform.right * 18;
+            default:
+                return Vector3.zero;
         }
-        etiqueta.GetComponent<TMP_Text>().font = s;
     }
 
     void Resetejar(InputUser inputUser, InputUserChange inputUserChange, InputDevice inputDevice)
@@ -108,11 +202,3 @@ public abstract class Input_Icone : MonoBehaviour
         }
     }
 }
-
-public static class ExtensionsSprite
-{
-    public static void Sprite(this SpriteRenderer spriteRenderer, Sprite sprite) { if (spriteRenderer != null) spriteRenderer.sprite = sprite; }
-    public static void Sprite(this Image image, Sprite sprite) { if (image != null) image.sprite = sprite; }
-}
-
-
