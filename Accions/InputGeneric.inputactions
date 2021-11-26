@@ -508,6 +508,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SubmenuEsquerra",
+                    "type": "Button",
+                    "id": "c82af49a-1d50-4f73-af43-6365ae8483b8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SubmenuDreta",
+                    "type": "Button",
+                    "id": "a90c477e-6cfe-43d5-8945-d09ae34cb222",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -695,6 +711,50 @@
                     "processors": "",
                     "groups": "Switch",
                     "action": "Enderrera",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "99157ecd-9227-4bbb-8a7c-1181a5fd60d1",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "SubmenuDreta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "25afb1e9-9e58-47e2-8c3d-2e306bd698d0",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SubmenuDreta",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "be39f2e4-5be6-4bbb-bb74-7f8c9c0ef2b9",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "SubmenuEsquerra",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36f0a8fe-9917-4d09-bf47-4fc403bdfc6f",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "SubmenuEsquerra",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
