@@ -11,7 +11,8 @@
                     "id": "6430be3e-df8e-4e95-a7af-e108ee9b8fde",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press(behavior=2)"
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "AccioSecundaria",
@@ -19,7 +20,8 @@
                     "id": "f9126289-cf46-4fd0-b94b-1be9c2d89fa2",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Moviment",
@@ -27,7 +29,8 @@
                     "id": "7ab82112-ea6d-4109-9039-6866f50aa774",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Visio",
@@ -35,7 +38,8 @@
                     "id": "38ae74b9-af5d-45d6-b378-f60303a4e41a",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Pausa",
@@ -43,7 +47,8 @@
                     "id": "09ed5eae-6d9e-40fb-b8e0-2f87a6e15878",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Interactuar",
@@ -51,7 +56,8 @@
                     "id": "be8870f2-e1c8-4eb7-9f53-e93a0a46cbb5",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Reconeixement_TeclatRatoli",
@@ -59,7 +65,8 @@
                     "id": "2e69adc5-4508-47ac-8dee-61d79655b573",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Reconeixement_Ps",
@@ -67,7 +74,8 @@
                     "id": "841f2f72-0810-4657-ba2d-6d4a3412aae4",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Reconeixement_Switch",
@@ -75,7 +83,8 @@
                     "id": "4db1b4db-a405-4b30-95bf-a2890f28a1ed",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Reconeixement_Xbox",
@@ -83,7 +92,8 @@
                     "id": "1800fbef-d1a1-41d9-b368-0fa4434d2a15",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Reconeixement_Tactil",
@@ -91,7 +101,8 @@
                     "id": "b93096d6-7844-4052-abe7-aa804a130c62",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Seleccionar",
@@ -99,7 +110,8 @@
                     "id": "e24e334a-f12e-4d97-af73-cdee9f14c225",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Desseleccionar",
@@ -107,7 +119,8 @@
                     "id": "54196ad1-39a9-4bf5-a7fa-af91913b0b05",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Reconeixement",
@@ -115,7 +128,8 @@
                     "id": "e8b59bdb-776e-428d-b86b-a100240a6a75",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Prova",
@@ -123,7 +137,8 @@
                     "id": "9f1acf09-9710-410d-bc3f-2d88f7cce439",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -491,7 +506,17 @@
                     "id": "fbeb17fe-6866-4bf0-903f-e498f8fd4c31",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Pausa",
+                    "type": "Button",
+                    "id": "05ab9136-f0e6-4de6-92be-3bf44d169f08",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Seleccionar",
@@ -499,7 +524,8 @@
                     "id": "35dba629-21ef-4ec8-adc5-4d0e1da79ac9",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Enderrera",
@@ -507,7 +533,8 @@
                     "id": "500e2d70-e733-4da6-9b4f-92f589f1c2e9",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SubmenuEsquerra",
@@ -515,7 +542,8 @@
                     "id": "c82af49a-1d50-4f73-af43-6365ae8483b8",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "SubmenuDreta",
@@ -523,7 +551,8 @@
                     "id": "a90c477e-6cfe-43d5-8945-d09ae34cb222",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -755,6 +784,39 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "SubmenuEsquerra",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a228df00-7d6c-4181-8000-1d21f98eb9b4",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli;Gamepad;Tactil;PlayStation;Xbox;Switch",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8e916b1b-3d7e-4823-abdc-cac1711673e8",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "323a6d73-d636-44fa-b474-2e2331d84294",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

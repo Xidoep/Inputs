@@ -7,18 +7,24 @@ using UnityEngine.InputSystem;
 [SelectionBase]
 public class Input_EsdevenimentPerBinding : MonoBehaviour
 {
-    public InputActionReference escoltador;
+    public InputActionReference[] escoltadors;
     public UnityEvent OnInteractuar;
 
 
     private void OnEnable()
     {
-        escoltador.action.performed += Interactuar;
+        for (int i = 0; i < escoltadors.Length; i++)
+        {
+            escoltadors[i].action.performed += Interactuar;
+        }
     }
 
     private void OnDisable()
     {
-        escoltador.action.performed -= Interactuar;
+        for (int i = 0; i < escoltadors.Length; i++)
+        {
+            escoltadors[i].action.performed -= Interactuar;
+        }
     }
 
 
