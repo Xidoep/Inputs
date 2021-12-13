@@ -339,13 +339,13 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
             // If it's a part binding, show the name of the part in the UI.
             var partName = default(string);
             if (action.bindings[bindingIndex].isPartOfComposite)
-                partName = $"'{action.bindings[bindingIndex].name}' ";
+                partName = action.bindings[bindingIndex].name;
 
             // Bring up rebind overlay, if we have one.
             if (m_RebindText != null)
             {
                 //---(XIDO)
-                m_RebindText.GetComponent<UI_ArgumentRebinding>().Argument = !string.IsNullOrEmpty(partName) ? partName : "";
+                m_RebindText.GetComponent<UI_ArgumentRebinding>().Argument = !string.IsNullOrEmpty(partName) ? $"'{partName}' " : "";
 
                 /*var text = !string.IsNullOrEmpty(m_RebindOperation.expectedControlType)
                     ? $"{partName}Waiting for {m_RebindOperation.expectedControlType} input..."
