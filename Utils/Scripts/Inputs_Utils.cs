@@ -9,7 +9,12 @@ public static class Inputs_Utils
 {
     static bool iguals;
     static int index;
-    public static bool GetBool(this InputActionReference actionReference) => actionReference.action.ReadValue<float>() > 0.1f;
+    //public static bool GetBool(this InputActionReference actionReference) => actionReference.action.ReadValue<float>() > 0.1f;
+    public static bool GetBool(this InputActionReference actionReference) 
+    {
+        Debug.Log(actionReference.action.ReadValue<float>());
+        return actionReference.action.ReadValue<float>() > 0.1f;
+    } 
     public static float GetFloat(this InputActionReference actionReference) => actionReference.action.ReadValue<float>();
     public static Vector2 GetVector2(this InputActionReference actionReference) => actionReference.action.ReadValue<Vector2>();
 
