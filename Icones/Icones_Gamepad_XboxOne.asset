@@ -12,75 +12,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623131aeb68fdf649bc29995bd20e5ef, type: 3}
   m_Name: Icones_Gamepad_XboxOne
   m_EditorClassIdentifier: 
-  Esquema: Xbox
   paths:
   - XInputController
-  plataformes: 1b000000
   botons:
-  - sprite: {fileID: 21300000, guid: d2c61688609e7ce47824bd0dd5369096, type: 3}
+  - path: dpad/up
+    sprite: {fileID: 21300000, guid: d2c61688609e7ce47824bd0dd5369096, type: 3}
     fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
-    path: dpad/up
     boto: 0
-  - sprite: {fileID: 21300000, guid: 8661fa24106fc434e8853434d99812e5, type: 3}
+  - path: dpad/down
+    sprite: {fileID: 21300000, guid: 8661fa24106fc434e8853434d99812e5, type: 3}
     fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
-    path: dpad/down
     boto: 1
-  - sprite: {fileID: 21300000, guid: a07691336b1d68b48bc4d0ab7e3eaec3, type: 3}
+  - path: dpad/left
+    sprite: {fileID: 21300000, guid: a07691336b1d68b48bc4d0ab7e3eaec3, type: 3}
     fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
-    path: dpad/left
     boto: 2
-  - sprite: {fileID: 21300000, guid: a80f8a83d40d8924db440dda77ec7db4, type: 3}
+  - path: dpad/right
+    sprite: {fileID: 21300000, guid: a80f8a83d40d8924db440dda77ec7db4, type: 3}
     fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
-    path: dpad/right
     boto: 3
-  - sprite: {fileID: 21300000, guid: 135f4a883282a664ab1f812965b7e0ab, type: 3}
+  - path: buttonNorth
+    sprite: {fileID: 21300000, guid: 135f4a883282a664ab1f812965b7e0ab, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    path: buttonNorth
     boto: 4
-  - sprite: {fileID: 21300000, guid: 35af9b02d60fff848a17d66d3a2c8840, type: 3}
+  - path: buttonEast
+    sprite: {fileID: 21300000, guid: 35af9b02d60fff848a17d66d3a2c8840, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    path: buttonEast
     boto: 5
-  - sprite: {fileID: 21300000, guid: 6ca94dbb643eed74e969202d4aa40f30, type: 3}
+  - path: buttonSouth
+    sprite: {fileID: 21300000, guid: 6ca94dbb643eed74e969202d4aa40f30, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    path: buttonSouth
     boto: 6
-  - sprite: {fileID: 21300000, guid: 671d8cd7b1a0952438aca9dbe7960aa4, type: 3}
+  - path: buttonWest
+    sprite: {fileID: 21300000, guid: 671d8cd7b1a0952438aca9dbe7960aa4, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    path: buttonWest
     boto: 7
-  - sprite: {fileID: 21300000, guid: abde0f4133df66943b432e236b0e960e, type: 3}
+  - path: leftStick
+    sprite: {fileID: 21300000, guid: abde0f4133df66943b432e236b0e960e, type: 3}
     fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
-    path: leftStick
     boto: 8
-  - sprite: {fileID: 21300000, guid: da5eaf6b0ab5a5048b480c503d7379bf, type: 3}
+  - path: rightStick
+    sprite: {fileID: 21300000, guid: da5eaf6b0ab5a5048b480c503d7379bf, type: 3}
     fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
-    path: rightStick
     boto: 9
-  - sprite: {fileID: 21300000, guid: 5ee2ec240b598374e8b96e345ed7acb1, type: 3}
+  - path: leftShoulder
+    sprite: {fileID: 21300000, guid: 5ee2ec240b598374e8b96e345ed7acb1, type: 3}
     fondo: {fileID: 21300000, guid: d4ee7d18acd1fac4dbd3e9054654f21b, type: 3}
-    path: leftShoulder
     boto: 10
-  - sprite: {fileID: 21300000, guid: d265e985cbf39ba4a89015a6f38be78f, type: 3}
+  - path: rightShoulder
+    sprite: {fileID: 21300000, guid: d265e985cbf39ba4a89015a6f38be78f, type: 3}
     fondo: {fileID: 21300000, guid: f0b4f9e2e0ca76d4d86b5ada315b3ac5, type: 3}
-    path: rightShoulder
     boto: 11
-  - sprite: {fileID: 21300000, guid: 645d05ffdde9ed14ab5a616b09f8ab8b, type: 3}
+  - path: start
+    sprite: {fileID: 21300000, guid: 645d05ffdde9ed14ab5a616b09f8ab8b, type: 3}
     fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
-    path: start
     boto: 12
-  - sprite: {fileID: 21300000, guid: 1b594a8d1931f794498a50456364edbc, type: 3}
+  - path: select
+    sprite: {fileID: 21300000, guid: 1b594a8d1931f794498a50456364edbc, type: 3}
     fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
-    path: select
     boto: 13
-  - sprite: {fileID: 21300000, guid: 9b62807b4e69aa44d82487f2c918294c, type: 3}
+  - path: leftTrigger
+    sprite: {fileID: 21300000, guid: 9b62807b4e69aa44d82487f2c918294c, type: 3}
     fondo: {fileID: 21300000, guid: 68abd5e59e8e9ce4182aaa367d762a4f, type: 3}
-    path: leftTrigger
     boto: 32
-  - sprite: {fileID: 21300000, guid: 543737cab02fb844aacd803350623dbb, type: 3}
+  - path: rightTrigger
+    sprite: {fileID: 21300000, guid: 543737cab02fb844aacd803350623dbb, type: 3}
     fondo: {fileID: 21300000, guid: dbb6efc7354d0ca47b57ae96a73b077a, type: 3}
-    path: rightTrigger
     boto: 33
+  - path: dpad
+    sprite: {fileID: 21300000, guid: e77362b8233193a49a86503d99aab5ba, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+    boto: 0
   tecles: []
   ratoli: []
   tactil: []
+  fondoComposat: {fileID: 0}

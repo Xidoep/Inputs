@@ -79,6 +79,10 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: 543737cab02fb844aacd803350623dbb, type: 3}
     fondo: {fileID: 21300000, guid: dbb6efc7354d0ca47b57ae96a73b077a, type: 3}
     boto: 33
+  - path: dpad
+    sprite: {fileID: 21300000, guid: e77362b8233193a49a86503d99aab5ba, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+    boto: 0
   tecles: []
   ratoli: []
   tactil: []
