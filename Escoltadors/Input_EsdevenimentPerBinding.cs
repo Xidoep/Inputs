@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using XS_Utils;
 
 [SelectionBase]
 public class Input_EsdevenimentPerBinding : MonoBehaviour
 {
-    public InputActionReference[] escoltadors;
-    public UnityEvent OnInteractuar;
-
+    [SerializeField] InputActionReference[] escoltadors;
+    [SerializeField] UnityEvent OnInteractuar;
+    [SerializeField] bool multipleInteractions = false;
+    bool interacted = false;
 
     private void OnEnable()
     {
@@ -31,8 +33,20 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
 
     public void Interactuar(InputAction.CallbackContext context)
     {
-        Debug.Log($"Interactuar desde {this.gameObject.name}");
+        if (interacted)
+        {
+            Debugar.Log("It has been interacted once and have multipleInteractions value sets as false");
+            return;
+        }
+
+        Debugar.Log($"Interactuar desde {this.gameObject.name}");
         if (context.phase == InputActionPhase.Performed) OnInteractuar.Invoke();
+
+
+        if (!multipleInteractions)
+            interacted = true;
     }
+
+    
 
 }
