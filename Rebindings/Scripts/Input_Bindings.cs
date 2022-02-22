@@ -12,9 +12,13 @@ public class Input_Bindings : ScriptableObject
     public static Input_Bindings Instance;
     [SerializeField] Input_BindingsGuardats guardats;
 
-    [ContextMenu("Carregar")]
+    private void OnEnable()
+    {
+        Carregar();
+    }
     public void Carregar()
     {
+        Debugar.Log("Carregar Bindings");
         for (int a = 0; a < inputActions.actionMaps.Count; a++)
         {
             foreach (var action in inputActions.actionMaps[a].actions)

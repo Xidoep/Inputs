@@ -14,6 +14,18 @@ public class Input_Reconeixement : ScriptableObject
     public Input_ReconeixementTipus actual;
     public List<Input_ReconeixementTipus> inputs;
 
+    private void OnEnable()
+    {
+        ComprovarPlataforma();
+    }
+
+    void TeclatRatoli() => actual = inputs[0];
+    void GamepadGeneric() => actual = inputs[1];
+    void Tactil() => actual = inputs[2];
+    void PS() => actual = inputs[3];
+    void Switch() => actual = inputs[4];
+    void Xbox() => actual = inputs[5];
+
     public void ComprovarPlataforma()
     {
         Debugar.Log("Input x plataforma");
@@ -21,45 +33,41 @@ public class Input_Reconeixement : ScriptableObject
         {
             case RuntimePlatform.OSXEditor:
             case RuntimePlatform.OSXPlayer:
-                actual = inputs[6];//iOS
-                break;
             case RuntimePlatform.WindowsPlayer:
             case RuntimePlatform.WindowsEditor:
-                actual = inputs[0];//TeclatRatoli
-                break;
-            case RuntimePlatform.IPhonePlayer:
-                actual = inputs[6];//iOS
-                break;
-            case RuntimePlatform.Android:
-                actual = inputs[2];//Tàctil
-                break;
             case RuntimePlatform.LinuxPlayer:
             case RuntimePlatform.LinuxEditor:
             case RuntimePlatform.WebGLPlayer:
-                actual = inputs[0];//TeclatRatoli
+            case RuntimePlatform.tvOS:
+            case RuntimePlatform.Stadia:
+            case RuntimePlatform.CloudRendering:
+            case RuntimePlatform.EmbeddedLinuxArm64:
+            case RuntimePlatform.EmbeddedLinuxArm32:
+            case RuntimePlatform.EmbeddedLinuxX64:
+            case RuntimePlatform.EmbeddedLinuxX86:
+            case RuntimePlatform.LinuxServer:
+            case RuntimePlatform.WindowsServer:
+            case RuntimePlatform.OSXServer:
+                TeclatRatoli();
+                break;
+            case RuntimePlatform.IPhonePlayer:
+            case RuntimePlatform.Android:
+            case RuntimePlatform.WSAPlayerX86:
+            case RuntimePlatform.WSAPlayerX64:
+            case RuntimePlatform.WSAPlayerARM:
+            case RuntimePlatform.Lumin:
+                Tactil();
                 break;
             case RuntimePlatform.PS4:
             case RuntimePlatform.PS5:
-                actual = inputs[3];//PS4
+                PS();
                 break;
             case RuntimePlatform.XboxOne:
             case RuntimePlatform.GameCoreXboxOne:
-            case RuntimePlatform.GameCoreXboxSeries:
-                actual = inputs[5];//Xbox
-                break;
-            case RuntimePlatform.tvOS:
-                actual = inputs[6];//iOS
+                Xbox();
                 break;
             case RuntimePlatform.Switch:
-                actual = inputs[4];//Switch
-                break;
-            case RuntimePlatform.Lumin: //linux
-            case RuntimePlatform.Stadia: //Posar una UI que es pugui clicar amb el dit o amb el ratolí per tornarse GAMEPAD.
-            case RuntimePlatform.CloudRendering: //Posar una UI que es pugui clicar amb el dit o amb el ratolí per tornarse GAMEPAD.
-                actual = inputs[0];//TeclatRatoli [Possible amb tots els tipus]
-                break;
-            default:
-                actual = inputs[0];//TeclatRatoli
+                Switch();
                 break;
         }
     }
