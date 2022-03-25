@@ -1,0 +1,21 @@
+{
+    "name": "XS.Inputs",
+    "rootNamespace": "",
+    "references": [
+        "GUID:0e27b928aa4d07c46ac4346b2411cb62",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:eec0964c48f6f4e40bc3ec2257ccf8c5",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:d12426c58bac368498b41ebe505f3d35",
+        "GUID:37e030ce89aa5244da079dc58a0a15f8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

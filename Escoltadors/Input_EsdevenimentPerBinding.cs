@@ -13,6 +13,8 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
     [SerializeField] bool multipleInteractions = false;
     bool interacted = false;
 
+    public UnityEvent GetOnInteractuar => OnInteractuar;
+
     private void OnEnable()
     {
         for (int i = 0; i < escoltadors.Length; i++)

@@ -13,20 +13,8 @@ MonoBehaviour:
   m_Name: Bindings_Guardats
   m_EditorClassIdentifier: 
   keys:
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment0
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment1
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment2
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment3
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment4
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayMoviment5
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayCorrer/Deixar0
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplayCorrer/Deixar1
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplaySaltar0
+  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplaySaltar1
   values:
-  - <Gamepad>/leftStick
-  - 2DVector
-  - <Keyboard>/w
-  - <Keyboard>/s
-  - <Keyboard>/a
-  - <Keyboard>/d
   - <Gamepad>/buttonSouth
-  - <Keyboard>/z
+  - <Mouse>/leftButton

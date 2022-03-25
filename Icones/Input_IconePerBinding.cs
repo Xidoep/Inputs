@@ -6,23 +6,26 @@ public class Input_IconePerBinding : Input_Icone
 {
     [Space(10)]
     [SerializeField] InputActionReference inputBinding;
-
     public InputActionReference InputBinding => inputBinding;
 
-    private void OnEnable()
-    {
-        MostrarIcone(inputBinding.action);
-    }
 
-    public void MostrarIcone()
+
+    void OnEnable() 
     {
+        if (inputBinding == null)
+            return;
+
         MostrarIcone(inputBinding.action);
     }
+    
+
+    
+    public void MostrarIcone() => MostrarIcone(inputBinding.action);
+    public void MostrarIcone(InputActionReference inputActionReference) => MostrarIcone(inputActionReference.action);
 
     [ContextMenu("Provar")]
     void Provar()
     {
-
         trobat = false;
         MostrarIcone(inputBinding.action);
     }

@@ -13,10 +13,6 @@ public abstract class Input_Icone : MonoBehaviour
     [SerializeField] GameObject binding;
     [SerializeField] GameObject fondo;
     List<GameObject> bindingsComposats;
-    //[Space(10)]
-    //public GameObject etiqueta;
-    //public LocalizedString texte;
-    //public LocalizedAsset<TMP_FontAsset> fonts;
 
     internal bool trobat = false;
 
@@ -74,18 +70,27 @@ public abstract class Input_Icone : MonoBehaviour
 
     void FindRenderers()
     {
-        bindingImage = binding.GetComponent<Image>();
-        bindingSpriteRenderer = binding.GetComponent<SpriteRenderer>();
+        if (bindingImage == null) bindingImage = binding.GetComponent<Image>();
+        if (bindingImage == null) 
+        {
+            if (bindingSpriteRenderer == null) bindingSpriteRenderer = binding.GetComponent<SpriteRenderer>();
+        }
 
         if (!fondo)
             return;
 
-        fondoImage = fondo.GetComponent<Image>();
-        fondoSpriteRenderer = fondo.GetComponent<SpriteRenderer>();
+        if (fondoImage == null) fondoImage = fondo.GetComponent<Image>();
+        if (fondoImage == null) 
+        {
+            if (fondoSpriteRenderer == null) fondoSpriteRenderer = fondo.GetComponent<SpriteRenderer>();
+        }
     }
 
-    public void MostrarIcone(InputAction accio)
+    protected void MostrarIcone(InputAction accio)
     {
+        if (accio == null)
+            return;
+
         if (trobat)
             return;
 
@@ -172,7 +177,8 @@ public abstract class Input_Icone : MonoBehaviour
 
         }
         SetSpriteFondo = input.fondoComposat;
-        SetSizeFondo = Vector3.one * 1.4f;
+        //SetSizeFondo = Vector3.one * 1.4f;
+        SetSizeFondo = Vector3.one;
 
     }
 

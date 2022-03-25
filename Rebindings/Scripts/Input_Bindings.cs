@@ -14,11 +14,14 @@ public class Input_Bindings : ScriptableObject
 
     private void OnEnable()
     {
+        Debugar.Log("Input_Bindings - OnEnable => Carregar()");
         Carregar();
     }
     public void Carregar()
     {
-        Debugar.Log("Carregar Bindings");
+        if (guardats.Keys.Count == 0)
+            return;
+
         for (int a = 0; a < inputActions.actionMaps.Count; a++)
         {
             foreach (var action in inputActions.actionMaps[a].actions)
@@ -93,8 +96,8 @@ public class Input_Bindings : ScriptableObject
             item.RemoveAllBindingOverrides();
 
         }
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.DeleteKey("rebinds");
+        //PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteKey("rebinds");
         //guardat.Borrar("rebinds");
     }
 
