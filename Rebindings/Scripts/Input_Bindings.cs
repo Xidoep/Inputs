@@ -14,7 +14,7 @@ public class Input_Bindings : ScriptableObject
 
     private void OnEnable()
     {
-        Debugar.Log("Input_Bindings - OnEnable => Carregar()");
+        Debugar.Log("[Input_Bindings] OnEnable => Carregar()");
         Carregar();
     }
     public void Carregar()
@@ -56,7 +56,7 @@ public class Input_Bindings : ScriptableObject
         Debug.Log($"{action.bindings.Count} bindings");
         for (int i = 0; i < action.bindings.Count; i++)
         {
-            Debug.Log($"Binding - {action.actionMap + action.name + i}");
+            Debugar.Log($"Binding - {action.actionMap + action.name + i}");
             //guardat.Set(action.actionMap + action.name + i, action.bindings[i].overridePath);
             if (!guardats.Keys.Contains(action.actionMap + action.name + i))
             {
@@ -66,7 +66,7 @@ public class Input_Bindings : ScriptableObject
             {
                 guardats.Replace(action.actionMap + action.name + i, action.bindings[i].PathOrOverridePath());
             }
-            Debug.Log($"Guardar: {action.actionMap + action.name + i} amb valor {action.bindings[i].PathOrOverridePath()}");
+            Debugar.Log($"Guardar: {action.actionMap + action.name + i} amb valor {action.bindings[i].PathOrOverridePath()}");
            
 
             //PlayerPrefs.SetString(action.actionMap + action.name + i, action.bindings[i].overridePath);
@@ -101,6 +101,10 @@ public class Input_Bindings : ScriptableObject
         //guardat.Borrar("rebinds");
     }
 
+    private void OnValidate()
+    {
+        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
+    }
 }
 
 

@@ -16,6 +16,7 @@ public class Input_Reconeixement : ScriptableObject
 
     private void OnEnable()
     {
+        Debugar.Log("[Input_Reconeixement] OnEnable => ComprovarPlataforma()");
         ComprovarPlataforma();
     }
 
@@ -28,7 +29,6 @@ public class Input_Reconeixement : ScriptableObject
 
     public void ComprovarPlataforma()
     {
-        Debugar.Log("Input x plataforma");
         switch (Application.platform)
         {
             case RuntimePlatform.OSXEditor:

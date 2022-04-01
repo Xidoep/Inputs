@@ -3,33 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using XS_Utils;
-
 public class InputsProves : MonoBehaviour
 {
-    [SerializeField] UI_Contextual contextual;
+    [Tooltip("This is automatically setted")][SerializeField] UI_Contextual contextual;
     [SerializeField] InputActionReference inputActionReference;
-    [SerializeField] Collider[] colliders;
-    bool mostrat;
-    private void OnTriggerEnter(Collider other)
-    {
-        contextual.Show(inputActionReference);
-    }
+    [SerializeField] LayerMask layer;
+    Collider[] colliders;
+    [SerializeField] float radius;
 
-    private void OnTriggerExit(Collider other)
+    bool mostrat = false;
+    int overlaps;
+
+    private void OnEnable()
     {
-        contextual.Hide(inputActionReference);
+        colliders = new Collider[1];
     }
 
     private void Update()
     {
-        colliders = XS_Physics.CollidersSphere(transform.position, 3);
+        overlaps = Physics.OverlapSphereNonAlloc(transform.position, radius, colliders, layer);
 
-        if (colliders.Length > 0 && !mostrat) 
+        //colliders = XS_Physics.CollidersSphere(transform.position, radius);
+
+        if (overlaps > 0) 
         {
             mostrat = true;
             contextual.Show(inputActionReference);
         }
-        else if(colliders.Length == 0 && mostrat)
+        else if(overlaps == 0)
         {
             mostrat = false;
             contextual.Hide(inputActionReference);
@@ -38,7 +39,12 @@ public class InputsProves : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = new Color(1, 0, 0, .5f);
-        Gizmos.DrawSphere(transform.position, 3f);
+        Gizmos.color = new Color(0, 1, 0, .5f);
+        Gizmos.DrawSphere(transform.position, radius);
+    }
+
+    private void OnValidate()
+    {
+        contextual = XS_Editor.LoadAssetAtPath<UI_Contextual>("Assets/XidoStudio/Inputs/Contextual/Basics/Contextual.asset");
     }
 }

@@ -10,30 +10,35 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
 {
     [SerializeField] InputActionReference[] escoltadors;
     [SerializeField] UnityEvent OnInteractuar;
-    [SerializeField] bool multipleInteractions = false;
+    [Tooltip("If this is set as FALSE, a flanc triggers when the action if performed, and prevent to interact it again. Unless you disable and re-enable the object again")][SerializeField] bool multipleInteractions = false;
+    [Tooltip("It delays the registration on action performed on Enable")][SerializeField] float delayRegistration = 0;
+    
     bool interacted = false;
-
-    public UnityEvent GetOnInteractuar => OnInteractuar;
+    bool registrated = false;
 
     private void OnEnable()
     {
-        for (int i = 0; i < escoltadors.Length; i++)
+        interacted = false;
+        registrated = false;
+        if (delayRegistration == 0)
         {
-            escoltadors[i].action.performed += Interactuar;
+            RegistrateInteraction();
+            return;
         }
+
+        StartCoroutine(RegistrateInteractionDelayed());
     }
 
     private void OnDisable()
     {
-        for (int i = 0; i < escoltadors.Length; i++)
-        {
-            escoltadors[i].action.performed -= Interactuar;
-        }
+        UnregistrateInteration();
     }
 
 
 
-    public void Interactuar(InputAction.CallbackContext context)
+
+
+    void Interactuar(InputAction.CallbackContext context)
     {
         if (interacted)
         {
@@ -49,6 +54,42 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
             interacted = true;
     }
 
-    
+
+
+
+
+    void RegistrateInteraction()
+    {
+        for (int i = 0; i < escoltadors.Length; i++)
+        {
+            escoltadors[i].action.performed += Interactuar;
+        }
+        registrated = true;
+    }
+    IEnumerator RegistrateInteractionDelayed()
+    {
+        yield return new WaitForSeconds(delayRegistration);
+        RegistrateInteraction();
+    }
+
+
+
+    void UnregistrateInteration()
+    {
+        if (!registrated)
+            return;
+
+        for (int i = 0; i < escoltadors.Length; i++)
+        {
+            escoltadors[i].action.performed -= Interactuar;
+        }
+    }
+
+
+
+    private void OnValidate()
+    {
+        if (delayRegistration < 0) delayRegistration = 0;
+    }
 
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using XS_Utils;
 
 [CreateAssetMenu(menuName = "Xido Studio/Menu/UI Contextual", fileName = "Contextual")]
 public class UI_Contextual : ScriptableObject
@@ -9,7 +10,7 @@ public class UI_Contextual : ScriptableObject
     [System.Serializable]
     public struct Icone
     {
-        public GameObject icone;
+        public GameObject binding;
         public InputActionReference action;
     }
 
@@ -19,7 +20,7 @@ public class UI_Contextual : ScriptableObject
 
     List<Icone> icones;
 
-    //public List<InputActionReference> inputActions;
+    public List<InputActionReference> inputActions;
 
     public void OnEnable()
     {
@@ -34,44 +35,51 @@ public class UI_Contextual : ScriptableObject
 
     public void Show(InputActionReference action)
     {
-        if (parent == null) 
+        //Check for if the input already was created.
+        for (int i = 0; i < icones.Count; i++)
         {
-            parent = Instantiate(prefabContextual).transform.GetChild(0);
+            if (icones[i].action == action) 
+            {
+                Debugar.Log("IS REPITED!");
+                return;
+            } 
         }
 
-        //if (inputActions == null) inputActions = new List<InputActionReference>();
-        //inputActions.Add(inputAction);
-        GameObject icone = Instantiate(prefabBinding, parent);
-        icone.GetComponent<Input_IconePerBinding>()?.MostrarIcone(action);
-        
-        if (icones == null) icones = new List<Icone>();
-        icones.Add(new Icone() 
+        //Check if parents exists. It does it after chechink the icone, to not do a null comparation on update.
+        if (parent == null) parent = Instantiate(prefabContextual).transform.GetChild(0);
+
+        //Create de binding
+        GameObject binding = Instantiate(prefabBinding, parent);
+        binding.GetComponent<Input_IconePerBinding>()?.MostrarIcone(action);
+
+        //Adds the icon to the list.
+        icones.Add(new Icone()
         {
-            icone = icone,
+            binding = binding,
             action = action
         });
-        
+ 
     }
 
     public void Hide(InputActionReference inputAction)
     {
-        bool trobat = false;
-        int index = 0;
-        while(index < icones.Count && !trobat)
+        Debugar.Log("Hide");
+        for (int i = 0; i < icones.Count; i++)
         {
-            if (icones[index].action == inputAction) trobat = true;
+            if (icones[i].action == inputAction) 
+            {
+                Destroy(icones[i].binding);
+                icones.RemoveAt(i);
+
+                if (icones.Count != 0)
+                    return;
+
+                Destroy(parent.GetComponentInParent<Canvas>().gameObject);
+                parent = null;
+                break;
+            } 
         }
 
-        if (!trobat) 
-            return;
-
-        Destroy(icones[index].icone);
-        icones.RemoveAt(index);
-
-        if (icones.Count != 0)
-            return;
-
-        Destroy(parent.GetComponentInParent<Canvas>().gameObject);
-
     }
+
 }
