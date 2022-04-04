@@ -5,6 +5,9 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using XS_Utils;
 
+/// <summary>
+/// Fires an event when an input action is performed.
+/// </summary>
 [SelectionBase]
 public class Input_EsdevenimentPerBinding : MonoBehaviour
 {

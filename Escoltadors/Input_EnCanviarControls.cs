@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 using XS_Utils;
 
+/// <summary>
+/// It fires an event when the actual device changes. Super usefull for UI, and hide/show things on diferent input modes.
+/// </summary>
 public class Input_EnCanviarControls : MonoBehaviour
 {
     [System.Serializable]
