@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using XS_Utils;
@@ -11,7 +12,10 @@ using XS_Utils;
 public class Input_EsdevenimentContextualPerBinding : MonoBehaviour
 {
     [Tooltip("This is automatically setted")] [SerializeField] UI_Contextual contextual;
+    [Space(20)]
     [SerializeField] InputActionReference inputActionReference;
+    [SerializeField] LocalizedString localizedString;
+    [Space(10)]
     [SerializeField] LayerMask layer;
     [SerializeField] UnityEvent OnInteractuar;
     Collider[] colliders;
@@ -29,7 +33,7 @@ public class Input_EsdevenimentContextualPerBinding : MonoBehaviour
 
         if (overlaps > 0)
         {
-            contextual.Show(inputActionReference);
+            contextual.Show(inputActionReference, localizedString);
             inputActionReference.action.performed += Interactuar;
         }
         else if (overlaps == 0)

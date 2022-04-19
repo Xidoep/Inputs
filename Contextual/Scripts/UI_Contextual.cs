@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Localization;
+using TMPro;
 using UnityEngine.InputSystem;
 using XS_Utils;
 
@@ -51,7 +53,6 @@ public class UI_Contextual : ScriptableObject
         //Create de binding
         GameObject binding = Instantiate(prefabBinding, parent);
         binding.GetComponent<Input_IconePerBinding>()?.MostrarIcone(action);
-
         //Adds the icon to the list.
         icones.Add(new Icone()
         {
@@ -59,6 +60,35 @@ public class UI_Contextual : ScriptableObject
             action = action
         });
  
+    }
+    public void Show(InputActionReference action, LocalizedString localizedString)
+    {
+        //Check for if the input already was created.
+        for (int i = 0; i < icones.Count; i++)
+        {
+            if (icones[i].action == action)
+            {
+                Debugar.Log("IS REPITED!");
+                return;
+            }
+        }
+
+        //Check if parents exists. It does it after chechink the icone, to not do a null comparation on update.
+        if (parent == null) parent = Instantiate(prefabContextual).transform.GetChild(0);
+
+        //Create de binding
+        GameObject binding = Instantiate(prefabBinding, parent);
+        binding.GetComponent<Input_IconePerBinding>()?.MostrarIcone(action);
+        TMP_Text text = binding.GetComponentInChildren<TMP_Text>();
+        localizedString.WriteOn(text);
+
+        //Adds the icon to the list.
+        icones.Add(new Icone()
+        {
+            binding = binding,
+            action = action
+        });
+
     }
 
     public void Hide(InputActionReference inputAction)
