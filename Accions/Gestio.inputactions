@@ -40,6 +40,15 @@
                     "processors": "NormalizeVector2",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Rotate Keyboard",
+                    "type": "Value",
+                    "id": "52f5377a-2ce1-4d7a-8e80-786c0f3061be",
+                    "expectedControlType": "Axis",
+                    "processors": "Normalize(min=-1,max=1)",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -167,7 +176,7 @@
                 {
                     "name": "positive",
                     "id": "2feb919a-2b82-4ffd-bb9d-9863e2aa6aec",
-                    "path": "<Keyboard>/r",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -178,7 +187,7 @@
                 {
                     "name": "negative",
                     "id": "66f015ba-4947-4e79-8ee6-cbe9f922f796",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/r",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -207,6 +216,39 @@
                     "action": "Zoom Mouse",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "fb4822d4-2b46-40c9-a70b-3c4c7d55f742",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate Keyboard",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "f4cf59b4-5055-474d-b8af-e5a58dc1cb9f",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate Keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "ed8f402b-05f5-4e64-bab3-1ef3c8e6101b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate Keyboard",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }
