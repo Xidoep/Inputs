@@ -49,6 +49,24 @@
                     "processors": "Normalize(min=-1,max=1)",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Rotate Mouse Activation",
+                    "type": "Button",
+                    "id": "e9313dde-fdf1-43dd-a950-183c70c7aa11",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Rotate Mouse",
+                    "type": "Value",
+                    "id": "1d5a57de-1af8-4d1d-b557-ba23f7153bf4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -249,6 +267,28 @@
                     "action": "Rotate Keyboard",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "f723add7-d325-4b0b-bc53-074bf39a6202",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate Mouse Activation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba1a9460-a37a-41d5-8ba7-d1ea9450a140",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "ScaleVector2",
+                    "groups": "",
+                    "action": "Rotate Mouse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
