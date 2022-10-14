@@ -1,17 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using XS_Utils;
 
-/// <summary>
-/// Fires an event when an input action is performed.
-/// </summary>
 [SelectionBase]
-public class Input_EsdevenimentPerBinding : MonoBehaviour
+public class Input_EsdevenimentPerInput : MonoBehaviour
 {
-    [SerializeField] InputActionReference[] escoltadors;
+    [SerializeField] InputAction escoltador;
     [SerializeField] UnityEvent OnInteractuar;
 
     [Tooltip("If this is set as FALSE, a flanc triggers when the action if performed, and prevent to interact it again. Unless you disable and re-enable the object again")]
@@ -19,7 +16,7 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
 
     [Tooltip("It delays the registration on action performed on Enable")]
     [SerializeField] float delayRegistration = 0;
-    
+
     bool interacted = false;
     bool registrated = false;
 
@@ -67,10 +64,7 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
 
     void RegistrateInteraction()
     {
-        for (int i = 0; i < escoltadors.Length; i++)
-        {
-            escoltadors[i].action.performed += Interactuar;
-        }
+        escoltador.performed += Interactuar;
         registrated = true;
     }
     IEnumerator RegistrateInteractionDelayed()
@@ -86,10 +80,7 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
         if (!registrated)
             return;
 
-        for (int i = 0; i < escoltadors.Length; i++)
-        {
-            escoltadors[i].action.performed -= Interactuar;
-        }
+        escoltador.performed -= Interactuar;
     }
 
 
