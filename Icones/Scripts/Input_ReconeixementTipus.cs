@@ -59,5 +59,5 @@ public enum Input_TactilInteraccions
 
 public enum Input_MouseInteraccions
 {
-    cap, posicio, delta
+    cap, position, delta
 }

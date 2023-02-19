@@ -113,10 +113,15 @@ public abstract class Input_Icone : MonoBehaviour
         if (input.paths[0] == "Keyboard")
         {
             
-            if (accio.EsComposada(playerInput.devices[0]))
+            if (accio.Es2D(playerInput.devices[0]))
             {
-                Debug.Log("Composada");
-                IconeComposte(input, accio);
+                Debug.Log("2D");
+                Icone2D(input, accio);
+            }
+            else if (accio.Es1D(playerInput.devices[0]))
+            {
+                Debug.Log("1D");
+                Icone1D(input, accio);
             }
             else
             {
@@ -150,7 +155,7 @@ public abstract class Input_Icone : MonoBehaviour
         SetSpriteFondo = icone.fondo;
         SetSizeFondo = Vector3.one;
     }
-    void IconeComposte(Input_ReconeixementTipus input, InputAction accio)
+    void Icone2D(Input_ReconeixementTipus input, InputAction accio)
     {
         if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
 
@@ -158,7 +163,7 @@ public abstract class Input_Icone : MonoBehaviour
         SetSpriteBinding = null;
         SetEnableBinding = false;
         //Busca icones
-        Inputs_Utils.Icone[] icones = input.GetIconeComposte(accio);
+        Inputs_Utils.Icone[] icones = input.GetIcone2D(accio);
 
         //Crea una imatge per cada icone
         for (int i = 0; i < icones.Length; i++)
@@ -168,7 +173,7 @@ public abstract class Input_Icone : MonoBehaviour
 
             //posicionar
             iconeComposada.transform.SetParent(transform);
-            iconeComposada.transform.localPosition = PosicioPerIndex(i);
+            iconeComposada.transform.localPosition = Posicio2D_PerIndex(i);
             iconeComposada.transform.localScale = Vector3.one * 0.2f;
 
             Image image = iconeComposada.AddComponent<Image>();
@@ -179,10 +184,41 @@ public abstract class Input_Icone : MonoBehaviour
         SetSpriteFondo = input.fondoComposat;
         //SetSizeFondo = Vector3.one * 1.4f;
         SetSizeFondo = Vector3.one;
-
     }
 
-    Vector3 PosicioPerIndex(int i)
+    void Icone1D(Input_ReconeixementTipus input, InputAction accio)
+    {
+
+        if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
+
+        //Neteja
+        SetSpriteBinding = null;
+        SetEnableBinding = false;
+        //Busca icones
+        Inputs_Utils.Icone[] icones = input.GetIcone1D(accio);
+
+        //Crea una imatge per cada icone
+        for (int i = 0; i < icones.Length; i++)
+        {
+            GameObject iconeComposada = new GameObject();
+            bindingsComposats.Add(iconeComposada);
+
+            //posicionar
+            iconeComposada.transform.SetParent(transform);
+            iconeComposada.transform.localPosition = Posicio1D_PerIndex(i);
+            iconeComposada.transform.localScale = Vector3.one * 0.3f;
+
+            Image image = iconeComposada.AddComponent<Image>();
+            image.sprite = icones[i].icone;
+            image.color = GetColorBinding;
+
+        }
+        SetSpriteFondo = input.fondoComposat;
+        //SetSizeFondo = Vector3.one * 1.4f;
+        SetSizeFondo = Vector3.one;
+    }
+
+    Vector3 Posicio2D_PerIndex(int i)
     {
         switch (i)
         {
@@ -193,6 +229,18 @@ public abstract class Input_Icone : MonoBehaviour
             case 2:
                 return transform.up * -8.3f + transform.right * -18;
             case 3:
+                return transform.up * -8.3f + transform.right * 18;
+            default:
+                return Vector3.zero;
+        }
+    }
+    Vector3 Posicio1D_PerIndex(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                return transform.up * -8.3f + transform.right * -18;
+            case 1:
                 return transform.up * -8.3f + transform.right * 18;
             default:
                 return Vector3.zero;

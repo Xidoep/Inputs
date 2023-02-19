@@ -2,7 +2,7 @@
     "name": "Gestio",
     "maps": [
         {
-            "name": "Navegacio",
+            "name": "GamePlay",
             "id": "1f3ad2f3-de8c-4a0b-b5dc-430c298d351c",
             "actions": [
                 {

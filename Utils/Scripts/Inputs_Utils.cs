@@ -22,7 +22,7 @@ public static class Inputs_Utils
     //public static Vector2 GetVector2(this InputActionReference actionReference) => actionReference.action.ReadValue<Vector2>();
 
     const string KEY_2DVECTOR = "2DVector";
-
+    const string KEY_1DVECTOR = "1DAxis";
 
     [Serializable]
     public struct Icone
@@ -98,20 +98,30 @@ public static class Inputs_Utils
         }
         return input;
     }
-    public static bool EsComposada(this InputAction accio, InputDevice inputDevice)
+    public static bool Es2D(this InputAction accio, InputDevice inputDevice)
     {
-        bool composada = false;
         for (int b = 0; b < accio.bindings.Count; b++)
         {
-            composada = accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR;
-            return composada;
+            if (accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR)
+                return true;
         }
-
-
-        return composada;
+        return false;
+    }
+    public static bool Es1D(this InputAction accio, InputDevice inputDevice)
+    {
+        for (int b = 0; b < accio.bindings.Count; b++)
+        {
+            if (accio.bindings[b].PathOrOverridePath() == KEY_1DVECTOR)
+                return true;
+        }
+        return false;
     }
 
-    public static Icone[] GetIconeComposte(this Input_ReconeixementTipus input, InputAction accio)
+
+    public static Icone[] GetIcone1D(this Input_ReconeixementTipus input, InputAction accio) => input.GetIcone2D(accio, false); 
+
+
+    public static Icone[] GetIcone2D(this Input_ReconeixementTipus input, InputAction accio, bool es2D = true)
     {
         List<Icone> icones = new List<Icone>();
         for (int b = 0; b < accio.bindings.Count; b++)
@@ -119,7 +129,7 @@ public static class Inputs_Utils
             
             if (accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR)
             {
-                for (int i = 1; i < 5; i++)
+                for (int i = 1; i < (es2D ? 5 : 3); i++)
                 {
                     for (int a = 0; a < input.tecles.Length; a++)
                     {
@@ -143,6 +153,7 @@ public static class Inputs_Utils
         }
         return icones.ToArray();
     }
+
 
     public static Icone GetIcone(this Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice)
     {
