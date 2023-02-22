@@ -126,7 +126,9 @@ public static class Inputs_Utils
         List<Icone> icones = new List<Icone>();
         for (int b = 0; b < accio.bindings.Count; b++)
         {
-            
+            if (b > 4)
+                break;
+
             if (accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR)
             {
                 for (int i = 1; i < (es2D ? 5 : 3); i++)

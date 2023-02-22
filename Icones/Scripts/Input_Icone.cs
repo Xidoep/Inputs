@@ -99,8 +99,8 @@ public abstract class Input_Icone : MonoBehaviour
 
         //XS_Utils.Inputs.Icone icone = XS_Utils.Inputs.GetIcone(reconeixement, accio);
         PlayerInput playerInput = FindObjectOfType<PlayerInput>();
-        Debug.Log(playerInput.gameObject.name);
-        Debug.Log(playerInput.devices[0]);
+        //Debug.Log(playerInput.gameObject.name);
+        //Debug.Log(playerInput.devices[0]);
 
         Input_ReconeixementTipus input = reconeixement.TipusInput(playerInput.devices[0]);
 
