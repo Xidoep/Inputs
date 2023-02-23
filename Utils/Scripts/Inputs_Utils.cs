@@ -129,7 +129,7 @@ public static class Inputs_Utils
             if (b > 4)
                 break;
 
-            if (accio.bindings[b].PathOrOverridePath() == KEY_2DVECTOR)
+            if (accio.bindings[b].PathOrOverridePath() == (es2D ? KEY_2DVECTOR : KEY_1DVECTOR))
             {
                 for (int i = 1; i < (es2D ? 5 : 3); i++)
                 {
@@ -233,6 +233,14 @@ public static class Inputs_Utils
                 if (string.Equals(input.tactil[a].Path, accio.bindings[b].PathOrOverridePath()))
                 {
                     return new Icone() { icone = input.tactil[a].sprite, fondo = input.tactil[a].fondo };
+                }
+            }
+            for (int a = 0; a < input.custom.Length; a++)
+            {
+                if (debug) Debugar.Log($"¿¿¿{input.custom[a].Path}???");
+                if (string.Equals(input.custom[a].Path, accio.bindings[b].PathOrOverridePath()))
+                {
+                    return new Icone() { icone = input.custom[a].sprite, fondo = input.custom[a].fondo };
                 }
             }
         }

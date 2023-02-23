@@ -15,8 +15,11 @@ public class Input_ReconeixementTipus : ScriptableObject
     public Tecla[] tecles;
     public Ratoli[] ratoli;
     public Tactil[] tactil;
+    public Custom[] custom;
 
     public Sprite fondoComposat;
+    public Sprite fondo1D;
+    public Sprite separador;
     public class Binding
     {
         public string path;
@@ -50,6 +53,11 @@ public class Input_ReconeixementTipus : ScriptableObject
     {
         public Input_TactilInteraccions tactil;
         public override string Path => $"<Touchscreen>/{path}";
+    }
+    [System.Serializable]
+    public class Custom : Binding
+    {
+        public override string Path => path;
     }
 }
 public enum Input_TactilInteraccions

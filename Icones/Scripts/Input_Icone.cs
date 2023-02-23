@@ -206,14 +206,25 @@ public abstract class Input_Icone : MonoBehaviour
             //posicionar
             iconeComposada.transform.SetParent(transform);
             iconeComposada.transform.localPosition = Posicio1D_PerIndex(i);
-            iconeComposada.transform.localScale = Vector3.one * 0.3f;
+            iconeComposada.transform.localScale = Vector3.one * 0.23f;
 
             Image image = iconeComposada.AddComponent<Image>();
             image.sprite = icones[i].icone;
             image.color = GetColorBinding;
 
         }
-        SetSpriteFondo = input.fondoComposat;
+        GameObject separador = new GameObject();
+        bindingsComposats.Add(separador);
+
+        separador.transform.SetParent(transform);
+        separador.transform.localPosition = Posicio1D_PerIndex(2);
+        separador.transform.localScale = Vector3.one * 0.3f;
+
+        Image imgSep = separador.AddComponent<Image>();
+        imgSep.sprite = input.separador;
+        imgSep.color = GetColorBinding;
+
+        SetSpriteFondo = input.fondo1D;
         //SetSizeFondo = Vector3.one * 1.4f;
         SetSizeFondo = Vector3.one;
     }
@@ -239,11 +250,11 @@ public abstract class Input_Icone : MonoBehaviour
         switch (i)
         {
             case 0:
-                return transform.up * -8.3f + transform.right * -18;
+                return transform.up * -1f + transform.right * -15;
             case 1:
-                return transform.up * -8.3f + transform.right * 18;
+                return transform.up * -1f + transform.right * 15;
             default:
-                return Vector3.zero;
+                return transform.up * -1f;
         }
     }
 
