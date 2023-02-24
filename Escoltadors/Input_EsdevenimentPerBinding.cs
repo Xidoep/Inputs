@@ -44,7 +44,7 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
 
 
 
-
+    public void Interactuar() => OnInteractuar.Invoke();
     void Interactuar(InputAction.CallbackContext context)
     {
         if (interacted)
@@ -54,7 +54,8 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
         }
 
         Debugar.Log($"Interactuar desde {this.gameObject.name}");
-        if (context.phase == InputActionPhase.Performed) OnInteractuar.Invoke();
+        Debug.Log($"phase = {context.phase}");
+        if (context.phase == InputActionPhase.Performed) Interactuar();
 
 
         if (!multipleInteractions)
@@ -65,8 +66,11 @@ public class Input_EsdevenimentPerBinding : MonoBehaviour
 
 
 
-    void RegistrateInteraction()
+    public void RegistrateInteraction()
     {
+        if (registrated)
+            return;
+
         for (int i = 0; i < escoltadors.Length; i++)
         {
             escoltadors[i].action.performed += Interactuar;
