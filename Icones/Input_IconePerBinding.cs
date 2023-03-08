@@ -6,6 +6,7 @@ public class Input_IconePerBinding : Input_Icone
 {
     [Space(10)]
     [SerializeField] InputActionReference inputBinding;
+    [SerializeField] InputDevice device;
     public InputActionReference InputBinding => inputBinding;
 
 

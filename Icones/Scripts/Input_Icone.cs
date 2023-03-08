@@ -102,7 +102,7 @@ public abstract class Input_Icone : MonoBehaviour
         //Debug.Log(playerInput.gameObject.name);
         //Debug.Log(playerInput.devices[0]);
 
-        Input_ReconeixementTipus input = reconeixement.TipusInput(playerInput.devices[0]);
+        Input_ReconeixementTipus input = reconeixement.TipusInput(Application.isPlaying ? playerInput.devices[0] : null);
 
         FindRenderers();
 
@@ -113,12 +113,12 @@ public abstract class Input_Icone : MonoBehaviour
         if (input.paths[0] == "Keyboard")
         {
             
-            if (accio.Es2D(playerInput.devices[0]))
+            if (accio.Es2D(Application.isPlaying ? playerInput.devices[0] : null))
             {
                 Debug.Log("2D");
                 Icone2D(input, accio);
             }
-            else if (accio.Es1D(playerInput.devices[0]))
+            else if (accio.Es1D(Application.isPlaying ? playerInput.devices[0] : null))
             {
                 Debug.Log("1D");
                 Icone1D(input, accio);
@@ -126,13 +126,13 @@ public abstract class Input_Icone : MonoBehaviour
             else
             {
                 Debug.Log("Simple");
-                IconeSimple(input, accio, playerInput.devices[0]);
+                IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null);
             }
         }
         else
         {
             Debug.Log("No Teclat");
-            IconeSimple(input, accio, playerInput.devices[0]);
+            IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null);
         }
 
     }
