@@ -5,18 +5,19 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Xido Studio/Inputs/Bindings Guardats", fileName = "Guardats")]
 public class Input_BindingsGuardats : ScriptableObject
 {
-    Dictionary<string,string> bindings;
+    [SerializeField] Dictionary<string,string> bindings;
+
     [SerializeField] List<string> keys;
     [SerializeField] List<string> values;
 
-    /*public Dictionary<string, string> Bindings
+    public Dictionary<string, string> Bindings
     {
         get
         {
             if (bindings == null) bindings = new Dictionary<string, string>();
             return bindings;
         }
-    }*/
+    }
     public List<string> Keys
     {
         get
@@ -39,14 +40,14 @@ public class Input_BindingsGuardats : ScriptableObject
 
     public void Add(string key, string binding)
     {
-        //Bindings.Add(key, binding);
+        Bindings.Add(key, binding);
 
         Keys.Add(key);
         Values.Add(binding);
     }
     public void Replace(string key, string binding)
     {
-        //Bindings[key] = binding;
+        Bindings[key] = binding;
 
         index = 0;
         trobat = false;
@@ -63,7 +64,7 @@ public class Input_BindingsGuardats : ScriptableObject
     }
     public void Remove(string key)
     {
-        //Bindings.Remove(key);
+        Bindings.Remove(key);
 
         index = 0;
         trobat = false;
@@ -83,7 +84,7 @@ public class Input_BindingsGuardats : ScriptableObject
     }
     public void RemoveAll()
     {
-        //Bindings.Clear();
+        Bindings.Clear();
 
         Keys.Clear();
         Values.Clear();

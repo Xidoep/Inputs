@@ -7,7 +7,7 @@ using XS_Utils;
 
 public static class Inputs_Utils
 {
-    static bool debug = true;
+    static bool debug = false;
 
     static bool iguals;
     static int index;
@@ -44,43 +44,8 @@ public static class Inputs_Utils
         return iguals;
     }
 
-    public static bool Comparar(this InputAction inputAction, string path)
-    {
-        iguals = false;
-        index = 0;
-        while (index < inputAction.bindings.Count && !iguals)
-        {
-            if (inputAction.bindings[index].path.Equals(path)) iguals = true;
-            else index++;
-        }
-        return iguals;
-    }
 
-    //public static bool Comparar(this InputBinding inputBinding, string path, bool overrided) => inputBinding.PathOrOverridePath() == path;
-    /*{
-        if (string.IsNullOrEmpty(inputBinding.overridePath))
-            return inputBinding.path == path;
-        else return inputBinding.overridePath == path;
-    }*/
-
-    /// <summary>
-    /// Retorna el pathoverride si n'hi ha un, si no, retorna el path per defecte.
-    /// </summary>
-    /// <param name="inputBinding"></param>
-    /// <returns></returns>
-    /*public static string PathOrOverridePath(this InputBinding inputBinding, bool overrided)
-    {
-        if (overrided)
-        {
-            if (string.IsNullOrEmpty(inputBinding.overridePath))
-                return inputBinding.path;
-            else return inputBinding.overridePath;
-        }
-        else return inputBinding.path;
-    }*/
-    //static Input_ReconeixementTipus input;
-
-    public static Input_ReconeixementTipus TipusInput(this Input_Reconeixement reconeixement, InputDevice inputDevice = null)
+    public static Input_ReconeixementTipus TipusInput(this Input_Reconeixement reconeixement, InputDevice inputDevice, bool overrided)
     {
         Input_ReconeixementTipus input = null;
         for (int r = 0; r < reconeixement.inputs.Count; r++)
@@ -115,7 +80,7 @@ public static class Inputs_Utils
         return input;
     }
 
-    public static XS_Input.Icone[] GetIcone1D(this Input_ReconeixementTipus input, InputAction accio) => input.GetIcone2D(accio, false); 
+    public static XS_Input.Icone[] GetIcone1D(this Input_ReconeixementTipus input, InputAction accio, bool overrided) => input.GetIcone2D(accio, overrided, false); 
 
 
     public static XS_Input.Icone[] GetIcone2D(this Input_ReconeixementTipus input, InputAction accio, bool overrided, bool es2D = true)
@@ -154,7 +119,7 @@ public static class Inputs_Utils
     }
 
 
-    public static XS_Input.Icone GetIcone(this Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice, bool overrided = true)
+    public static XS_Input.Icone GetIcone(this Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice, bool overrided )
     {
         XS_Input.Icone icone = new XS_Input.Icone() { icone = null, fondo = null };
 

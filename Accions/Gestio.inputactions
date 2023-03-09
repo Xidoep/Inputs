@@ -125,17 +125,6 @@
             ],
             "bindings": [
                 {
-                    "name": "WASD",
-                    "id": "7045b8a9-c01e-4055-82f3-241d1509e3d9",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moviment Teclat",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
                     "name": "Arrows",
                     "id": "e4b72b6f-b504-453b-991c-f23fcd604389",
                     "path": "2DVector",
@@ -189,6 +178,17 @@
                     "action": "Moviment Teclat",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "WASD",
+                    "id": "7045b8a9-c01e-4055-82f3-241d1509e3d9",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment Teclat",
+                    "isComposite": true,
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "up",

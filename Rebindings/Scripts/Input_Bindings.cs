@@ -7,7 +7,6 @@ using XS_Utils;
 [CreateAssetMenu(menuName = "Xido Studio/Inputs/Bindings", fileName = "Bindings")]
 public class Input_Bindings : ScriptableObject
 {
-    [SerializeField] Guardat guardat;
     [SerializeField] InputActionAsset inputActions;
     public static Input_Bindings Instance;
     [SerializeField] Input_BindingsGuardats guardats;
@@ -28,15 +27,6 @@ public class Input_Bindings : ScriptableObject
             {
                 for (int i = 0; i < action.bindings.Count; i++)
                 {
-                    //if (guardat.Existeix(action.actionMap + action.name + i))
-                    //    action.ApplyBindingOverride(i, (string)guardat.Get(action.actionMap + action.name + i, null));
-
-                    //if (guardats.Bindings.ContainsKey(action.actionMap + action.name + i))
-                    //    action.ApplyBindingOverride(i, guardats.Bindings[action.actionMap + action.name + i]);
-
-                    //if (!string.IsNullOrEmpty(PlayerPrefs.GetString(action.actionMap + action.name + i)))
-                    //    action.ApplyBindingOverride(i, PlayerPrefs.GetString(action.actionMap + action.name + i));
-
                     for (int k = 0; k < guardats.Keys.Count; k++)
                     {
                         if(guardats.Keys[k] == action.actionMap + action.name + i)
@@ -45,7 +35,6 @@ public class Input_Bindings : ScriptableObject
                         }
                     }
                 }
-
             }
         }
     }
@@ -57,19 +46,15 @@ public class Input_Bindings : ScriptableObject
         for (int i = 0; i < action.bindings.Count; i++)
         {
             Debugar.Log($"Binding - {action.actionMap + action.name + i}");
-            //guardat.Set(action.actionMap + action.name + i, action.bindings[i].overridePath);
             if (!guardats.Keys.Contains(action.actionMap + action.name + i))
             {
-                guardats.Add(action.actionMap + action.name + i, action.bindings[i].PathOrOverridePath());
+                guardats.Add(action.actionMap + action.name + i, action.bindings[i].PathOrOverridePath(true));
             }
             else
             {
-                guardats.Replace(action.actionMap + action.name + i, action.bindings[i].PathOrOverridePath());
+                guardats.Replace(action.actionMap + action.name + i, action.bindings[i].PathOrOverridePath(true));
             }
-            Debugar.Log($"Guardar: {action.actionMap + action.name + i} amb valor {action.bindings[i].PathOrOverridePath()}");
-           
-
-            //PlayerPrefs.SetString(action.actionMap + action.name + i, action.bindings[i].overridePath);
+            Debugar.Log($"Guardar: {action.actionMap + action.name + i} amb valor {action.bindings[i].PathOrOverridePath(true)}");
         }
     }
 
@@ -83,11 +68,6 @@ public class Input_Bindings : ScriptableObject
                 for (int i = 0; i < action.bindings.Count; i++)
                 {
                     guardats.RemoveAll();
-
-                    //guardat.Borrar(action.actionMap + action.name + i);
-
-                    //if (!string.IsNullOrEmpty(PlayerPrefs.GetString(action.actionMap + action.name + i)))
-                    //    action.ApplyBindingOverride(i, PlayerPrefs.GetString(action.actionMap + action.name + i));
                 }
             }
         }
@@ -96,15 +76,9 @@ public class Input_Bindings : ScriptableObject
             item.RemoveAllBindingOverrides();
 
         }
-        //PlayerPrefs.DeleteAll();
-        //PlayerPrefs.DeleteKey("rebinds");
-        //guardat.Borrar("rebinds");
+
     }
 
-    private void OnValidate()
-    {
-        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
-    }
 }
 
 

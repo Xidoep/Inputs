@@ -18,6 +18,7 @@ public abstract class Input_Icone : MonoBehaviour
 
     Image bindingImage;
     SpriteRenderer bindingSpriteRenderer;
+
     Image fondoImage;
     SpriteRenderer fondoSpriteRenderer;
 
@@ -86,7 +87,7 @@ public abstract class Input_Icone : MonoBehaviour
         }
     }
 
-    protected void MostrarIcone(InputAction accio)
+    protected void MostrarIcone(InputAction accio, bool overrided)
     {
         if (accio == null)
             return;
@@ -102,7 +103,7 @@ public abstract class Input_Icone : MonoBehaviour
         //Debug.Log(playerInput.gameObject.name);
         //Debug.Log(playerInput.devices[0]);
 
-        Input_ReconeixementTipus input = reconeixement.TipusInput(Application.isPlaying ? playerInput.devices[0] : null);
+        Input_ReconeixementTipus input = reconeixement.TipusInput(Application.isPlaying ? playerInput.devices[0] : null, overrided);
 
         FindRenderers();
 
@@ -113,31 +114,31 @@ public abstract class Input_Icone : MonoBehaviour
         if (input.paths[0] == "Keyboard")
         {
             
-            if (accio.Es2D(Application.isPlaying ? playerInput.devices[0] : null))
+            if (accio.Es2D(Application.isPlaying ? playerInput.devices[0] : null, overrided))
             {
                 Debug.Log("2D");
-                Icone2D(input, accio);
+                Icone2D(input, accio, overrided);
             }
-            else if (accio.Es1D(Application.isPlaying ? playerInput.devices[0] : null))
+            else if (accio.Es1D(Application.isPlaying ? playerInput.devices[0] : null, overrided))
             {
                 Debug.Log("1D");
-                Icone1D(input, accio);
+                Icone1D(input, accio, overrided);
             }
             else
             {
                 Debug.Log("Simple");
-                IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null);
+                IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null, overrided);
             }
         }
         else
         {
             Debug.Log("No Teclat");
-            IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null);
+            IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null, overrided);
         }
 
     }
 
-    void IconeSimple(Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice)
+    void IconeSimple(Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice, bool overrided)
     {
         if(bindingsComposats != null)
         {
@@ -148,14 +149,14 @@ public abstract class Input_Icone : MonoBehaviour
         }
        
 
-        Inputs_Utils.Icone icone = input.GetIcone(accio, inputDevice);
+        XS_Input.Icone icone = input.GetIcone(accio, inputDevice, overrided);
 
         SetEnableBinding = true;
         SetSpriteBinding = icone.icone;
         SetSpriteFondo = icone.fondo;
         SetSizeFondo = Vector3.one;
     }
-    void Icone2D(Input_ReconeixementTipus input, InputAction accio)
+    void Icone2D(Input_ReconeixementTipus input, InputAction accio, bool overrided)
     {
         if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
 
@@ -163,7 +164,7 @@ public abstract class Input_Icone : MonoBehaviour
         SetSpriteBinding = null;
         SetEnableBinding = false;
         //Busca icones
-        Inputs_Utils.Icone[] icones = input.GetIcone2D(accio);
+        XS_Input.Icone[] icones = input.GetIcone2D(accio, overrided);
 
         //Crea una imatge per cada icone
         for (int i = 0; i < icones.Length; i++)
@@ -173,7 +174,7 @@ public abstract class Input_Icone : MonoBehaviour
 
             //posicionar
             iconeComposada.transform.SetParent(transform);
-            iconeComposada.transform.localPosition = Posicio2D_PerIndex(i);
+            iconeComposada.transform.localPosition = iconeComposada.transform.Posicio2D_PerIndex(i);
             iconeComposada.transform.localScale = Vector3.one * 0.2f;
 
             Image image = iconeComposada.AddComponent<Image>();
@@ -186,7 +187,7 @@ public abstract class Input_Icone : MonoBehaviour
         SetSizeFondo = Vector3.one;
     }
 
-    void Icone1D(Input_ReconeixementTipus input, InputAction accio)
+    void Icone1D(Input_ReconeixementTipus input, InputAction accio, bool overrided)
     {
 
         if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
@@ -195,7 +196,7 @@ public abstract class Input_Icone : MonoBehaviour
         SetSpriteBinding = null;
         SetEnableBinding = false;
         //Busca icones
-        Inputs_Utils.Icone[] icones = input.GetIcone1D(accio);
+        XS_Input.Icone[] icones = input.GetIcone1D(accio, overrided);
 
         //Crea una imatge per cada icone
         for (int i = 0; i < icones.Length; i++)
@@ -205,7 +206,7 @@ public abstract class Input_Icone : MonoBehaviour
 
             //posicionar
             iconeComposada.transform.SetParent(transform);
-            iconeComposada.transform.localPosition = Posicio1D_PerIndex(i);
+            iconeComposada.transform.localPosition = iconeComposada.transform.Posicio1D_PerIndex(i);
             iconeComposada.transform.localScale = Vector3.one * 0.23f;
 
             Image image = iconeComposada.AddComponent<Image>();
@@ -217,7 +218,7 @@ public abstract class Input_Icone : MonoBehaviour
         bindingsComposats.Add(separador);
 
         separador.transform.SetParent(transform);
-        separador.transform.localPosition = Posicio1D_PerIndex(2);
+        separador.transform.localPosition = separador.transform.Posicio1D_PerIndex(2);
         separador.transform.localScale = Vector3.one * 0.3f;
 
         Image imgSep = separador.AddComponent<Image>();
@@ -229,34 +230,7 @@ public abstract class Input_Icone : MonoBehaviour
         SetSizeFondo = Vector3.one;
     }
 
-    Vector3 Posicio2D_PerIndex(int i)
-    {
-        switch (i)
-        {
-            case 0:
-                return transform.up * 9.7f;
-            case 1:
-                return transform.up * -8.3f;
-            case 2:
-                return transform.up * -8.3f + transform.right * -18;
-            case 3:
-                return transform.up * -8.3f + transform.right * 18;
-            default:
-                return Vector3.zero;
-        }
-    }
-    Vector3 Posicio1D_PerIndex(int i)
-    {
-        switch (i)
-        {
-            case 0:
-                return transform.up * -1f + transform.right * -15;
-            case 1:
-                return transform.up * -1f + transform.right * 15;
-            default:
-                return transform.up * -1f;
-        }
-    }
+   
 
     void Resetejar(InputUser inputUser, InputUserChange inputUserChange, InputDevice inputDevice)
     {
