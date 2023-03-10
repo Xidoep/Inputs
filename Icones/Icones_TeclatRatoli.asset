@@ -478,11 +478,23 @@ MonoBehaviour:
     fondo: {fileID: 21300000, guid: 8d124ab53c2cad541809d7d9e2eb07b3, type: 3}
     mouseButton: 2
     mouseInteraccio: 2
-  tactil: []
-  custom:
-  - path: <Mouse>/scroll
+  - path: scroll
     sprite: {fileID: 21300000, guid: e934d18fbaa7b2c40b6d723d2cc4e760, type: 3}
     fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
+    mouseButton: 2
+    mouseInteraccio: 2
+  - path: delta/x
+    sprite: {fileID: 21300000, guid: 184e2e4f7e62ab4459744f965260b7eb, type: 3}
+    fondo: {fileID: 21300000, guid: f7fe30e5621079d419cc80be595dcfd6, type: 3}
+    mouseButton: 2
+    mouseInteraccio: 2
+  - path: delta/y
+    sprite: {fileID: 21300000, guid: 864f246eb61a6f34b9631d2a94a5a7c4, type: 3}
+    fondo: {fileID: 21300000, guid: 78a8873158b87ed409eb87c139a04513, type: 3}
+    mouseButton: 2
+    mouseInteraccio: 2
+  tactil: []
+  custom: []
   fondoComposat: {fileID: 21300000, guid: 8e61d7071e8f93641801091206504b27, type: 3}
   fondo1D: {fileID: 21300000, guid: 8f9fe8dc380526e4aac84b8033a17874, type: 3}
   separador: {fileID: 21300000, guid: 16cdac78986cebb4fbb4ab32c62e69df, type: 3}

@@ -124,21 +124,26 @@ public abstract class Input_Icone : MonoBehaviour
                 Debug.Log("1D");
                 Icone1D(input, accio, overrided);
             }
+            else if(accio.EsOneModifier(Application.isPlaying ? playerInput.devices[0] : null, overrided))
+            {
+                Debug.Log("One Modifier");
+                IconeOnModifier(input, accio, overrided);
+            }
             else
             {
                 Debug.Log("Simple");
-                IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null, overrided);
+                Icone(input, accio, Application.isPlaying ? playerInput.devices[0] : null, overrided);
             }
         }
         else
         {
             Debug.Log("No Teclat");
-            IconeSimple(input, accio, Application.isPlaying ? playerInput.devices[0] : null, overrided);
+            Icone(input, accio, Application.isPlaying ? playerInput.devices[0] : null, overrided);
         }
 
     }
 
-    void IconeSimple(Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice, bool overrided)
+    void Icone(Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice, bool overrided)
     {
         if(bindingsComposats != null)
         {
@@ -229,8 +234,49 @@ public abstract class Input_Icone : MonoBehaviour
         //SetSizeFondo = Vector3.one * 1.4f;
         SetSizeFondo = Vector3.one;
     }
+    void IconeOnModifier(Input_ReconeixementTipus input, InputAction accio, bool overrided)
+    {
 
-   
+        if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
+
+        //Neteja
+        SetSpriteBinding = null;
+        SetEnableBinding = false;
+        //Busca icones
+        XS_Input.Icone[] icones = input.GetIconeOnModifier(accio, overrided);
+
+        //Crea una imatge per cada icone
+        for (int i = 0; i < icones.Length; i++)
+        {
+            GameObject iconeComposada = new GameObject();
+            bindingsComposats.Add(iconeComposada);
+
+            //posicionar
+            iconeComposada.transform.SetParent(transform);
+            iconeComposada.transform.localPosition = iconeComposada.transform.Posicio1D_PerIndex(i);
+            iconeComposada.transform.localScale = Vector3.one * 0.23f;
+
+            Image image = iconeComposada.AddComponent<Image>();
+            image.sprite = icones[i].icone;
+            image.color = GetColorBinding;
+
+        }
+        GameObject separador = new GameObject();
+        bindingsComposats.Add(separador);
+
+        separador.transform.SetParent(transform);
+        separador.transform.localPosition = separador.transform.Posicio1D_PerIndex(2);
+        separador.transform.localScale = Vector3.one * 0.3f;
+
+        Image imgSep = separador.AddComponent<Image>();
+        imgSep.sprite = input.separador;
+        imgSep.color = GetColorBinding;
+
+        SetSpriteFondo = input.fondo1D;
+        //SetSizeFondo = Vector3.one * 1.4f;
+        SetSizeFondo = Vector3.one;
+    }
+
 
     void Resetejar(InputUser inputUser, InputUserChange inputUserChange, InputDevice inputDevice)
     {

@@ -83,7 +83,26 @@ MonoBehaviour:
     sprite: {fileID: 21300000, guid: e77362b8233193a49a86503d99aab5ba, type: 3}
     fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
     boto: 0
+  - path: leftStick/x
+    sprite: {fileID: 21300000, guid: 2e715fa9792080644ae0eba42f110aa4, type: 3}
+    fondo: {fileID: 21300000, guid: 94844a590fbf3a64bacb7270557f9ba6, type: 3}
+    boto: 8
+  - path: leftStick/y
+    sprite: {fileID: 21300000, guid: 9b15bd724823e294dbf3b8a704a8e589, type: 3}
+    fondo: {fileID: 21300000, guid: 9c41176f9bc49484e83dccaddaee8028, type: 3}
+    boto: 8
+  - path: rightStick/x
+    sprite: {fileID: 21300000, guid: 415ec7b220bd9c142b3afa0249cf4cca, type: 3}
+    fondo: {fileID: 21300000, guid: 94844a590fbf3a64bacb7270557f9ba6, type: 3}
+    boto: 8
+  - path: rightStick/y
+    sprite: {fileID: 21300000, guid: 8f55fdb31a7bb2e4b96f90b37e3e0bb7, type: 3}
+    fondo: {fileID: 21300000, guid: 9c41176f9bc49484e83dccaddaee8028, type: 3}
+    boto: 8
   tecles: []
   ratoli: []
   tactil: []
+  custom: []
   fondoComposat: {fileID: 0}
+  fondo1D: {fileID: 0}
+  separador: {fileID: 0}

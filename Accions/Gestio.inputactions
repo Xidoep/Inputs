@@ -33,6 +33,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Moviment Joystick",
+                    "type": "Value",
+                    "id": "d024ede9-ac00-423b-b4ca-c20d0e4f6364",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Zoom Teclat",
                     "type": "Value",
                     "id": "d2ef82b2-eb8d-44aa-aa37-472fe6081e9c",
@@ -69,7 +78,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Girar Ratoli",
+                    "name": "Girar",
                     "type": "Value",
                     "id": "1d5a57de-1af8-4d1d-b557-ba23f7153bf4",
                     "expectedControlType": "Vector2",
@@ -334,15 +343,37 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "ba1a9460-a37a-41d5-8ba7-d1ea9450a140",
-                    "path": "<Mouse>/delta",
+                    "name": "One Modifier",
+                    "id": "f28788f4-ae68-4fcb-bdf9-164e07fd8825",
+                    "path": "OneModifier",
                     "interactions": "",
-                    "processors": "ScaleVector2",
-                    "groups": "TeclatRatoli",
-                    "action": "Girar Ratoli",
-                    "isComposite": false,
+                    "processors": "",
+                    "groups": "",
+                    "action": "Girar",
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "8b132e01-933f-4f09-81f5-52e944414c67",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Girar",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "14a7252f-7943-4cc4-bf39-bc8bb949badc",
+                    "path": "<Mouse>/delta/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Girar",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -418,6 +449,28 @@
                     "processors": "",
                     "groups": "TeclatRatoli",
                     "action": "Foto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7f298199-1d23-4926-bcc2-7ccb2aa66ce4",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment Joystick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8f655de4-332a-430b-b8a0-e493ced7da29",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Girar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
