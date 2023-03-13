@@ -47,6 +47,11 @@ public static class Inputs_Utils
 
     public static Input_ReconeixementTipus TipusInput(this Input_Reconeixement reconeixement, InputDevice inputDevice, bool overrided)
     {
+        if (inputDevice == null) //DEBUG
+        {
+            return reconeixement.actual;
+        }
+
         Input_ReconeixementTipus input = null;
         for (int r = 0; r < reconeixement.inputs.Count; r++)
         {
@@ -80,6 +85,7 @@ public static class Inputs_Utils
         return input;
     }
 
+    /*
     public static XS_Input.Icone[] GetIconeOnModifier(this Input_ReconeixementTipus input, InputAction accio, bool overrided) => input.GetIcone2D(accio, overrided, 0); 
     public static XS_Input.Icone[] GetIcone1D(this Input_ReconeixementTipus input, InputAction accio, bool overrided) => input.GetIcone2D(accio, overrided, 1);
     public static XS_Input.Icone[] GetIcone2D(this Input_ReconeixementTipus input, InputAction accio, bool overrided, int Ds = 2)
@@ -103,29 +109,6 @@ public static class Inputs_Utils
                     break;
             }
 
-            /*if (accio.bindings[b].PathOrOverridePath(overrided) == (Ds == 2 ? XS_Input.KEY_2DVECTOR : XS_Input.KEY_1DVECTOR))
-            {
-                for (int i = 1; i < (es2D ? 5 : 3); i++)
-                {
-                    for (int a = 0; a < input.tecles.Length; a++)
-                    {
-                        if (debug) Debugar.Log($"¿¿¿{input.tecles[a].Path}???");
-                        if (string.Equals(input.tecles[a].Path, accio.bindings[b + i].PathOrOverridePath(overrided)))
-                        {
-                            if (debug) Debugar.Log($"¡¡¡¡¡{input.tecles[a].Path}!!!!!");
-                            icones.Add(
-                                new XS_Input.Icone()
-                                {
-                                    icone = input.tecles[a].sprite,
-                                    fondo = input.tecles[a].fondo
-                                });
-                            break;
-                        }
-                        
-                    }
-                }
-                
-            }*/
         }
         return icones.ToArray();
 
@@ -157,28 +140,10 @@ public static class Inputs_Utils
 
     }
 
-
     public static XS_Input.Icone GetIcone(this Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice, bool overrided )
     {
         XS_Input.Icone icone = new XS_Input.Icone() { icone = null, fondo = null };
 
-        //Input_ReconeixementTipus input = null;
-        //Input_ReconeixementTipus input = reconeixement.TipusInput(inputDevice);
-
-        //Trobar tipus d'imput
-        /*for (int r = 0; r < reconeixement.inputs.Count; r++)
-        {
-            for (int p = 0; p < reconeixement.inputs[r].paths.Length; p++)
-            {
-                Debugar.Log(reconeixement.inputs[r].paths[p]);
-                if (inputDevice.name.StartsWith(reconeixement.inputs[r].paths[p]))
-                {
-                    Debugar.Log($"Trobat! {reconeixement.inputs[r].name}");
-                    input = reconeixement.inputs[r];
-                    break;
-                }
-            }
-        }*/
 
 
 
@@ -233,6 +198,7 @@ public static class Inputs_Utils
 
         return icone;
     }
+    */
 
     /// <summary>
     /// Retorna el device el jugador 1.

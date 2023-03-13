@@ -12,28 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623131aeb68fdf649bc29995bd20e5ef, type: 3}
   m_Name: Icones_Tactil
   m_EditorClassIdentifier: 
-  Esquema: Tactil
   paths:
   - Touchscreen
   - Pen
-  plataformes: 080000000b000000
-  botons: []
-  tecles: []
-  ratoli: []
-  tactil:
-  - sprite: {fileID: 21300000, guid: 1bed18134e048524dada879c15a12666, type: 3}
+  bindings:
+  - path: <Touchscreen>/press
+    sprite: {fileID: 21300000, guid: 1bed18134e048524dada879c15a12666, type: 3}
     fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
-    path: press
-    tactil: 0
-  - sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
+  - path: <Pen>/press
+    sprite: {fileID: 21300000, guid: 1bed18134e048524dada879c15a12666, type: 3}
+    fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
+  - path: <Touchscreen>/position
+    sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
     fondo: {fileID: 21300000, guid: e01151744b670f1459b269e3ae9c14b6, type: 3}
-    path: position
-    tactil: 1
-  - sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
+  - path: <Pen>/position
+    sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
     fondo: {fileID: 21300000, guid: e01151744b670f1459b269e3ae9c14b6, type: 3}
-    path: delta
-    tactil: 2
-  - sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
+  - path: <Touchscreen>/delta
+    sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
     fondo: {fileID: 21300000, guid: e01151744b670f1459b269e3ae9c14b6, type: 3}
-    path: primaryTouch/startPosition
-    tactil: 0
+  - path: <Pen>/delta
+    sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
+    fondo: {fileID: 21300000, guid: e01151744b670f1459b269e3ae9c14b6, type: 3}
+  - path: <Touchscreen>/primaryTouch/startPosition
+    sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
+    fondo: {fileID: 21300000, guid: e01151744b670f1459b269e3ae9c14b6, type: 3}
+  - path: <Pen>/primaryTouch/startPosition
+    sprite: {fileID: 21300000, guid: 485ccee043c854842a959322696b2da1, type: 3}
+    fondo: {fileID: 21300000, guid: e01151744b670f1459b269e3ae9c14b6, type: 3}
+  fondoComposat: {fileID: 0}
+  fondo1D: {fileID: 0}
+  separador: {fileID: 0}

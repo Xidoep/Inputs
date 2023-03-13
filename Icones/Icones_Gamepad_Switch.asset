@@ -14,95 +14,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - SwitchProControllerHID
-  botons:
-  - path: dpad/up
-    sprite: {fileID: 21300000, guid: b1c828bbd062ab74bb94d56b8c90bb33, type: 3}
+  bindings:
+  - path: <SwitchProControllerHID>/dpad
+    sprite: {fileID: 21300000, guid: e77362b8233193a49a86503d99aab5ba, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <SwitchProControllerHID>/dpad/up
+    sprite: {fileID: 21300000, guid: d2c61688609e7ce47824bd0dd5369096, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <SwitchProControllerHID>/dpad/down
+    sprite: {fileID: 21300000, guid: 8661fa24106fc434e8853434d99812e5, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <SwitchProControllerHID>/dpad/left
+    sprite: {fileID: 21300000, guid: a07691336b1d68b48bc4d0ab7e3eaec3, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <SwitchProControllerHID>/dpad/right
+    sprite: {fileID: 21300000, guid: a80f8a83d40d8924db440dda77ec7db4, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <SwitchProControllerHID>/buttonNorth
+    sprite: {fileID: 21300000, guid: 4e2c306e0f86f1549871e8c699588889, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 0
-  - path: dpad/down
-    sprite: {fileID: 21300000, guid: 769950dd10183f04c88611c23d6ceb20, type: 3}
+  - path: <SwitchProControllerHID>/buttonEast
+    sprite: {fileID: 21300000, guid: 9166dad89bba3d4419d3854154faa858, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 1
-  - path: dpad/left
-    sprite: {fileID: 21300000, guid: 1a1f580e77944c4418cc087356a58e60, type: 3}
+  - path: <SwitchProControllerHID>/buttonSouth
+    sprite: {fileID: 21300000, guid: ce0f848532af01c4a992aca32c34aab0, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 2
-  - path: dpad/right
-    sprite: {fileID: 21300000, guid: 98ce4283915431c458c5969be306bea1, type: 3}
+  - path: <SwitchProControllerHID>/buttonWest
+    sprite: {fileID: 21300000, guid: aea3b90cb015e7e44a3a1dd4354c71fe, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 3
-  - path: buttonNorth
-    sprite: {fileID: 21300000, guid: 6b6d298f15c680a47b2de1bf928c8556, type: 3}
-    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 4
-  - path: buttonEast
-    sprite: {fileID: 21300000, guid: 464a27d9217e9bf48936e9d806f9fb5b, type: 3}
-    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 5
-  - path: buttonSouth
-    sprite: {fileID: 21300000, guid: 53b544291654cc24ead05216b446f4e5, type: 3}
-    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 6
-  - path: buttonWest
-    sprite: {fileID: 21300000, guid: c4a084254cb19f7449c970c88da26267, type: 3}
-    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 7
-  - path: leftStick
+  - path: <SwitchProControllerHID>/leftStick
     sprite: {fileID: 21300000, guid: abde0f4133df66943b432e236b0e960e, type: 3}
     fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
-    boto: 8
-  - path: rightStick
-    sprite: {fileID: 21300000, guid: da5eaf6b0ab5a5048b480c503d7379bf, type: 3}
-    fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
-    boto: 9
-  - path: leftShoulder
-    sprite: {fileID: 21300000, guid: b479aef6646e22c41986601cab90b355, type: 3}
-    fondo: {fileID: 21300000, guid: d4ee7d18acd1fac4dbd3e9054654f21b, type: 3}
-    boto: 10
-  - path: rightShoulder
-    sprite: {fileID: 21300000, guid: b64b880240049ea4b9a0c57c4b673edd, type: 3}
-    fondo: {fileID: 21300000, guid: f0b4f9e2e0ca76d4d86b5ada315b3ac5, type: 3}
-    boto: 11
-  - path: start
-    sprite: {fileID: 21300000, guid: 10a0f2c4ea2120440963cbf5b39a7ab0, type: 3}
-    fondo: {fileID: 21300000, guid: 63e6d7220e9d48f4e94c960387ca1b06, type: 3}
-    boto: 12
-  - path: select
-    sprite: {fileID: 21300000, guid: 4f108bc86a9ee874a8aaeb7e182aa20a, type: 3}
-    fondo: {fileID: 21300000, guid: 8cf3f6e661646354aa6e58d7a35f53d7, type: 3}
-    boto: 13
-  - path: leftTrigger
-    sprite: {fileID: 21300000, guid: 71b86860efdd1ab45b29002189f8bf25, type: 3}
-    fondo: {fileID: 21300000, guid: 68abd5e59e8e9ce4182aaa367d762a4f, type: 3}
-    boto: 32
-  - path: rightTrigger
-    sprite: {fileID: 21300000, guid: c5766477038aded4ab5e3eebdc4033a6, type: 3}
-    fondo: {fileID: 21300000, guid: dbb6efc7354d0ca47b57ae96a73b077a, type: 3}
-    boto: 33
-  - path: dpad
-    sprite: {fileID: 21300000, guid: 76c2bb4cf7451814aab4d38fc3f31740, type: 3}
-    fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 0
-  - path: leftStick/x
+  - path: <SwitchProControllerHID>/leftStick/x
     sprite: {fileID: 21300000, guid: 2e715fa9792080644ae0eba42f110aa4, type: 3}
     fondo: {fileID: 21300000, guid: 94844a590fbf3a64bacb7270557f9ba6, type: 3}
-    boto: 8
-  - path: leftStick/y
+  - path: <SwitchProControllerHID>/leftStick/y
     sprite: {fileID: 21300000, guid: 9b15bd724823e294dbf3b8a704a8e589, type: 3}
     fondo: {fileID: 21300000, guid: 9c41176f9bc49484e83dccaddaee8028, type: 3}
-    boto: 8
-  - path: rightStick/x
+  - path: <SwitchProControllerHID>/rightStick
+    sprite: {fileID: 21300000, guid: da5eaf6b0ab5a5048b480c503d7379bf, type: 3}
+    fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
+  - path: <SwitchProControllerHID>/rightStick/x
     sprite: {fileID: 21300000, guid: 415ec7b220bd9c142b3afa0249cf4cca, type: 3}
     fondo: {fileID: 21300000, guid: 94844a590fbf3a64bacb7270557f9ba6, type: 3}
-    boto: 8
-  - path: rightStick/y
+  - path: <SwitchProControllerHID>/rightStick/y
     sprite: {fileID: 21300000, guid: 8f55fdb31a7bb2e4b96f90b37e3e0bb7, type: 3}
     fondo: {fileID: 21300000, guid: 9c41176f9bc49484e83dccaddaee8028, type: 3}
-    boto: 8
-  tecles: []
-  ratoli: []
-  tactil: []
-  custom: []
+  - path: <SwitchProControllerHID>/leftShoulder
+    sprite: {fileID: 21300000, guid: 5ee2ec240b598374e8b96e345ed7acb1, type: 3}
+    fondo: {fileID: 21300000, guid: d4ee7d18acd1fac4dbd3e9054654f21b, type: 3}
+  - path: <SwitchProControllerHID>/rightShoulder
+    sprite: {fileID: 21300000, guid: d265e985cbf39ba4a89015a6f38be78f, type: 3}
+    fondo: {fileID: 21300000, guid: f0b4f9e2e0ca76d4d86b5ada315b3ac5, type: 3}
+  - path: <SwitchProControllerHID>/select
+    sprite: {fileID: 21300000, guid: 1b594a8d1931f794498a50456364edbc, type: 3}
+    fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
+  - path: <SwitchProControllerHID>/leftTrigger
+    sprite: {fileID: 21300000, guid: 9b62807b4e69aa44d82487f2c918294c, type: 3}
+    fondo: {fileID: 21300000, guid: 68abd5e59e8e9ce4182aaa367d762a4f, type: 3}
+  - path: <SwitchProControllerHID>/rightTrigger
+    sprite: {fileID: 21300000, guid: 543737cab02fb844aacd803350623dbb, type: 3}
+    fondo: {fileID: 21300000, guid: dbb6efc7354d0ca47b57ae96a73b077a, type: 3}
+  - path: <SwitchProControllerHID>/start
+    sprite: {fileID: 21300000, guid: 645d05ffdde9ed14ab5a616b09f8ab8b, type: 3}
+    fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
   fondoComposat: {fileID: 0}
   fondo1D: {fileID: 0}
   separador: {fileID: 0}

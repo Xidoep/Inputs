@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: Bindings_Guardats
   m_EditorClassIdentifier: 
   keys:
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplaySaltar0
-  - Exploracio (UnityEngine.InputSystem.InputActionAsset):GameplaySaltar1
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar0
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar1
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar2
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar3
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar4
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar5
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar6
+  - Gestio (UnityEngine.InputSystem.InputActionAsset):GamePlayGirar7
   values:
-  - <Gamepad>/buttonSouth
-  - <Mouse>/leftButton
+  - 1DAxis
+  - <Keyboard>/y
+  - <Keyboard>/u
+  - OneModifier
+  - <Mouse>/rightButton
+  - <Mouse>/delta/x
+  - <Gamepad>/rightStick/x
+  - <XInputController>/rightStick/x

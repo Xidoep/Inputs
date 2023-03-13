@@ -15,7 +15,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Moviment Teclat",
+                    "name": "Pan",
                     "type": "Value",
                     "id": "17868786-aa0c-4510-85bb-b7773f425611",
                     "expectedControlType": "Vector2",
@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Moviment Ratoli",
+                    "name": "Pan Ratoli",
                     "type": "Value",
                     "id": "c13ee07a-6f4b-4426-9e39-8029423476f2",
                     "expectedControlType": "Vector2",
@@ -33,16 +33,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Moviment Joystick",
-                    "type": "Value",
-                    "id": "d024ede9-ac00-423b-b4ca-c20d0e4f6364",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Zoom Teclat",
+                    "name": "Zoom",
                     "type": "Value",
                     "id": "d2ef82b2-eb8d-44aa-aa37-472fe6081e9c",
                     "expectedControlType": "Axis",
@@ -51,39 +42,12 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Zoom Ratoli",
-                    "type": "Value",
-                    "id": "036e03f8-d8a9-41c8-9816-378a558c95be",
-                    "expectedControlType": "Vector2",
-                    "processors": "NormalizeVector2",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Girar Teclat",
+                    "name": "Girar",
                     "type": "Value",
                     "id": "52f5377a-2ce1-4d7a-8e80-786c0f3061be",
                     "expectedControlType": "Axis",
                     "processors": "Normalize(min=-1,max=1)",
                     "interactions": "Press(behavior=2)",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Girar Ratoli Activation",
-                    "type": "Button",
-                    "id": "e9313dde-fdf1-43dd-a950-183c70c7aa11",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Girar",
-                    "type": "Value",
-                    "id": "1d5a57de-1af8-4d1d-b557-ba23f7153bf4",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
                     "initialStateCheck": true
                 },
                 {
@@ -140,7 +104,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -151,7 +115,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -162,7 +126,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -173,7 +137,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -184,7 +148,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -195,7 +159,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -206,7 +170,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -217,7 +181,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -228,7 +192,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -239,18 +203,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Teclat",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
+                    "name": "R/F",
                     "id": "16fd5e39-fd2f-4ad2-822c-fc13c7735d29",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Zoom Teclat",
+                    "action": "Zoom",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -261,7 +225,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Zoom Teclat",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -272,7 +236,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Zoom Teclat",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -283,29 +247,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Ratoli",
+                    "action": "Pan Ratoli",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "ea0dbdcf-7e4a-48e2-b70f-dfcdade36369",
-                    "path": "<Mouse>/scroll",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Zoom Ratoli",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "1D Axis",
+                    "name": "Q/E",
                     "id": "fb4822d4-2b46-40c9-a70b-3c4c7d55f742",
                     "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Girar Teclat",
+                    "action": "Girar",
                     "isComposite": true,
                     "isPartOfComposite": false
                 },
@@ -316,7 +269,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Girar Teclat",
+                    "action": "Girar",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
@@ -327,24 +280,13 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Girar Teclat",
+                    "action": "Girar",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "f723add7-d325-4b0b-bc53-074bf39a6202",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "Press(behavior=2)",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Girar Ratoli Activation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "One Modifier",
-                    "id": "f28788f4-ae68-4fcb-bdf9-164e07fd8825",
+                    "name": "RightButton + Delta.x",
+                    "id": "70dd9dcb-b1a2-45d7-ad4a-7f06545c3d4d",
                     "path": "OneModifier",
                     "interactions": "",
                     "processors": "",
@@ -355,7 +297,7 @@
                 },
                 {
                     "name": "modifier",
-                    "id": "8b132e01-933f-4f09-81f5-52e944414c67",
+                    "id": "aac986e8-9191-4303-8e4f-da05baf5cbd1",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
@@ -366,7 +308,7 @@
                 },
                 {
                     "name": "binding",
-                    "id": "14a7252f-7943-4cc4-bf39-bc8bb949badc",
+                    "id": "e4ffb6bb-98ba-4c64-899a-7cb6534e54e8",
                     "path": "<Mouse>/delta/x",
                     "interactions": "",
                     "processors": "",
@@ -376,37 +318,26 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "bbfb2294-f864-44f5-8f32-5d206b4d9c80",
-                    "path": "1DAxis",
+                    "name": "",
+                    "id": "55c969fc-8e7c-43ac-9cd3-e56bf39b0eee",
+                    "path": "<Gamepad>/rightStick/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Gamepad",
                     "action": "Girar",
-                    "isComposite": true,
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "positive",
-                    "id": "1347433a-31fb-4423-a580-55ff063235d2",
-                    "path": "<Keyboard>/q",
+                    "name": "",
+                    "id": "f2c8434c-2dc5-4759-b1f6-e6ecb6376582",
+                    "path": "<XInputController>/rightStick/x",
                     "interactions": "",
                     "processors": "",
-                    "groups": "TeclatRatoli",
+                    "groups": "Xbox",
                     "action": "Girar",
                     "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "negative",
-                    "id": "0e3787d6-603e-4e2e-970d-ed386e36f690",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Girar",
-                    "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
@@ -447,7 +378,7 @@
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad;Switch;PlayStation;Xbox",
+                    "groups": "Gamepad",
                     "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -458,7 +389,7 @@
                     "path": "<XInputController>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Gamepad;Switch;PlayStation;Xbox",
+                    "groups": "Xbox",
                     "action": "Pausa",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -470,6 +401,28 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
+                    "action": "Album",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "821dbd5d-a27f-4610-a8ce-ef7c19189964",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Album",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b5ba2d3-0a9d-4ef2-8840-65927b2f1784",
+                    "path": "<XInputController>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
                     "action": "Album",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -498,23 +451,23 @@
                 },
                 {
                     "name": "",
-                    "id": "8f655de4-332a-430b-b8a0-e493ced7da29",
-                    "path": "<Gamepad>/leftStick/x",
+                    "id": "bcce37fb-b8d0-4d6a-a58c-845f13309984",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Girar",
+                    "groups": "Gamepad",
+                    "action": "Foto",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "50e156f6-0820-4fb4-8bad-ecab22c0a8d4",
-                    "path": "<XInputController>/leftStick/x",
+                    "id": "390b3092-c496-4fff-a2c6-71a87c72157b",
+                    "path": "<XInputController>/buttonNorth",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Girar",
+                    "groups": "Xbox",
+                    "action": "Foto",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -524,87 +477,76 @@
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Moviment Teclat",
+                    "groups": "Gamepad",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "48e288c7-0f2d-4563-8d65-f52bb1eca511",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Moviment Joystick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1cd4f166-2d47-47a4-97e4-a3fd6be4845d",
+                    "id": "1196a6ba-a51b-4181-923b-b0d34d1dfd83",
                     "path": "<XInputController>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Moviment Joystick",
+                    "groups": "Xbox",
+                    "action": "Pan",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Arrows",
-                    "id": "d416c2ca-6724-4cf9-81e1-739cad6d01f3",
-                    "path": "2DVector",
+                    "name": "",
+                    "id": "cc0e6cae-4add-40cb-b689-2cbb4795589f",
+                    "path": "<SwitchProControllerHID>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Moviment Joystick",
-                    "isComposite": true,
+                    "groups": "Switch",
+                    "action": "Pan",
+                    "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "fdfc30b9-7602-4e6c-97e3-d0f5c5639a6a",
-                    "path": "<Keyboard>/upArrow",
+                    "name": "",
+                    "id": "05127d92-9ee0-4681-830a-c7a97169a899",
+                    "path": "<DualShockGamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment Joystick",
+                    "groups": "PlayStation",
+                    "action": "Pan",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "down",
-                    "id": "b135e136-0675-4b18-aa26-33944d4a8fef",
-                    "path": "<Keyboard>/downArrow",
+                    "name": "",
+                    "id": "ea0dbdcf-7e4a-48e2-b70f-dfcdade36369",
+                    "path": "<Mouse>/scroll/y",
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Moviment Joystick",
+                    "action": "Zoom",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "left",
-                    "id": "fcd0990a-5b45-49de-a37b-3ef8aecdf2cf",
-                    "path": "<Keyboard>/leftArrow",
+                    "name": "",
+                    "id": "94b7e873-e65e-45a5-8e02-6d75c3217115",
+                    "path": "<Gamepad>/rightStick/y",
                     "interactions": "",
                     "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment Joystick",
+                    "groups": "Gamepad",
+                    "action": "Zoom",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
-                    "name": "right",
-                    "id": "414a0958-2027-4fdc-a226-d3b063290577",
-                    "path": "<Keyboard>/rightArrow",
+                    "name": "",
+                    "id": "78031d31-4971-4094-a256-69c65fba82d3",
+                    "path": "<XInputController>/rightStick/y",
                     "interactions": "",
                     "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Moviment Joystick",
+                    "groups": "Xbox",
+                    "action": "Zoom",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 }
             ]
         },

@@ -16,498 +16,297 @@ MonoBehaviour:
   - Keyboard
   - Mouse
   bindings:
-  - path: <Keyboard>/q
-    sprite: {fileID: 21300000, guid: 475b1e01183b6234a9ab25de68f64861, type: 3}
-    fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-  - path: <Keyboard>/e
-    sprite: {fileID: 21300000, guid: 475b1e01183b6234a9ab25de68f64861, type: 3}
-    fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-  - path: <Mouse>/rightButton
-    sprite: {fileID: 21300000, guid: 475b1e01183b6234a9ab25de68f64861, type: 3}
-    fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-  - path: <Keyboard>/upArrow
-    sprite: {fileID: 21300000, guid: 475b1e01183b6234a9ab25de68f64861, type: 3}
-    fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-  botons: []
-  tecles:
-  - path: escape
+  - path: <Keyboard>/escape
     sprite: {fileID: 21300000, guid: 36a4c71111fa4cc41a668daf752b2b31, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 1
-    key: 60
-  - path: f1
+  - path: <Keyboard>/f1
     sprite: {fileID: 21300000, guid: 475b1e01183b6234a9ab25de68f64861, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 94
-  - path: f2
+  - path: <Keyboard>/f2
     sprite: {fileID: 21300000, guid: 8c63cf83843a8314fa78481418d2ece4, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 95
-  - path: f3
+  - path: <Keyboard>/f3
     sprite: {fileID: 21300000, guid: 72555dbc9f25e2246ae8b0cfb16ba9a0, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 95
-  - path: f4
+  - path: <Keyboard>/f4
     sprite: {fileID: 21300000, guid: 205435d28d2540d468bb5a3b0ce4ce12, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 97
-  - path: f5
+  - path: <Keyboard>/f5
     sprite: {fileID: 21300000, guid: 7c9d9943aa567504488928102fabb749, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 98
-  - path: f6
+  - path: <Keyboard>/f6
     sprite: {fileID: 21300000, guid: 135d7a8ec4a4e4141b1411c49b21ad86, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 99
-  - path: f7
+  - path: <Keyboard>/f7
     sprite: {fileID: 21300000, guid: 74c6f622303b4f44aad227e12bb41ce4, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 100
-  - path: f8
+  - path: <Keyboard>/f8
     sprite: {fileID: 21300000, guid: 51104a32dec27ad4f9000e56d77f57af, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 101
-  - path: f9
+  - path: <Keyboard>/f9
     sprite: {fileID: 21300000, guid: 4bc71dfb2c5350445a7f0d19ff37e5ce, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 102
-  - path: f10
+  - path: <Keyboard>/f10
     sprite: {fileID: 21300000, guid: 07c014c575cebe3469d79b51083bec9d, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 103
-  - path: f11
+  - path: <Keyboard>/f11
     sprite: {fileID: 21300000, guid: a22b00d5eeacb4a49bd9a35d67bebeec, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 104
-  - path: f12
+  - path: <Keyboard>/f12
     sprite: {fileID: 21300000, guid: 1db3cb6d6b79ae9439e6e806f9036555, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 105
-  - path: 1
+  - path: <Keyboard>/1
     sprite: {fileID: 21300000, guid: a83b5fd9e5fbf83458d4b5e3c08d376e, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 41
-  - path: 2
+  - path: <Keyboard>/2
     sprite: {fileID: 21300000, guid: 3e071f054adf4b546912a256a92e3df3, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 42
-  - path: 3
+  - path: <Keyboard>/3
     sprite: {fileID: 21300000, guid: 7c2e5f92741cb284a83a9a679dc91991, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 43
-  - path: 4
+  - path: <Keyboard>/4
     sprite: {fileID: 21300000, guid: e9160ad99ba812f47b1742c7a69c9b71, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 44
-  - path: 5
+  - path: <Keyboard>/5
     sprite: {fileID: 21300000, guid: f28bb04fdfbf72d41a1053a943671934, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 45
-  - path: 6
+  - path: <Keyboard>/6
     sprite: {fileID: 21300000, guid: 2c6c36fa4468127429525881ca5a7fb7, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 46
-  - path: 7
+  - path: <Keyboard>/7
     sprite: {fileID: 21300000, guid: ea230916d32a5654ab2351014778150b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 47
-  - path: 8
+  - path: <Keyboard>/8
     sprite: {fileID: 21300000, guid: c884778c367105a418dcf7d7b74dc0f8, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 48
-  - path: 9
+  - path: <Keyboard>/9
     sprite: {fileID: 21300000, guid: 36974382766ff27459f6dae120fcd96b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 49
-  - path: 0
+  - path: <Keyboard>/0
     sprite: {fileID: 21300000, guid: ffb822e263561114d998ef66034aecc0, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 50
-  - path: backspace
+  - path: <Keyboard>/backspace
     sprite: {fileID: 21300000, guid: 400aef05fab6cbb45bd82e6e432348af, type: 3}
     fondo: {fileID: 21300000, guid: 8f9fe8dc380526e4aac84b8033a17874, type: 3}
-    WASD_Fletxes: 0
-    key: 65
-  - path: insert
+  - path: <Keyboard>/insert
     sprite: {fileID: 21300000, guid: 1f85f962522b5e64580686d04fc9ae04, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 70
-  - path: home
+  - path: <Keyboard>/home
     sprite: {fileID: 21300000, guid: 4d69a4f434411894e9025e9d37642c9d, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 68
-  - path: pageUp
+  - path: <Keyboard>/pageUp
     sprite: {fileID: 21300000, guid: 750390f784db37e43b474198a4a973c8, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 67
-  - path: numLock
+  - path: <Keyboard>/numLock
     sprite: {fileID: 21300000, guid: 9003df679dda9d1469bc0b0e58b2d3d4, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 73
-  - path: numpadDivide
+  - path: <Keyboard>/numpadDivide
     sprite: {fileID: 21300000, guid: 2e760ee1eea4d1b4d8cf60037bcc8554, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 78
-  - path: numpadMultiply
+  - path: <Keyboard>/numpadMultiply
     sprite: {fileID: 21300000, guid: 968d265e49c1d5a44977bf1e21a31a44, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 79
-  - path: numpadMinus
+  - path: <Keyboard>/numpadMinus
     sprite: {fileID: 21300000, guid: 577ced311ae77cd4194680793c594c34, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 81
-  - path: tab
+  - path: <Keyboard>/tab
     sprite: {fileID: 21300000, guid: a3fe03a68c409ac4b9a186590e51d29f, type: 3}
     fondo: {fileID: 21300000, guid: 3d0d261c78789444e8fa3ec7d17d7840, type: 3}
-    WASD_Fletxes: 0
-    key: 3
-  - path: q
+  - path: <Keyboard>/q
     sprite: {fileID: 21300000, guid: 0edd9ed69da459f4e964646c2bfa9e4c, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 31
-  - path: w
+  - path: <Keyboard>/w
     sprite: {fileID: 21300000, guid: f5c723f53210f9049810f8c80da677f6, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 37
-  - path: e
+  - path: <Keyboard>/e
     sprite: {fileID: 21300000, guid: 0bf6831b9651c3842836f182d0d8c35b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 19
-  - path: r
+  - path: <Keyboard>/r
     sprite: {fileID: 21300000, guid: 5abbf36f465ee4f4483b21a4901d1f33, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 32
-  - path: t
+  - path: <Keyboard>/t
     sprite: {fileID: 21300000, guid: 6c4a38186c8ba8b41854f2a4b93b23a5, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 34
-  - path: y
+  - path: <Keyboard>/y
     sprite: {fileID: 21300000, guid: b661427985dedba49b36dbe1f86e7c9b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 39
-  - path: u
+  - path: <Keyboard>/u
     sprite: {fileID: 21300000, guid: f322de838e76d424290b59a84538a68c, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 35
-  - path: i
+  - path: <Keyboard>/i
     sprite: {fileID: 21300000, guid: b9bbe233ca1424f4a8ee3b1b19cd3341, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 23
-  - path: o
+  - path: <Keyboard>/o
     sprite: {fileID: 21300000, guid: fbdffc97f4f157a4fbfdea6283568c1a, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 29
-  - path: p
+  - path: <Keyboard>/p
     sprite: {fileID: 21300000, guid: 5e982dd77ee38c04fa92801106a8070d, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 30
-  - path: enter
+  - path: <Keyboard>/enter
     sprite: {fileID: 21300000, guid: 84f76b5983b93f642ab1c51ab0be5c8d, type: 3}
     fondo: {fileID: 21300000, guid: 83492419cd5f8ba4ca3a05974413a078, type: 3}
-    WASD_Fletxes: 0
-    key: 2
-  - path: delete
+  - path: <Keyboard>/delete
     sprite: {fileID: 21300000, guid: 1b8c08d0cd12ebc4f8de46e47af5c195, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 71
-  - path: end
+  - path: <Keyboard>/end
     sprite: {fileID: 21300000, guid: d25df41f9b0ac1747800bab852360804, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 69
-  - path: pageDown
+  - path: <Keyboard>/pageDown
     sprite: {fileID: 21300000, guid: c65399794b5edf44eb02b4614816cdbb, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 66
-  - path: numpad7
+  - path: <Keyboard>/numpad7
     sprite: {fileID: 21300000, guid: ea230916d32a5654ab2351014778150b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 91
-  - path: numpad8
+  - path: <Keyboard>/numpad8
     sprite: {fileID: 21300000, guid: c884778c367105a418dcf7d7b74dc0f8, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 92
-  - path: numpad9
+  - path: <Keyboard>/numpad9
     sprite: {fileID: 21300000, guid: 36974382766ff27459f6dae120fcd96b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 93
-  - path: numpadPlus
+  - path: <Keyboard>/numpadPlus
     sprite: {fileID: 21300000, guid: 9bad523f29d12dd4e8a49498a91a8f60, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 80
-  - path: capsLock
+  - path: <Keyboard>/capsLock
     sprite: {fileID: 21300000, guid: a7e173a620f211442a99ee1143301924, type: 3}
     fondo: {fileID: 21300000, guid: 8f9fe8dc380526e4aac84b8033a17874, type: 3}
-    WASD_Fletxes: 0
-    key: 72
-  - path: a
+  - path: <Keyboard>/a
     sprite: {fileID: 21300000, guid: df1539b07512e954bb105994f1887ac0, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 15
-  - path: s
+  - path: <Keyboard>/s
     sprite: {fileID: 21300000, guid: 4d1f3af3e0709b849be3f4d744e8555b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 33
-  - path: d
+  - path: <Keyboard>/d
     sprite: {fileID: 21300000, guid: a7b2803ef3b52e24086cc5a010c76d9b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 18
-  - path: f
+  - path: <Keyboard>/f
     sprite: {fileID: 21300000, guid: d973d2e4fabc5404080995944c6bf353, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 20
-  - path: g
+  - path: <Keyboard>/g
     sprite: {fileID: 21300000, guid: 45c9af9131a022849906b76cd6fe7964, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 21
-  - path: h
+  - path: <Keyboard>/h
     sprite: {fileID: 21300000, guid: a15f10b6af472c8448d3f9f5cdd7b35a, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 22
-  - path: j
+  - path: <Keyboard>/j
     sprite: {fileID: 21300000, guid: 3996de79e8509884a93285a352728db2, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 24
-  - path: k
+  - path: <Keyboard>/k
     sprite: {fileID: 21300000, guid: d8f398f7129d936408e0dc7e6cce27c5, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 25
-  - path: l
+  - path: <Keyboard>/l
     sprite: {fileID: 21300000, guid: b9bbe233ca1424f4a8ee3b1b19cd3341, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 23
-  - path: numpad4
+  - path: <Keyboard>/numpad4
     sprite: {fileID: 21300000, guid: e9160ad99ba812f47b1742c7a69c9b71, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 88
-  - path: numpad5
+  - path: <Keyboard>/numpad5
     sprite: {fileID: 21300000, guid: f28bb04fdfbf72d41a1053a943671934, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 89
-  - path: numpad6
+  - path: <Keyboard>/numpad6
     sprite: {fileID: 21300000, guid: 2c6c36fa4468127429525881ca5a7fb7, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 90
-  - path: leftShift
+  - path: <Keyboard>/leftShift
     sprite: {fileID: 21300000, guid: ffdfb63b1a9d4d2429542d6db8aef363, type: 3}
     fondo: {fileID: 21300000, guid: 3d0d261c78789444e8fa3ec7d17d7840, type: 3}
-    WASD_Fletxes: 0
-    key: 51
-  - path: z
+  - path: <Keyboard>/z
     sprite: {fileID: 21300000, guid: 0cf5b32694c9643478b385255e0086bd, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 40
-  - path: x
+  - path: <Keyboard>/x
     sprite: {fileID: 21300000, guid: c244fbb3ef8354642a93764fbf4319d7, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 38
-  - path: c
+  - path: <Keyboard>/c
     sprite: {fileID: 21300000, guid: 1079590ca95c0a34a9b50dc09bed2523, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 17
-  - path: v
+  - path: <Keyboard>/v
     sprite: {fileID: 21300000, guid: 0ef8c756a70ada342ba264a065dd7a23, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 36
-  - path: b
+  - path: <Keyboard>/b
     sprite: {fileID: 21300000, guid: 75dcc62e4d067c94ca056f182450e35f, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 16
-  - path: n
+  - path: <Keyboard>/n
     sprite: {fileID: 21300000, guid: c61f6219f63aeb74bad943ff776b2db1, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 28
-  - path: m
+  - path: <Keyboard>/m
     sprite: {fileID: 21300000, guid: 5307dddbbaab75745ae984f55506749e, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 27
-  - path: rightShift
+  - path: <Keyboard>/rightShift
     sprite: {fileID: 21300000, guid: ffdfb63b1a9d4d2429542d6db8aef363, type: 3}
     fondo: {fileID: 21300000, guid: 3d0d261c78789444e8fa3ec7d17d7840, type: 3}
-    WASD_Fletxes: 0
-    key: 52
-  - path: upArrow
+  - path: <Keyboard>/upArrow
     sprite: {fileID: 21300000, guid: 2430791bb4323a944a108a60d9131438, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 63
-  - path: numpad1
+  - path: <Keyboard>/numpad1
     sprite: {fileID: 21300000, guid: a83b5fd9e5fbf83458d4b5e3c08d376e, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 85
-  - path: numpad2
+  - path: <Keyboard>/numpad2
     sprite: {fileID: 21300000, guid: 3e071f054adf4b546912a256a92e3df3, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 86
-  - path: numpad3
+  - path: <Keyboard>/numpad3
     sprite: {fileID: 21300000, guid: 7c2e5f92741cb284a83a9a679dc91991, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 87
-  - path: numpadEnter
+  - path: <Keyboard>/numpadEnter
     sprite: {fileID: 21300000, guid: 84f76b5983b93f642ab1c51ab0be5c8d, type: 3}
     fondo: {fileID: 21300000, guid: 83492419cd5f8ba4ca3a05974413a078, type: 3}
-    WASD_Fletxes: 0
-    key: 77
-  - path: leftCtrl
+  - path: <Keyboard>/leftCtrl
     sprite: {fileID: 21300000, guid: 87a80a2d17b1e7240b6001b4c83aaf3d, type: 3}
     fondo: {fileID: 21300000, guid: 3d0d261c78789444e8fa3ec7d17d7840, type: 3}
-    WASD_Fletxes: 0
-    key: 55
-  - path: leftAlt
+  - path: <Keyboard>/leftAlt
     sprite: {fileID: 21300000, guid: da3a67f38e35f7447b523292a03d46ad, type: 3}
     fondo: {fileID: 21300000, guid: 3d0d261c78789444e8fa3ec7d17d7840, type: 3}
-    WASD_Fletxes: 0
-    key: 53
-  - path: space
+  - path: <Keyboard>/space
     sprite: {fileID: 21300000, guid: eb2fa9d4f0494a64ea8e0cdca591e40e, type: 3}
     fondo: {fileID: 21300000, guid: 8f9fe8dc380526e4aac84b8033a17874, type: 3}
-    WASD_Fletxes: 0
-    key: 1
-  - path: rightAlt
+  - path: <Keyboard>/rightAlt
     sprite: {fileID: 21300000, guid: da3a67f38e35f7447b523292a03d46ad, type: 3}
     fondo: {fileID: 21300000, guid: 3d0d261c78789444e8fa3ec7d17d7840, type: 3}
-    WASD_Fletxes: 0
-    key: 54
-  - path: rightCtrl
+  - path: <Keyboard>/rightCtrl
     sprite: {fileID: 21300000, guid: 87a80a2d17b1e7240b6001b4c83aaf3d, type: 3}
     fondo: {fileID: 21300000, guid: 3d0d261c78789444e8fa3ec7d17d7840, type: 3}
-    WASD_Fletxes: 0
-    key: 56
-  - path: leftArrow
+  - path: <Keyboard>/leftArrow
     sprite: {fileID: 21300000, guid: db8dfbf31b8cbdd408499f2ce15a737b, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 61
-  - path: downArrow
+  - path: <Keyboard>/downArrow
     sprite: {fileID: 21300000, guid: 813be094705974e4f86754ffb9108d50, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 64
-  - path: rightArrow
+  - path: <Keyboard>/rightArrow
     sprite: {fileID: 21300000, guid: 283c831ef1873914688d3ec2fd1c0404, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 62
-  - path: numpad0
+  - path: <Keyboard>/numpad0
     sprite: {fileID: 21300000, guid: ffb822e263561114d998ef66034aecc0, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 84
-  - path: numpadPeriod
+  - path: <Keyboard>/numpadPeriod
     sprite: {fileID: 21300000, guid: ae066919ee23f174f9bc7eab864195c7, type: 3}
     fondo: {fileID: 21300000, guid: 23c2477bee25ffc499f7067d36db068c, type: 3}
-    WASD_Fletxes: 0
-    key: 82
-  ratoli:
-  - path: leftButton
+  - path: <Mouse>/leftButton
     sprite: {fileID: 21300000, guid: f7dee85a04c707f4e988cde453bdbb7f, type: 3}
     fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
-    mouseButton: 0
-    mouseInteraccio: 0
-  - path: rightButton
+  - path: <Mouse>/rightButton
     sprite: {fileID: 21300000, guid: e84e0823dfdb63942a9ebbd1b074de90, type: 3}
     fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
-    mouseButton: 1
-    mouseInteraccio: 0
-  - path: middleButton
+  - path: <Mouse>/middleButton
     sprite: {fileID: 21300000, guid: e934d18fbaa7b2c40b6d723d2cc4e760, type: 3}
     fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
-    mouseButton: 2
-    mouseInteraccio: 0
-  - path: position
+  - path: <Mouse>/position
     sprite: {fileID: 21300000, guid: 6548e012fa50c9e44813d1b17936e2d6, type: 3}
     fondo: {fileID: 21300000, guid: 8d124ab53c2cad541809d7d9e2eb07b3, type: 3}
-    mouseButton: 0
-    mouseInteraccio: 1
-  - path: delta
+  - path: <Mouse>/delta
     sprite: {fileID: 21300000, guid: 6548e012fa50c9e44813d1b17936e2d6, type: 3}
     fondo: {fileID: 21300000, guid: 8d124ab53c2cad541809d7d9e2eb07b3, type: 3}
-    mouseButton: 2
-    mouseInteraccio: 2
-  - path: scroll
-    sprite: {fileID: 21300000, guid: e934d18fbaa7b2c40b6d723d2cc4e760, type: 3}
-    fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
-    mouseButton: 2
-    mouseInteraccio: 2
-  - path: delta/x
+  - path: <Mouse>/delta/x
     sprite: {fileID: 21300000, guid: 184e2e4f7e62ab4459744f965260b7eb, type: 3}
     fondo: {fileID: 21300000, guid: f7fe30e5621079d419cc80be595dcfd6, type: 3}
-    mouseButton: 2
-    mouseInteraccio: 2
-  - path: delta/y
+  - path: <Mouse>/delta/y
     sprite: {fileID: 21300000, guid: 864f246eb61a6f34b9631d2a94a5a7c4, type: 3}
     fondo: {fileID: 21300000, guid: 78a8873158b87ed409eb87c139a04513, type: 3}
-    mouseButton: 2
-    mouseInteraccio: 2
-  tactil: []
-  custom: []
+  - path: <Mouse>/scroll
+    sprite: {fileID: 21300000, guid: e934d18fbaa7b2c40b6d723d2cc4e760, type: 3}
+    fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
+  - path: <Mouse>/scroll/x
+    sprite: {fileID: 21300000, guid: e934d18fbaa7b2c40b6d723d2cc4e760, type: 3}
+    fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
+  - path: <Mouse>/scroll/y
+    sprite: {fileID: 21300000, guid: e934d18fbaa7b2c40b6d723d2cc4e760, type: 3}
+    fondo: {fileID: 21300000, guid: 2b3fd6a9c777a6748b071b557b877896, type: 3}
   fondoComposat: {fileID: 21300000, guid: 8e61d7071e8f93641801091206504b27, type: 3}
   fondo1D: {fileID: 21300000, guid: 8f9fe8dc380526e4aac84b8033a17874, type: 3}
   separador: {fileID: 21300000, guid: 16cdac78986cebb4fbb4ab32c62e69df, type: 3}

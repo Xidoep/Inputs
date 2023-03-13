@@ -14,95 +14,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - DualShockGamepad
-  botons:
-  - path: dpad/up
-    sprite: {fileID: 21300000, guid: 94d50de34ddfdba46bfdaaaf62726864, type: 3}
-    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
-    boto: 0
-  - path: dpad/down
-    sprite: {fileID: 21300000, guid: ae74f92bfd239d849a188e7ce5662109, type: 3}
-    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
-    boto: 1
-  - path: dpad/left
-    sprite: {fileID: 21300000, guid: f368b3d6ac452e643a33611e95772325, type: 3}
-    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
-    boto: 2
-  - path: dpad/right
-    sprite: {fileID: 21300000, guid: 358978d2a83b71240a7df7ccf793cc25, type: 3}
-    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
-    boto: 3
-  - path: buttonNorth
-    sprite: {fileID: 21300000, guid: aabdb535cf922a941b7dc9eccc6df883, type: 3}
+  bindings:
+  - path: <DualShockGamepad>/dpad
+    sprite: {fileID: 21300000, guid: e77362b8233193a49a86503d99aab5ba, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <DualShockGamepad>/dpad/up
+    sprite: {fileID: 21300000, guid: d2c61688609e7ce47824bd0dd5369096, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <DualShockGamepad>/dpad/down
+    sprite: {fileID: 21300000, guid: 8661fa24106fc434e8853434d99812e5, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <DualShockGamepad>/dpad/left
+    sprite: {fileID: 21300000, guid: a07691336b1d68b48bc4d0ab7e3eaec3, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <DualShockGamepad>/dpad/right
+    sprite: {fileID: 21300000, guid: a80f8a83d40d8924db440dda77ec7db4, type: 3}
+    fondo: {fileID: 21300000, guid: 6d525fa2381865d408b41a5dcbcf8c83, type: 3}
+  - path: <DualShockGamepad>/buttonNorth
+    sprite: {fileID: 21300000, guid: 4e2c306e0f86f1549871e8c699588889, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 4
-  - path: buttonEast
-    sprite: {fileID: 21300000, guid: 7a7c3c6efc2d8ca4d9a2b12d67c4e498, type: 3}
+  - path: <DualShockGamepad>/buttonEast
+    sprite: {fileID: 21300000, guid: 9166dad89bba3d4419d3854154faa858, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 5
-  - path: buttonSouth
-    sprite: {fileID: 21300000, guid: bf48db5b789b3154ea8239dcdec3e244, type: 3}
+  - path: <DualShockGamepad>/buttonSouth
+    sprite: {fileID: 21300000, guid: ce0f848532af01c4a992aca32c34aab0, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 6
-  - path: buttonWest
-    sprite: {fileID: 21300000, guid: 797ee0b4e06d4ab47b1c7bf1c0b49b0a, type: 3}
+  - path: <DualShockGamepad>/buttonWest
+    sprite: {fileID: 21300000, guid: aea3b90cb015e7e44a3a1dd4354c71fe, type: 3}
     fondo: {fileID: 21300000, guid: a2b29bf1b5f11ff449d938d361e1d107, type: 3}
-    boto: 7
-  - path: leftStick
+  - path: <DualShockGamepad>/leftStick
     sprite: {fileID: 21300000, guid: abde0f4133df66943b432e236b0e960e, type: 3}
     fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
-    boto: 8
-  - path: rightStick
-    sprite: {fileID: 21300000, guid: da5eaf6b0ab5a5048b480c503d7379bf, type: 3}
-    fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
-    boto: 9
-  - path: leftShoulder
-    sprite: {fileID: 21300000, guid: 8cfb72e9ab241d14da7d6ef42ddbce31, type: 3}
-    fondo: {fileID: 21300000, guid: d4ee7d18acd1fac4dbd3e9054654f21b, type: 3}
-    boto: 10
-  - path: rightShoulder
-    sprite: {fileID: 21300000, guid: ce953424d403ded4e92ff0e36150a6a1, type: 3}
-    fondo: {fileID: 21300000, guid: f0b4f9e2e0ca76d4d86b5ada315b3ac5, type: 3}
-    boto: 11
-  - path: start
-    sprite: {fileID: 21300000, guid: 082e87ab998bda8498d64a527ef3a7f7, type: 3}
-    fondo: {fileID: 21300000, guid: 931b55b3eddcdbc4889bf33860cb0485, type: 3}
-    boto: 12
-  - path: select
-    sprite: {fileID: 21300000, guid: 9e32887f1f5a5b64985b9f3fdbcb9ada, type: 3}
-    fondo: {fileID: 21300000, guid: 931b55b3eddcdbc4889bf33860cb0485, type: 3}
-    boto: 13
-  - path: leftTrigger
-    sprite: {fileID: 21300000, guid: c4c10002e02b65e4d85e55d2b7f7a1cf, type: 3}
-    fondo: {fileID: 21300000, guid: 68abd5e59e8e9ce4182aaa367d762a4f, type: 3}
-    boto: 32
-  - path: rightTrigger
-    sprite: {fileID: 21300000, guid: 5f95fce1a996ff74da1639dcbebdf45c, type: 3}
-    fondo: {fileID: 21300000, guid: dbb6efc7354d0ca47b57ae96a73b077a, type: 3}
-    boto: 33
-  - path: dpad
-    sprite: {fileID: 21300000, guid: bfe70a45219089340af43bc05e1305af, type: 3}
-    fondo: {fileID: 21300000, guid: 07059bbc9ff6d734c98ade61a1dbedef, type: 3}
-    boto: 0
-  - path: leftStick/x
+  - path: <DualShockGamepad>/leftStick/x
     sprite: {fileID: 21300000, guid: 2e715fa9792080644ae0eba42f110aa4, type: 3}
     fondo: {fileID: 21300000, guid: 94844a590fbf3a64bacb7270557f9ba6, type: 3}
-    boto: 8
-  - path: leftStick/y
+  - path: <DualShockGamepad>/leftStick/y
     sprite: {fileID: 21300000, guid: 9b15bd724823e294dbf3b8a704a8e589, type: 3}
     fondo: {fileID: 21300000, guid: 9c41176f9bc49484e83dccaddaee8028, type: 3}
-    boto: 8
-  - path: rightStick/x
+  - path: <DualShockGamepad>/rightStick
+    sprite: {fileID: 21300000, guid: da5eaf6b0ab5a5048b480c503d7379bf, type: 3}
+    fondo: {fileID: 21300000, guid: 8bbb220a81dba174ca47befe412879f6, type: 3}
+  - path: <DualShockGamepad>/rightStick/x
     sprite: {fileID: 21300000, guid: 415ec7b220bd9c142b3afa0249cf4cca, type: 3}
     fondo: {fileID: 21300000, guid: 94844a590fbf3a64bacb7270557f9ba6, type: 3}
-    boto: 8
-  - path: rightStick/y
+  - path: <DualShockGamepad>/rightStick/y
     sprite: {fileID: 21300000, guid: 8f55fdb31a7bb2e4b96f90b37e3e0bb7, type: 3}
     fondo: {fileID: 21300000, guid: 9c41176f9bc49484e83dccaddaee8028, type: 3}
-    boto: 8
-  tecles: []
-  ratoli: []
-  tactil: []
-  custom: []
+  - path: <DualShockGamepad>/leftShoulder
+    sprite: {fileID: 21300000, guid: 5ee2ec240b598374e8b96e345ed7acb1, type: 3}
+    fondo: {fileID: 21300000, guid: d4ee7d18acd1fac4dbd3e9054654f21b, type: 3}
+  - path: <DualShockGamepad>/rightShoulder
+    sprite: {fileID: 21300000, guid: d265e985cbf39ba4a89015a6f38be78f, type: 3}
+    fondo: {fileID: 21300000, guid: f0b4f9e2e0ca76d4d86b5ada315b3ac5, type: 3}
+  - path: <DualShockGamepad>/select
+    sprite: {fileID: 21300000, guid: 1b594a8d1931f794498a50456364edbc, type: 3}
+    fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
+  - path: <DualShockGamepad>/leftTrigger
+    sprite: {fileID: 21300000, guid: 9b62807b4e69aa44d82487f2c918294c, type: 3}
+    fondo: {fileID: 21300000, guid: 68abd5e59e8e9ce4182aaa367d762a4f, type: 3}
+  - path: <DualShockGamepad>/rightTrigger
+    sprite: {fileID: 21300000, guid: 543737cab02fb844aacd803350623dbb, type: 3}
+    fondo: {fileID: 21300000, guid: dbb6efc7354d0ca47b57ae96a73b077a, type: 3}
+  - path: <DualShockGamepad>/start
+    sprite: {fileID: 21300000, guid: 645d05ffdde9ed14ab5a616b09f8ab8b, type: 3}
+    fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
   fondoComposat: {fileID: 0}
   fondo1D: {fileID: 0}
   separador: {fileID: 0}

@@ -160,6 +160,15 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 return m_guardatEvent;
             }
         }
+        public InfoMessage infoMessage
+        {
+            get
+            {
+                if (m_infoMessage == null)
+                    m_infoMessage = new InfoMessage();
+                return m_infoMessage;
+            }
+        }
 
         /// <summary>
         /// When an interactive rebind is in progress, this is the rebind operation controller.
@@ -381,6 +390,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                 if(binding.effectivePath == newBindings.effectivePath)
                 {
                     Debug.Log("Duplicate binding found: " + newBindings.effectivePath);
+                    m_infoMessage.Invoke();
                     return true;
                 }
             }
@@ -392,6 +402,7 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
                     if(action.bindings[i].effectivePath == newBindings.effectivePath)
                     {
                         Debug.Log("Duplicate binding found: " + newBindings.effectivePath);
+                        m_infoMessage.Invoke();
                         return true;
                     }
                 }
@@ -495,6 +506,9 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         [SerializeField]
         private GuardarEvent m_guardatEvent;
 
+        [SerializeField]
+        private InfoMessage m_infoMessage;
+
         private InputActionRebindingExtensions.RebindingOperation m_RebindOperation;
 
         private static List<RebindActionUI> s_RebindActionUIs;
@@ -522,19 +536,16 @@ namespace UnityEngine.InputSystem.Samples.RebindUI
         }
 
         [Serializable]
-        public class UpdateBindingUIEvent : UnityEvent<RebindActionUI, string, string, string>
-        {
-        }
+        public class UpdateBindingUIEvent : UnityEvent<RebindActionUI, string, string, string> { }
 
         [Serializable]
-        public class InteractiveRebindEvent : UnityEvent<RebindActionUI, InputActionRebindingExtensions.RebindingOperation>
-        {
-        }
+        public class InteractiveRebindEvent : UnityEvent<RebindActionUI, InputActionRebindingExtensions.RebindingOperation> { }
 
         [Serializable]
-        public class GuardarEvent : UnityEvent<InputAction>
-        {
-        }
+        public class GuardarEvent : UnityEvent<InputAction> { }
+
+        [Serializable]
+        public class InfoMessage : UnityEvent { }
 
         /*public void Guardar(InputAction action)
         {

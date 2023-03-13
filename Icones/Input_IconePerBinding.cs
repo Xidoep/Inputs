@@ -9,8 +9,12 @@ public class Input_IconePerBinding : Input_Icone
     [SerializeField] InputDevice device;
     [SerializeField] bool prioritzaMouse = false;
     [SerializeField] bool overrided;
-    public InputActionReference InputBinding => inputBinding;
-    public bool Overrided { set => overrided = value; }
+    //public InputActionReference InputBinding => inputBinding;
+    //public bool Overrided { set => overrided = value; }
+    public bool SetPropritzarMouse { set => prioritzaMouse = value; }
+
+    //public InputActionReference SetInputActionReference(InputActionReference inputActionReference) => inputBinding = inputActionReference;
+    public InputActionReference SetInputActionReference { set => inputBinding = value; }
 
     void OnEnable() 
     {
@@ -19,11 +23,20 @@ public class Input_IconePerBinding : Input_Icone
 
         MostrarIcone(inputBinding.action, overrided, prioritzaMouse);
     }
-    
 
-    
-    public void MostrarIcone() => MostrarIcone(inputBinding.action, overrided, prioritzaMouse);
-    public void MostrarIcone(InputActionReference inputActionReference) => MostrarIcone(inputActionReference.action, overrided, prioritzaMouse);
+
+
+    public void MostrarIcone(bool forçar) 
+    {
+        if (forçar) trobat = false;
+        MostrarIcone(inputBinding.action, overrided, prioritzaMouse);
+    }
+    public void MostrarIcone(InputActionReference inputActionReference, bool forçar = false) 
+    {
+        if (forçar) trobat = false;
+        inputBinding = inputActionReference;
+        MostrarIcone(inputActionReference.action, overrided, prioritzaMouse);
+    } 
 
     [ContextMenu("Provar")]
     void Provar()
