@@ -376,6 +376,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "1D Axis",
+                    "id": "bbfb2294-f864-44f5-8f32-5d206b4d9c80",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Girar",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "positive",
+                    "id": "1347433a-31fb-4423-a580-55ff063235d2",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Girar",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "negative",
+                    "id": "0e3787d6-603e-4e2e-970d-ed386e36f690",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Girar",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "ec50300b-f164-4a46-b3c7-15714f54c2cd",
                     "path": "<Keyboard>/space",
@@ -421,6 +454,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f6aceaed-aa55-47de-a7a1-c25cdc61378a",
+                    "path": "<XInputController>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Switch;PlayStation;Xbox",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "d79d9151-ddd9-4802-912a-95818b08f147",
                     "path": "<Keyboard>/tab",
                     "interactions": "",
@@ -454,7 +498,40 @@
                 },
                 {
                     "name": "",
+                    "id": "8f655de4-332a-430b-b8a0-e493ced7da29",
+                    "path": "<Gamepad>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Girar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "50e156f6-0820-4fb4-8bad-ecab22c0a8d4",
+                    "path": "<XInputController>/leftStick/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Girar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7f298199-1d23-4926-bcc2-7ccb2aa66ce4",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment Teclat",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48e288c7-0f2d-4563-8d65-f52bb1eca511",
                     "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
@@ -465,14 +542,69 @@
                 },
                 {
                     "name": "",
-                    "id": "8f655de4-332a-430b-b8a0-e493ced7da29",
-                    "path": "<Gamepad>/leftStick/x",
+                    "id": "1cd4f166-2d47-47a4-97e4-a3fd6be4845d",
+                    "path": "<XInputController>/leftStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Girar",
+                    "action": "Moviment Joystick",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "Arrows",
+                    "id": "d416c2ca-6724-4cf9-81e1-739cad6d01f3",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Moviment Joystick",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "fdfc30b9-7602-4e6c-97e3-d0f5c5639a6a",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment Joystick",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "b135e136-0675-4b18-aa26-33944d4a8fef",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment Joystick",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "fcd0990a-5b45-49de-a37b-3ef8aecdf2cf",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment Joystick",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "414a0958-2027-4fdc-a226-d3b063290577",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Moviment Joystick",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },

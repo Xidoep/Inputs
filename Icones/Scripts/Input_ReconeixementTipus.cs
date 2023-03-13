@@ -11,6 +11,7 @@ public class Input_ReconeixementTipus : ScriptableObject
     public string[] paths;
     //public RuntimePlatform[] plataformes;
 
+    public Binding[] bindings;
     public Boto[] botons;
     public Tecla[] tecles;
     public Ratoli[] ratoli;
@@ -20,12 +21,14 @@ public class Input_ReconeixementTipus : ScriptableObject
     public Sprite fondoComposat;
     public Sprite fondo1D;
     public Sprite separador;
+
+    [System.Serializable]
     public class Binding
     {
         public string path;
         public Sprite sprite;
         public Sprite fondo;
-        public virtual string Path { get; }
+        public virtual string Path => path;
     }
 
     [System.Serializable]

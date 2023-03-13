@@ -9,7 +9,11 @@ using XS_Utils;
 
 public abstract class Input_Icone : MonoBehaviour
 {
+
+
     [SerializeField] Input_Reconeixement reconeixement;
+    [SerializeField] TipoBinding tipoBinding;
+    [SerializeField] List<XS_Input.Icone> icones;
     [SerializeField] GameObject binding;
     [SerializeField] GameObject fondo;
     List<GameObject> bindingsComposats;
@@ -87,7 +91,7 @@ public abstract class Input_Icone : MonoBehaviour
         }
     }
 
-    protected void MostrarIcone(InputAction accio, bool overrided)
+    protected void MostrarIcone(InputAction accio, bool overrided, bool prioritzaMouse)
     {
         if (accio == null)
             return;
@@ -98,14 +102,74 @@ public abstract class Input_Icone : MonoBehaviour
         trobat = true;
         InputUser.onChange += Resetejar;
 
-        //XS_Utils.Inputs.Icone icone = XS_Utils.Inputs.GetIcone(reconeixement, accio);
         PlayerInput playerInput = FindObjectOfType<PlayerInput>();
-        //Debug.Log(playerInput.gameObject.name);
-        //Debug.Log(playerInput.devices[0]);
-
         Input_ReconeixementTipus input = reconeixement.TipusInput(Application.isPlaying ? playerInput.devices[0] : null, overrided);
 
         FindRenderers();
+
+        Debug.Log(input.paths[0]);
+
+        icones = new List<XS_Input.Icone>();
+
+        tipoBinding = TipoBinding.Simple;
+        for (int ab = 0; ab < accio.bindings.Count; ab++)
+        {
+            Debug.Log(accio.bindings[ab].path);
+            for (int ib = 0; ib < input.bindings.Length; ib++)
+            {
+
+                if (string.Equals(input.bindings[ib].Path, accio.bindings[ab].PathOrOverridePath(overrided)))
+                {
+                    if(input.paths[0] == "Keyboard")
+                    {
+                        if (prioritzaMouse)
+                        {
+                            if (accio.bindings[ab].PathOrOverridePath(overrided).Contains("Keyboard"))
+                                continue;
+                        }
+                        else
+                        {
+                            if (accio.bindings[ab].PathOrOverridePath(overrided).Contains("Mouse"))
+                                continue;
+                        }
+                    }
+                    Debug.Log(accio.bindings[ab].name);
+
+
+
+                    Debug.Log($" **************************************{input.bindings[ib].Path}");
+
+                    if (accio.bindings[ab - 1].PathOrOverridePath(overrided) == "OneModifier") tipoBinding = TipoBinding.OnModifier;
+                    if (accio.bindings[ab - 1].PathOrOverridePath(overrided) == "1DAxis") tipoBinding = TipoBinding.Axis;
+                    if (accio.bindings[ab - 1].PathOrOverridePath(overrided) == "2DVector") tipoBinding = TipoBinding.Vector2;
+
+
+                    icones.Add(new XS_Input.Icone() { 
+                        icone = input.bindings[ib].sprite, 
+                        fondo = input.bindings[ib].fondo 
+                    });
+                }
+            }
+
+        }
+
+
+        switch (tipoBinding)
+        {
+            case TipoBinding.Simple:
+                SetEnableBinding = true;
+                SetSpriteBinding = icones[0].icone;
+                SetSpriteFondo = icones[0].fondo;
+                break;
+            case TipoBinding.OnModifier:
+                break;
+            case TipoBinding.Axis:
+                break;
+            case TipoBinding.Vector2:
+                break;
+        }
+
+        return;
 
 
         if (input == null)
@@ -152,6 +216,7 @@ public abstract class Input_Icone : MonoBehaviour
                 Destroy(bindingsComposats[i]);
             }
         }
+
        
 
         XS_Input.Icone icone = input.GetIcone(accio, inputDevice, overrided);
@@ -285,5 +350,11 @@ public abstract class Input_Icone : MonoBehaviour
             trobat = false;
             InputUser.onChange -= Resetejar;
         }
+    }
+
+
+    public enum TipoBinding
+    {
+        Simple, OnModifier, Axis, Vector2
     }
 }

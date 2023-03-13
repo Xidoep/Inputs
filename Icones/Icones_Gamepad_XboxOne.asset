@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paths:
   - XInputController
+  bindings:
+  - path: <XInputController>/start
+    sprite: {fileID: 21300000, guid: 645d05ffdde9ed14ab5a616b09f8ab8b, type: 3}
+    fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
+  - path: <XInputController>/leftStick/x
+    sprite: {fileID: 21300000, guid: 645d05ffdde9ed14ab5a616b09f8ab8b, type: 3}
+    fondo: {fileID: 21300000, guid: c15b2c8e24f698b498b85d2ed2f6cea4, type: 3}
   botons:
   - path: dpad/up
     sprite: {fileID: 21300000, guid: d2c61688609e7ce47824bd0dd5369096, type: 3}

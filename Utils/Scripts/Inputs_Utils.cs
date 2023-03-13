@@ -56,7 +56,7 @@ public static class Inputs_Utils
                 {
                     if (inputDevice.name.StartsWith(reconeixement.inputs[r].paths[p]))
                     {
-                        if (debug) Debugar.Log($"{reconeixement.inputs[r].name}");
+                       Debugar.Log($"{reconeixement.inputs[r].name}");
                         input = reconeixement.inputs[r];
                         break;
                     }
@@ -65,7 +65,7 @@ public static class Inputs_Utils
                 {
                     //if (inputDevice.name.StartsWith(reconeixement.inputs[r].paths[p]))
                     //{
-                        if (debug) Debugar.Log($"{reconeixement.inputs[r].paths[p]}");
+                        Debugar.Log($"{reconeixement.inputs[r].paths[p]}");
                         input = reconeixement.inputs[r];
                         break;
                     //}
@@ -180,8 +180,10 @@ public static class Inputs_Utils
             }
         }*/
 
-        //Trobar el binding
-        if (input == null)
+
+
+            //Trobar el binding
+            if (input == null)
             return icone;
 
         for (int b = 0; b < accio.bindings.Count; b++)
@@ -194,26 +196,6 @@ public static class Inputs_Utils
                     if (debug) Debugar.Log($"¡¡¡¡¡{input.tecles[a].Path}!!!!!");
                     return new XS_Input.Icone() { icone = input.tecles[a].sprite, fondo = input.tecles[a].fondo };
                 }
-                //PROVAR 
-                /*if (accio.bindings[b].PathOrOverridePath(overrided) == XS_Input.KEY_2DVECTOR)
-                {
-                    if (debug) Debugar.Log($"¿¿¿{input.tecles[a].Path}???");
-                    if (string.Equals(input.tecles[a].Path, accio.bindings[b + 1].PathOrOverridePath(overrided)))
-                    {
-                        if (debug) Debugar.Log($"¡¡¡¡¡{input.tecles[a].Path}!!!!!");
-                        return new XS_Input.Icone() { icone = input.tecles[a].sprite, fondo = input.tecles[a].fondo };
-                    }
-                    b += 4;
-                }
-                else
-                {
-                    if (debug) Debugar.Log($"¿¿¿{input.tecles[a].Path}???");
-                    if (string.Equals(input.tecles[a].Path, accio.bindings[b].PathOrOverridePath(overrided)))
-                    {
-                        if (debug) Debugar.Log($"¡¡¡¡¡{input.tecles[a].Path}!!!!!");
-                        return new XS_Input.Icone() { icone = input.tecles[a].sprite, fondo = input.tecles[a].fondo };
-                    }
-                }*/
             }
             for (int a = 0; a < input.ratoli.Length; a++)
             {
