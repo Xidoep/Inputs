@@ -1221,6 +1221,17 @@
                 },
                 {
                     "name": "",
+                    "id": "f866c2a5-82bf-46b2-97e6-54349d0f2681",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;PlayStation;Switch;Xbox",
+                    "action": "Reset",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "13357b42-63ae-433b-931c-586e68156b3c",
                     "path": "<Keyboard>/anyKey",
                     "interactions": "",

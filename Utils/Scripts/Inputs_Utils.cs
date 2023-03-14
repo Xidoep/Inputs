@@ -61,7 +61,7 @@ public static class Inputs_Utils
                 {
                     if (inputDevice.name.StartsWith(reconeixement.inputs[r].paths[p]))
                     {
-                       Debugar.Log($"{reconeixement.inputs[r].name}");
+                       //Debugar.Log($"{reconeixement.inputs[r].name}");
                         input = reconeixement.inputs[r];
                         break;
                     }
@@ -70,7 +70,7 @@ public static class Inputs_Utils
                 {
                     //if (inputDevice.name.StartsWith(reconeixement.inputs[r].paths[p]))
                     //{
-                        Debugar.Log($"{reconeixement.inputs[r].paths[p]}");
+                        //Debugar.Log($"{reconeixement.inputs[r].paths[p]}");
                         input = reconeixement.inputs[r];
                         break;
                     //}
@@ -78,7 +78,7 @@ public static class Inputs_Utils
             }
             if (input != null)
             {
-                Debug.LogError($"input = {input.name}");
+                //Debug.LogError($"input = {input.name}");
                 break;
             }
         }

@@ -119,7 +119,7 @@ public abstract class Input_Icone : MonoBehaviour
         tipoBinding = TipoBinding.Simple;
         for (int ab = 0; ab < accio.bindings.Count; ab++)
         {
-            Debug.Log(accio.bindings[ab].path);
+            //Debug.Log(accio.bindings[ab].path);
             for (int ib = 0; ib < input.bindings.Length; ib++)
             {
 
@@ -138,11 +138,11 @@ public abstract class Input_Icone : MonoBehaviour
                                 continue;
                         }
                     }
-                    Debug.Log(accio.bindings[ab].name);
+                    //Debug.Log(accio.bindings[ab].name);
 
 
 
-                    Debug.Log($" **************************************{input.bindings[ib].Path}");
+                    //Debug.Log($" **************************************{input.bindings[ib].Path}");
 
                     if(ab > 0)
                     {
