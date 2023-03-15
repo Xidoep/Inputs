@@ -45,7 +45,7 @@ public static class Inputs_Utils
     }
 
 
-    public static Input_ReconeixementTipus TipusInput(this Input_Reconeixement reconeixement, InputDevice inputDevice, bool overrided)
+    public static Input_ReconeixementTipus TipusInput(this Input_Reconeixement reconeixement, InputDevice inputDevice)
     {
         if (inputDevice == null) //DEBUG
         {

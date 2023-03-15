@@ -9,23 +9,23 @@ using XS_Utils;
 
 public abstract class Input_Icone : MonoBehaviour
 {
-
-
     [SerializeField] Input_Reconeixement reconeixement;
-    [SerializeField] TipoBinding tipoBinding;
-    [SerializeField] List<XS_Input.Icone> icones;
+
+    [Apartat("ELEMENTS")]
     [SerializeField] GameObject binding;
     [SerializeField] GameObject fondo;
-    List<GameObject> bindingsComposats;
 
-    internal bool trobat = false;
 
+    //[Apartat("DEBUG")]
+    List<XS_Input.Icone> icones;
+    TipoBinding tipoBinding;
+    //INTERN
+    protected bool trobat = false;
     Image bindingImage;
     SpriteRenderer bindingSpriteRenderer;
-
     Image fondoImage;
     SpriteRenderer fondoSpriteRenderer;
-
+    List<GameObject> bindingsComposats;
     GameObject icone;
     Image imgSep;
 
@@ -73,14 +73,17 @@ public abstract class Input_Icone : MonoBehaviour
             else if (fondoSpriteRenderer != null) fondoSpriteRenderer.transform.localScale = value;
         }
     }
+    protected Input_ReconeixementTipus GetReconeixementTipus => reconeixement.TipusInput(Application.isPlaying? PlayerInput.GetPlayerByIndex(0).devices[0] : null);
 
     public List<XS_Input.Icone> Icones => icones;
 
 
-
     void FindRenderers()
     {
-        if (bindingImage == null) bindingImage = binding.GetComponent<Image>();
+        if (bindingImage == null) 
+        {
+            bindingImage = binding.GetComponent<Image>();
+        }
         if (bindingImage == null) 
         {
             if (bindingSpriteRenderer == null) bindingSpriteRenderer = binding.GetComponent<SpriteRenderer>();
@@ -89,14 +92,17 @@ public abstract class Input_Icone : MonoBehaviour
         if (!fondo)
             return;
 
-        if (fondoImage == null) fondoImage = fondo.GetComponent<Image>();
+        if (fondoImage == null) 
+        {
+            fondoImage = fondo.GetComponent<Image>();
+        }
         if (fondoImage == null) 
         {
             if (fondoSpriteRenderer == null) fondoSpriteRenderer = fondo.GetComponent<SpriteRenderer>();
         }
     }
 
-    protected void MostrarIcone(InputAction accio, bool overrided, bool prioritzaMouse)
+    protected void MostrarIcone(InputAction accio, bool overrided, bool prioritzaMouse, Input_ReconeixementTipus tipus)
     {
         if (accio == null)
             return;
@@ -107,25 +113,22 @@ public abstract class Input_Icone : MonoBehaviour
         trobat = true;
         InputUser.onChange += Resetejar;
 
-        PlayerInput playerInput = FindObjectOfType<PlayerInput>();
-        Input_ReconeixementTipus input = reconeixement.TipusInput(Application.isPlaying ? playerInput.devices[0] : null, overrided);
-
         FindRenderers();
 
-        Debug.Log(input.paths[0]);
+        //Debug.Log(tipus.paths[0]);
 
         icones = new List<XS_Input.Icone>();
 
         tipoBinding = TipoBinding.Simple;
         for (int ab = 0; ab < accio.bindings.Count; ab++)
         {
-            //Debug.Log(accio.bindings[ab].path);
-            for (int ib = 0; ib < input.bindings.Length; ib++)
+            string debug = $"({tipus.paths[0]}) {accio.name}\n";
+            for (int ib = 0; ib < tipus.bindings.Length; ib++)
             {
-
-                if (string.Equals(input.bindings[ib].Path, accio.bindings[ab].PathOrOverridePath(overrided)))
+                debug +=$"{tipus.bindings[ib].Path} = {accio.bindings[ab].PathOrOverridePath(overrided)}?\n";
+                if (string.Equals(tipus.bindings[ib].Path, accio.bindings[ab].PathOrOverridePath(overrided)))
                 {
-                    if(input.paths[0] == "Keyboard")
+                    if(tipus.paths[0] == "Keyboard")
                     {
                         if (prioritzaMouse)
                         {
@@ -142,8 +145,9 @@ public abstract class Input_Icone : MonoBehaviour
 
 
 
-                    //Debug.Log($" **************************************{input.bindings[ib].Path}");
+                    debug += $" **************************************{tipus.bindings[ib].Path}";
 
+                    Debug.Log(debug);
                     if(ab > 0)
                     {
                         if (accio.bindings[ab - 1].PathOrOverridePath(overrided) == "OneModifier") tipoBinding = TipoBinding.OnModifier;
@@ -151,7 +155,7 @@ public abstract class Input_Icone : MonoBehaviour
                         if (accio.bindings[ab - 1].PathOrOverridePath(overrided) == "2DVector") tipoBinding = TipoBinding.Vector2;
                     }
 
-                    icones.Add(input.bindings[ib].Icone(accio.bindings[ab].IsOverrdided()));
+                    icones.Add(tipus.bindings[ib].Icone(accio.bindings[ab].IsOverrdided()));
                 }
             }
         }
@@ -178,7 +182,7 @@ public abstract class Input_Icone : MonoBehaviour
                 BindingEnable = false;
                 BindingSprite = null;
 
-                FondoSprite = input.fondo1D;
+                FondoSprite = tipus.fondo1D;
 
                 for (int i = 0; i < 2; i++)
                 {
@@ -201,7 +205,7 @@ public abstract class Input_Icone : MonoBehaviour
                 BindingEnable = false;
                 BindingSprite = null;
 
-                FondoSprite = input.fondoComposat;
+                FondoSprite = tipus.fondoComposat;
 
                 for (int i = 0; i < 4; i++)
                 {
@@ -236,7 +240,7 @@ public abstract class Input_Icone : MonoBehaviour
                 separador.transform.localScale = Vector3.one * 0.3f;
 
                 imgSep = separador.AddComponent<Image>();
-                imgSep.sprite = input.separador;
+                imgSep.sprite = tipus.separador;
                 imgSep.color = BindingColor;
                 break;
             case TipoBinding.Axis:
@@ -248,7 +252,7 @@ public abstract class Input_Icone : MonoBehaviour
                 mes.transform.localScale = Vector3.one * 0.3f;
 
                 imgSep = mes.AddComponent<Image>();
-                imgSep.sprite = input.separador;
+                imgSep.sprite = tipus.separador;
                 imgSep.color = BindingColor;
                 break;
             case TipoBinding.Vector2:
@@ -295,142 +299,6 @@ public abstract class Input_Icone : MonoBehaviour
 */
     }
 
-    /*
-    void Icone(Input_ReconeixementTipus input, InputAction accio, InputDevice inputDevice, bool overrided)
-    {
-        if(bindingsComposats != null)
-        {
-            for (int i = 0; i < bindingsComposats.Count; i++)
-            {
-                Destroy(bindingsComposats[i]);
-            }
-        }
-
-       
-
-        XS_Input.Icone icone = input.GetIcone(accio, inputDevice, overrided);
-
-        BindingEnable = true;
-        BindingSprite = icone.icone;
-        FondoSprite = icone.fondo;
-        FondoSize = Vector3.one;
-    }
-    void Icone2D(Input_ReconeixementTipus input, InputAction accio, bool overrided)
-    {
-        if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
-
-        //Neteja
-        BindingSprite = null;
-        BindingEnable = false;
-        //Busca icones
-        XS_Input.Icone[] icones = input.GetIcone2D(accio, overrided);
-
-        //Crea una imatge per cada icone
-        for (int i = 0; i < icones.Length; i++)
-        {
-            GameObject iconeComposada = new GameObject();
-            bindingsComposats.Add(iconeComposada);
-
-            //posicionar
-            iconeComposada.transform.SetParent(transform);
-            iconeComposada.transform.localPosition = iconeComposada.transform.Posicio2D_PerIndex(i);
-            iconeComposada.transform.localScale = Vector3.one * 0.2f;
-
-            Image image = iconeComposada.AddComponent<Image>();
-            image.sprite = icones[i].icone;
-            image.color = BindingColor;
-
-        }
-        FondoSprite = input.fondoComposat;
-        //SetSizeFondo = Vector3.one * 1.4f;
-        FondoSize = Vector3.one;
-    }
-
-    void Icone1D(Input_ReconeixementTipus input, InputAction accio, bool overrided)
-    {
-
-        if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
-
-        //Neteja
-        BindingSprite = null;
-        BindingEnable = false;
-        //Busca icones
-        XS_Input.Icone[] icones = input.GetIcone1D(accio, overrided);
-
-        //Crea una imatge per cada icone
-        for (int i = 0; i < icones.Length; i++)
-        {
-            GameObject iconeComposada = new GameObject();
-            bindingsComposats.Add(iconeComposada);
-
-            //posicionar
-            iconeComposada.transform.SetParent(transform);
-            iconeComposada.transform.localPosition = iconeComposada.transform.Posicio1D_PerIndex(i);
-            iconeComposada.transform.localScale = Vector3.one * 0.23f;
-
-            Image image = iconeComposada.AddComponent<Image>();
-            image.sprite = icones[i].icone;
-            image.color = BindingColor;
-
-        }
-        GameObject separador = new GameObject();
-        bindingsComposats.Add(separador);
-
-        separador.transform.SetParent(transform);
-        separador.transform.localPosition = separador.transform.Posicio1D_PerIndex(2);
-        separador.transform.localScale = Vector3.one * 0.3f;
-
-        Image imgSep = separador.AddComponent<Image>();
-        imgSep.sprite = input.separador;
-        imgSep.color = BindingColor;
-
-        FondoSprite = input.fondo1D;
-        //SetSizeFondo = Vector3.one * 1.4f;
-        FondoSize = Vector3.one;
-    }
-    void IconeOnModifier(Input_ReconeixementTipus input, InputAction accio, bool overrided)
-    {
-
-        if (bindingsComposats == null) bindingsComposats = new List<GameObject>();
-
-        //Neteja
-        BindingSprite = null;
-        BindingEnable = false;
-        //Busca icones
-        XS_Input.Icone[] icones = input.GetIconeOnModifier(accio, overrided);
-
-        //Crea una imatge per cada icone
-        for (int i = 0; i < icones.Length; i++)
-        {
-            GameObject iconeComposada = new GameObject();
-            bindingsComposats.Add(iconeComposada);
-
-            //posicionar
-            iconeComposada.transform.SetParent(transform);
-            iconeComposada.transform.localPosition = iconeComposada.transform.Posicio1D_PerIndex(i);
-            iconeComposada.transform.localScale = Vector3.one * 0.23f;
-
-            Image image = iconeComposada.AddComponent<Image>();
-            image.sprite = icones[i].icone;
-            image.color = BindingColor;
-
-        }
-        GameObject separador = new GameObject();
-        bindingsComposats.Add(separador);
-
-        separador.transform.SetParent(transform);
-        separador.transform.localPosition = separador.transform.Posicio1D_PerIndex(2);
-        separador.transform.localScale = Vector3.one * 0.3f;
-
-        Image imgSep = separador.AddComponent<Image>();
-        imgSep.sprite = input.separador;
-        imgSep.color = BindingColor;
-
-        FondoSprite = input.fondo1D;
-        //SetSizeFondo = Vector3.one * 1.4f;
-        FondoSize = Vector3.one;
-    }
-    */
 
     void Resetejar(InputUser inputUser, InputUserChange inputUserChange, InputDevice inputDevice)
     {
@@ -445,5 +313,10 @@ public abstract class Input_Icone : MonoBehaviour
     public enum TipoBinding
     {
         Simple, OnModifier, Axis, Vector2
+    }
+
+    protected void OnValidate()
+    {
+        if(reconeixement == null) reconeixement = XS_Editor.LoadAssetAtPath<Input_Reconeixement>("Assets/XidoStudio/Inputs/Reconeixement/Reconeixement.asset");
     }
 }
