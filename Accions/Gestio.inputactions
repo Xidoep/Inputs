@@ -520,7 +520,7 @@
                     "id": "ea0dbdcf-7e4a-48e2-b70f-dfcdade36369",
                     "path": "<Mouse>/scroll/y",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "Scale(factor=-0.05)",
                     "groups": "TeclatRatoli",
                     "action": "Zoom",
                     "isComposite": false,
