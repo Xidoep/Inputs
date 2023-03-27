@@ -51,24 +51,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Debug_Step",
-                    "type": "Value",
-                    "id": "6e10a840-ea60-4e38-8f4e-9ed9c6e97b6d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Debug_Propagar",
-                    "type": "Value",
-                    "id": "e922ebbd-4f9b-4314-a2b6-ee2236d96b07",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": true
-                },
-                {
                     "name": "Pausa",
                     "type": "Button",
                     "id": "45b9f792-22ae-49b0-bfc8-a42034303d8e",
@@ -90,6 +72,15 @@
                     "name": "Foto",
                     "type": "Button",
                     "id": "8e7a615f-317d-4799-bc03-e1b16e2c5de7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Colocar",
+                    "type": "Button",
+                    "id": "a4426db4-7a47-4d69-9e1e-01690074124c",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -341,28 +332,6 @@
                 },
                 {
                     "name": "",
-                    "id": "ec50300b-f164-4a46-b3c7-15714f54c2cd",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Debug_Step",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "64f71106-e9d3-4de5-817d-c1002f034ec0",
-                    "path": "<Keyboard>/numpadEnter",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "TeclatRatoli",
-                    "action": "Debug_Propagar",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d9bf9b76-609b-48ce-a2ec-ff8192b9b635",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
@@ -434,6 +403,72 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4befaeaa-619c-478a-8d98-2f9dc2984705",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "888565b6-e2ca-4e77-83a7-f99049101f4a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c2dee2a4-1390-4b57-ba70-2d19cf019e94",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;PlayStation;Switch;Xbox",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ccee4edf-50b4-4eae-b391-fbb05aee7aae",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation;Gamepad;Switch;Xbox",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "366bcc92-0e29-4f44-8d60-269080f1ea8c",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Switch;PlayStation;Gamepad;Xbox",
+                    "action": "Any",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0a550a2c-9613-4bfe-a629-f4becc8a8990",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox;Switch;PlayStation;Gamepad",
                     "action": "Any",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -545,6 +580,72 @@
                     "processors": "",
                     "groups": "Xbox",
                     "action": "Zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d8a7c579-213d-4de4-b0e9-f917ddf2f8b0",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Colocar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "60f12e65-32bc-4a41-b4b8-1392fc08edcb",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Colocar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "83d24f1d-ecc2-43b8-a853-106ce5b59a6a",
+                    "path": "<DualShockGamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PlayStation",
+                    "action": "Colocar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ecb7f15-867c-472e-85ed-d8557b4a57af",
+                    "path": "<SwitchProControllerHID>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Switch",
+                    "action": "Colocar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "270c3ff4-8b15-4dd1-9ed7-d0789a81036c",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Xbox",
+                    "action": "Colocar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dea6ff93-5dc0-49fd-9969-90476e42e6e9",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Colocar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

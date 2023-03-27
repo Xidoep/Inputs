@@ -66,4 +66,27 @@ public class Input_EnCanviarControls : MonoBehaviour
             else comprovacions[i].SiNo?.Invoke();
         }
     }
+
+
+
+
+
+
+
+    [ContextMenu("Debug coincidir")]
+    void DebugCoincidir()
+    {
+        for (int i = 0; i < comprovacions.Length; i++)
+        {
+            comprovacions[i].EnCoincidir?.Invoke();
+        }
+    }
+    [ContextMenu("Debug NO coincidir")]
+    void DebugNoCoincidir()
+    {
+        for (int i = 0; i < comprovacions.Length; i++)
+        {
+            comprovacions[i].SiNo?.Invoke();
+        }
+    }
 }
