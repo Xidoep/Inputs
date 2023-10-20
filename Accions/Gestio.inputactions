@@ -24,9 +24,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Pan Ratoli",
+                    "name": "Pan Posicio",
                     "type": "Value",
                     "id": "c13ee07a-6f4b-4426-9e39-8029423476f2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Pan Ratoli",
+                    "type": "Value",
+                    "id": "caaf9bd2-05bf-493c-a689-14e9d30329bf",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -238,7 +247,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "TeclatRatoli",
-                    "action": "Pan Ratoli",
+                    "action": "Pan Posicio",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -648,6 +657,39 @@
                     "action": "Colocar",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "LeftButton + Delta.x",
+                    "id": "15c0e7c0-702b-4554-a387-8b31214e269d",
+                    "path": "OneModifier",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pan",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "modifier",
+                    "id": "fcdf75f1-52f5-462e-bab0-50589383d079",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "TeclatRatoli",
+                    "action": "Pan",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "binding",
+                    "id": "1fe4e99f-7c8e-47ff-913f-a7c767a85816",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "InvertVector2,ScaleVector2(x=0.75,y=0.75)",
+                    "groups": "TeclatRatoli",
+                    "action": "Pan",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         },
