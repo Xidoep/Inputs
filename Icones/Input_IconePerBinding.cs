@@ -10,7 +10,7 @@ public class Input_IconePerBinding : Input_Icone
     [Apartat("OPCIONS")]
     [SerializeField] bool prioritzaMouse = false;
     [SerializeField] bool overrided;
-    [Nota("Afageix un Tipus si vols que sempre utilizi aquell Input i ignori el reconeixment dinamic. Per una UI de controls, per exemple.", NoteType.Warning)]
+    //[Nota("Afageix un Tipus si vols que sempre utilizi aquell Input i ignori el reconeixment dinamic. Per una UI de controls, per exemple.", NoteType.Warning)]
     [SerializeField] Input_ReconeixementTipus tipusForçat;
 
     //[SerializeField] InputDevice device;
